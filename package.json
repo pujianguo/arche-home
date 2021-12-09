@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build:test": "vite build --mode test",
+    "build:pre": "vite build --mode pre",
+    "build:release": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
