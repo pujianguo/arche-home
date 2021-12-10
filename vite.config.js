@@ -15,6 +15,16 @@ export default defineConfig({
       api: resolve(__dirname, 'src/api'),
     },
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        javascriptEnabled: true,
+        additionalData: (content, loaderContext) => {
+          return "@import 'styles/mixins.scss';" + content
+        },
+      },
+    },
+  },
   server: {
     port: 3000,
     proxy: {

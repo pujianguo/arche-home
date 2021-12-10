@@ -10,6 +10,9 @@ const count = ref(0)
 
 <template>
   <h1>{{ msg }}</h1>
+  <div class="div">
+    div
+  </div>
 
   <p>
     Recommended IDE setup:
@@ -33,8 +36,14 @@ const count = ref(0)
   </p>
 </template>
 
-<style scoped>
+<style lang="scss">
 a {
   color: #42b983;
+}
+
+.div {
+  @include flex-center();
+
+  color: $color-primary;
 }
 </style>
