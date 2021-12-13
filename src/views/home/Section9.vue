@@ -43,6 +43,17 @@
           </div>
         </div>
       </div>
+      <div class="content-footer">
+        <div class="box-item">
+          © 2021 Arche Group. All rights reserved.
+        </div>
+        <div class="box-item">
+          A Smart Way to Enter Metaverse
+        </div>
+        <div class="box-item">
+          Reach Out Us -- support@arche.network
+        </div>
+      </div>
     </div>
 
   </section>
@@ -196,11 +207,13 @@ const socialList = [
         width: 100%;
 
         .box {
+          box-sizing: border-box;
           width: 50%;
+          padding-right: 20px;
         }
 
         .box-1 {
-          margin-bottom: 62px;
+          margin-bottom: 60px;
 
           .logo {
             display: flex;
@@ -224,23 +237,29 @@ const socialList = [
         }
 
         .box-2 {
-          max-width: 545px;
-          margin-bottom: 62px;
-          font-style: normal;
+          max-width: 450px;
+          margin-bottom: 60px;
           line-height: 36px;
           text-align: left;
           letter-spacing: 0;
 
           h1 {
-            font-size: 26px;
+            font-size: 20px;
+            font-style: normal;
             font-weight: 900;
-            color: #fff;
+            line-height: 36px;
+            text-align: left;
+            letter-spacing: 0;
           }
 
           h2 {
-            font-size: 20px;
+            font-size: 18px;
+            font-style: normal;
             font-weight: 400;
+            line-height: 36px;
             color: rgba(255, 255, 255, .7);
+            text-align: left;
+            letter-spacing: 0;
           }
         }
 
@@ -257,13 +276,14 @@ const socialList = [
         }
 
         .box-3 {
-          margin-bottom: 73px;
+          margin-bottom: 83px;
 
           .input-box {
+            box-sizing: border-box;
             display: flex;
             align-items: center;
-            width: 83%;
-            min-width: 300px;
+            width: 100%;
+            max-width: 530px;
             height: 56px;
             padding-left: 15px;
             margin-top: 32px;
@@ -311,15 +331,17 @@ const socialList = [
           .social {
             display: flex;
             align-content: center;
-            justify-content: flex-start;
-            margin-top: 25px;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 340px;
+            margin-top: 29px;
 
             .social-item {
               opacity: 1;
 
               img {
-                width: 70px;
-                margin-right: 30px;
+                width: 60px;
+                // margin-right: 30px;
                 transition: all .3s;
               }
 
@@ -333,6 +355,56 @@ const socialList = [
         }
       }
     }
+
+    .content-footer {
+      display: flex;
+      // flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 80px;
+      padding: 0 120px;
+      background: #0038ff;
+
+      .box-item {
+        // flex: 1;
+        font-family: Cindie Mono;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 19px;
+        text-align: left;
+        letter-spacing: 0;
+
+        &:nth-child(1){
+
+        }
+
+        &:nth-child(2) {
+          // color: rgba(255, 255, 255, .2);
+          opacity: .2;
+        }
+
+        &:nth-child(3) {
+        }
+      }
+    }
+  }
+
+  input::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, .3);
+  }
+
+  input::-moz-placeholder {   /* Mozilla Firefox 19+ */
+    color: rgba(255, 255, 255, .3);
+  }
+
+  input:-moz-placeholder {    /* Mozilla Firefox 4 to 18 */
+    color: rgba(255, 255, 255, .3);
+  }
+
+  input:-ms-input-placeholder {  /* Internet Explorer 10-11 */
+    color: rgba(255, 255, 255, .3);
   }
 }
 </style>
