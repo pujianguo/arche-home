@@ -60,6 +60,7 @@ onMounted(() => {
 <style lang="scss">
 .home-section-2 {
   position: relative;
+  z-index: 2;
   width: 100%;
   min-height: 100vh;
   overflow: hidden;

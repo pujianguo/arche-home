@@ -1,5 +1,6 @@
 <template>
   <div class="home-page">
+    <Header/>
     <Section1/>
     <Section2/>
     <Section3/>
@@ -13,6 +14,7 @@
 </template>
 
 <script setup>
+import Header from './Header.vue'
 import Section1 from './Section1.vue'
 import Section2 from './Section2.vue'
 import Section3 from './Section3.vue'
@@ -34,6 +36,10 @@ import Section9 from './Section9.vue'
     position: relative;
     width: 100%;
     min-height: 100vh;
+
+    .container {
+      box-sizing: border-box;
+    }
   }
 
   // section {
