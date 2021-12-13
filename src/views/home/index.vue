@@ -29,6 +29,7 @@ import Section9 from './Section9.vue'
 
 <style lang="scss">
 .home-page {
+  overflow-x: hidden;
   color: #fff;
   background: #000;
 

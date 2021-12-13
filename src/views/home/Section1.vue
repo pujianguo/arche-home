@@ -1,14 +1,12 @@
 <template>
   <section class="home-section-1">
     <div class="background-wrap">
-      <div class="background">
         <div class="box">
           <div class="box-item"></div>
           <div class="box-item"></div>
           <div class="box-item"></div>
           <div class="box-item"></div>
         </div>
-      </div>
     </div>
     <div class="container">
       <div class="text-content">

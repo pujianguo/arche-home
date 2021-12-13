@@ -54,6 +54,27 @@ onMounted(() => {
     .fromTo('.home-section-2 .box3', { x: innerWidth * -0.5 }, { x: 0 }, 0)
     .fromTo('.home-section-2 .box4', { x: 0 }, { x: innerWidth * -0.5 }, 0)
     .fromTo('.home-section-2 .box5', { x: innerWidth * -0.5 }, { x: 0 }, 0)
+
+  const cards = gsap.utils.toArray('.home-section-2 .container .number-card')
+  cards.forEach((box, i) => {
+    ScrollTrigger.create({
+      trigger: box,
+      toggleClass: 'active',
+      start: 'top 90%',
+      end: 'top top',
+      // markers: true,
+    })
+  })
+
+  gsap.utils.toArray('.home-section-2 .container .text-content .line').forEach(line => {
+    ScrollTrigger.create({
+      trigger: line,
+      toggleClass: 'active',
+      start: 'top 80%',
+      end: 'top top',
+      // markers: true,
+    })
+  })
 })
 </script>
 
@@ -74,11 +95,50 @@ onMounted(() => {
     padding: 120px;
 
     .text-content {
+      .number-card {
+        .number {
+          transition: .5s;
+          transform: translateX(300px) rotate(720deg);
+        }
+
+        .title {
+          transition: .5s;
+          transform: translateX(-100%);
+        }
+
+        &.active {
+          .number {
+            transform: translateX(0) rotate(0);
+          }
+
+          .title {
+            transform: translateX(0);
+          }
+        }
+      }
+
       .line {
+        position: relative;
         width: 1px;
         height: 20vh;
         margin: 30px 4px;
-        background: #fff;
+
+        &::before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 0;
+          content: '';
+          background: #fff;
+          transition: .5s;
+        }
+
+        &.active {
+          &::before {
+            height: 100%;
+          }
+        }
       }
     }
   }
