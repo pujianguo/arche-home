@@ -22,13 +22,15 @@
 
 <style lang="scss">
 .home-section-8 {
+  min-height: unset !important;
+
   .container {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 120px;
+    padding: 120px 120px 0 120px;
 
     .title {
       max-width: 900px;

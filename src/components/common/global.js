@@ -1,7 +1,7 @@
 /*
  * @Descripttion: 注册全局组件
  * @Author: pujianguo
- * @Date: 2021-06-20 15:57:00
+ * @Date: 2021-12-13 09:58:48
  */
 
 export default {

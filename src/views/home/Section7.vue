@@ -87,6 +87,7 @@
         margin-bottom: 30px;
 
         p {
+          font-family: Inter;
           font-size: 18px;
           font-style: normal;
           font-weight: 400;
