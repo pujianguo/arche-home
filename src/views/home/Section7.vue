@@ -12,21 +12,44 @@
       </div>
       <div class="content-wrap">
         <div class="content">
-          <div class="item item-1">1</div>
-          <div class="item item-2">2</div>
-          <div class="item item-3">3</div>
-          <div class="item item-4">4</div>
-          <div class="item item-5">5</div>
-          <div class="item item-6">6</div>
-          <div class="item item-7">7</div>
-          <div class="item item-8">8</div>
-          <div class="item item-9">9</div>
-          <div class="item item-10">10</div>
-          <div class="item item-11">11</div>
-          <div class="item item-12">12</div>
-          <div class="item item-13">13</div>
-          <div class="item item-14">14</div>
-          <div class="item item-15">15</div>
+          <div class="item item-1"></div>
+          <div class="item item-2">
+            <h1>IGO</h1>
+          </div>
+          <div class="item item-3"></div>
+          <div class="item item-4"></div>
+          <div class="item item-5">
+            <h1>GAO</h1>
+          </div>
+          <div class="item item-6">
+            <h1>Match</h1>
+            <h1>maker</h1>
+          </div>
+          <div class="item item-7"></div>
+          <div class="item item-8">
+            <div class="item-content">
+              <a-svg class="text-p" name="text_decentralized-protocol-as-a-service"></a-svg>
+              <a-svg class="text-dp" name="text_dp"></a-svg>
+              <a-svg class="text-aas" name="text_aas"></a-svg>
+            </div>
+          </div>
+          <div class="item item-9">
+            <h1>BOT</h1>
+          </div>
+          <div class="item item-10"></div>
+          <div class="item item-11">
+            <h1>MARKETPLACE</h1>
+          </div>
+          <div class="item item-12"></div>
+          <div class="item item-13">
+            <h1>Derivative</h1>
+            <h1>service</h1>
+          </div>
+          <div class="item item-14"></div>
+          <div class="item item-15">
+            <a-svg class="create-by" name="text_create-by"></a-svg>
+            <a-svg class="logo" name="logo-main"></a-svg>
+          </div>
         </div>
       </div>
     </div>
@@ -134,9 +157,21 @@
         // height: 895px;
 
         .item {
+          box-sizing: border-box;
+          padding: 20px;
           font-size: 2em;
           text-align: center;
           background: #101113;
+
+          h1 {
+            font-family: Cindie Mono;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 42px;
+            text-align: left;
+            letter-spacing: .01em;
+          }
         }
 
         .item-1 {
@@ -169,6 +204,50 @@
 
         .item-8 {
           grid-area: h;
+
+          .item-content {
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+            &::before {
+              position: absolute;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              content: '';
+              background: url('/images/home/section7_item8_bg.png');
+              background-size: cover;
+            }
+
+            .text-p {
+              position: absolute;
+              top: 0;
+              left: 0;
+              z-index: 1;
+              width: 292px;
+              height: 121px;
+            }
+
+            .text-dp {
+              position: absolute;
+              bottom: 60px;
+              left: 0;
+              z-index: 1;
+              width: 199px;
+              height: 75px;
+            }
+
+            .text-aas {
+              position: absolute;
+              right: 0;
+              bottom: 0;
+              z-index: 1;
+              width: 308px;
+              height: 74px;
+            }
+          }
         }
 
         .item-9 {
@@ -196,7 +275,22 @@
         }
 
         .item-15 {
+          display: flex;
+          flex-direction: column;
           grid-area: o;
+          align-items: flex-end;
+          justify-content: flex-end;
+
+          .create-by {
+            width: 195px;
+            height: 17px;
+            margin-bottom: 5px;
+          }
+
+          .logo {
+            width: 317px;
+            height: 57px;
+          }
         }
       }
     }

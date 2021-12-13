@@ -67,7 +67,7 @@ onMounted(() => {
 
     .box {
       position: absolute;
-      top: 300px;
+      top: 320px;
       right: 300px;
       width: 300px;
       height: 300px;

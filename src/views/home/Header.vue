@@ -2,11 +2,7 @@
   <div class="home-header">
     <div class="left">
       <a target="_blank" href="https://arche.network" class="logo flex-center" title="ARCHE">
-        <!-- <img class="shape" src="/images/logo_icon.png" alt="">
-        <img class="text" src="/images/logo_text.png" alt=""> -->
-        <svg class="logo-main">
-          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-main"></use>
-        </svg>
+        <a-svg class="logo-main" name="logo-main"></a-svg>
       </a>
     </div>
     <ul class="center">
