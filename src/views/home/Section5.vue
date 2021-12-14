@@ -27,7 +27,8 @@
 
       <div class="iframe-wrap">
         <div class="iframe-content">
-          <iframe class="iframe" src="https://my.spline.design/archecoin-32464c6f27c84f65e1e55f794034d281/" frameborder="0"></iframe>
+          <!-- <iframe class="iframe" src="https://my.spline.design/archecoin-32464c6f27c84f65e1e55f794034d281/" frameborder="0"></iframe> -->
+          <iframe class="iframe" src="/iframe/archecoin.html" frameborder="0"></iframe>
         </div>
       </div>
     </div>
@@ -122,7 +123,7 @@
     .iframe-wrap {
       right: 0;
       z-index: -1;
-      width: 50%;
+      width: 70%;
     }
   }
 }

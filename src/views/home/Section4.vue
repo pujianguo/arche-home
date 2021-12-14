@@ -3,7 +3,8 @@
     <div class="container">
       <div class="iframe-wrap">
         <div class="iframe-content">
-          <iframe class="iframe" src="https://my.spline.design/aga-a262187371bf78740dbd5fedcd367b3c/" frameborder="0"></iframe>
+          <!-- <iframe class="iframe" src="https://my.spline.design/aga-a262187371bf78740dbd5fedcd367b3c/" frameborder="0"></iframe> -->
+          <iframe class="iframe" src="/iframe/aga.html" frameborder="0"></iframe>
         </div>
       </div>
 
@@ -140,7 +141,7 @@ useInitGsap(initGsap)
     .iframe-wrap {
       left: 0;
       z-index: -1;
-      width: 50%;
+      width: 70%;
     }
   }
 }
