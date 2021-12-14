@@ -1,9 +1,10 @@
 <template>
   <section class="home-section-3">
-    <!-- <div class="background-wrap">
-      <div class="background">
-      </div>
-    </div> -->
+    <div class="bg-box">
+      <div class="bg-1"></div>
+      <div class="bg-2"></div>
+      <div class="bg-3"></div>
+    </div>
     <div class="container">
       <div class="text-content">
         <div class="title-card">
@@ -46,11 +47,23 @@ onMounted(() => {
   gsap.timeline({
     scrollTrigger: {
       trigger: '.home-section-3',
-      start: 'top bottom',
-      end: 'bottom top',
+      start: 'top 80%',
+      end: 'top 20%',
       // markers: true,
       scrub: true,
     },
+  })
+    .from('.home-section-3 .line-box', { x: 505 }, 0)
+    .from('.home-section-3 .title-box', { rotationX: 90 })
+
+  gsap.utils.toArray('.home-section-3 .container .number-card').forEach((box, i) => {
+    ScrollTrigger.create({
+      trigger: box,
+      toggleClass: 'active',
+      start: 'top 90%',
+      end: 'top top',
+      // markers: true,
+    })
   })
 })
 </script>
@@ -58,9 +71,61 @@ onMounted(() => {
 <style lang="scss">
 .home-section-3 {
   position: relative;
+  z-index: 30;
   width: 100%;
   min-height: 100vh;
-  overflow: hidden;
+
+  .bg-box {
+    position: absolute;
+    top: 120px;
+    left: -234px;
+    width: 1396px;
+    height: 1350px;
+    opacity: .34;
+    animation: rotate 5s linear infinite;
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+        transform-origin: center center;
+      }
+
+      100% {
+        transform: rotate(360deg);
+        transform-origin: center center;
+      }
+    }
+
+    .bg-1 {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 836px;
+      height: 836px;
+      background: #fa00ff;
+      filter: blur(989.041px);
+    }
+
+    .bg-2 {
+      position: absolute;
+      top: 176px;
+      left: 0;
+      width: 560px;
+      height: 560px;
+      background: #012fd2;
+      filter: blur(989.041px);
+    }
+
+    .bg-3 {
+      position: absolute;
+      bottom: 0;
+      left: 400px;
+      width: 514px;
+      height: 514px;
+      background: #00ff47;
+      filter: blur(989.041px);
+    }
+  }
 
   .container {
     position: relative;
@@ -73,6 +138,7 @@ onMounted(() => {
     .text-content {
       .title-card {
         margin-bottom: 89px;
+        overflow: hidden;
 
         .line-box {
           .line {
@@ -96,6 +162,26 @@ onMounted(() => {
 
       .number-card {
         width: 590px;
+
+        .number {
+          transition: .5s;
+          transform: translateX(300px) rotate(720deg);
+        }
+
+        .title {
+          transition: .5s;
+          transform: translateX(-100%);
+        }
+
+        &.active {
+          .number {
+            transform: translateX(0) rotate(0);
+          }
+
+          .title {
+            transform: translateX(0);
+          }
+        }
       }
     }
 

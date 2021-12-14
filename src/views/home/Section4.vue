@@ -6,9 +6,10 @@
       <div class="text-content text-content-right">
         <div class="title-card">
           <div class="title-box">
-            <h1>AGA</h1>
-            <h1>IN</h1>
-            <h1>DAO</h1>
+            <h1 class="h1">AGA</h1>
+            <h1 class="h2">IN</h1>
+            <h1 class="h3">DAO</h1>
+            <img class="img" src="/images/home/section4_img_1.png" alt="">
           </div>
         </div>
 
@@ -39,11 +40,27 @@ onMounted(() => {
   gsap.timeline({
     scrollTrigger: {
       trigger: '.home-section-4',
-      start: 'top bottom',
-      end: 'bottom top',
+      // start: 'top bottom',
+      // end: 'bottom top',
+      start: 'top 80%',
+      end: 'top 20%',
       // markers: true,
       scrub: true,
     },
+  })
+    .from('.home-section-4 .title-box .h1', { rotationY: 90 })
+    .from('.home-section-4 .title-box .h2', { rotationY: -90 })
+    .from('.home-section-4 .title-box .h3', { rotationY: 90 })
+    .from('.home-section-4 .title-box .img', { rotationY: 90 })
+
+  gsap.utils.toArray('.home-section-4 .container .number-card').forEach((box, i) => {
+    ScrollTrigger.create({
+      trigger: box,
+      toggleClass: 'active',
+      start: 'top 90%',
+      end: 'top top',
+      // markers: true,
+    })
   })
 })
 </script>
@@ -72,17 +89,13 @@ onMounted(() => {
           width: 421px;
           margin-right: 153px;
 
-          &::after {
+          .img {
             position: absolute;
             top: -8px;
             right: -153px;
             z-index: -1;
             width: 298px;
             height: 298px;
-            content: '';
-            background: url('/images/home/section4_img_1.png') no-repeat;
-            background-size: 100%;
-            border-radius: 0;
           }
 
           h1 {
@@ -104,12 +117,29 @@ onMounted(() => {
       .number-card {
         width: 515px;
 
+        .number {
+          transition: .5s;
+          transform: translateX(-300px) rotate(-720deg);
+        }
+
         .title {
           width: 360px;
+          transition: .5s;
+          transform: translateX(100%);
         }
 
         .desc {
           width: 360px;
+        }
+
+        &.active {
+          .number {
+            transform: translateX(0) rotate(0);
+          }
+
+          .title {
+            transform: translateX(0);
+          }
         }
       }
     }

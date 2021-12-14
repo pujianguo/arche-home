@@ -1,5 +1,10 @@
 <template>
   <section class="home-section-5">
+    <div class="bg-box">
+      <div class="bg-1"></div>
+      <div class="bg-2"></div>
+      <div class="bg-3"></div>
+    </div>
     <div class="container">
       <div class="text-content">
         <div class="title-card">
@@ -49,7 +54,59 @@ onMounted(() => {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  overflow: hidden;
+
+  .bg-box {
+    position: absolute;
+    top: -300px;
+    left: -54px;
+    z-index: 1;
+    width: 1006px;
+    height: 935px;
+    opacity: .34;
+    animation: rotate 5s linear infinite;
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+        transform-origin: center center;
+      }
+
+      100% {
+        transform: rotate(360deg);
+        transform-origin: center center;
+      }
+    }
+
+    .bg-1 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 637px;
+      height: 637px;
+      background: #012fd2;
+      filter: blur(683.594px);
+    }
+
+    .bg-2 {
+      position: absolute;
+      top: 266px;
+      right: 0;
+      width: 370px;
+      height: 370px;
+      background: #0ff;
+      filter: blur(683.594px);
+    }
+
+    .bg-3 {
+      position: absolute;
+      right: 180px;
+      bottom: 0;
+      width: 295px;
+      height: 295px;
+      background: #00ff47;
+      filter: blur(683.594px);
+    }
+  }
 
   .container {
     position: relative;
