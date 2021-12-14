@@ -9,8 +9,9 @@
       <div class="text-content">
         <div class="title-card">
           <div class="line-box">
-            <span class="text">ARCHER</span>
+            <span class="text">Warriors</span>
             <span class="line"></span>
+            <span class="text">for Decentralization</span>
           </div>
           <div class="title-box">
             <h1>Earn more</h1>
@@ -20,7 +21,7 @@
         <div class="number-card">
           <div class="number">04</div>
           <h1 class="title">Share to Earn and contribute to Metaverse</h1>
-          <p class="desc">Archers have special rights and interests on the platform. Archers can earn commission by promoting the games or orders on Arche. Buyers who use Archer's links can also earn cashback.</p>
+          <p class="desc">Archers have special rights and interests on the platform and in AGA Ecosystem. Archers can earn commission by promoting the tasks or orders on Arche. Buyers who use Archer's links can also earn cashback.</p>
           <div class="footer">
             <div class="footer-btn">
               <span class="text">BE archer</span>
@@ -141,8 +142,10 @@ onMounted(() => {
         overflow: hidden;
 
         .line-box {
+          max-width: 567px;
+
           .line {
-            width: 445px;
+            flex: 1;
           }
         }
 
@@ -161,7 +164,7 @@ onMounted(() => {
       }
 
       .number-card {
-        width: 590px;
+        max-width: 590px;
 
         .number {
           transition: .5s;

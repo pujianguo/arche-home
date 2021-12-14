@@ -1,7 +1,9 @@
 <template>
   <section class="home-section-4">
     <div class="container">
-      <iframe class="iframe-content" src="https://my.spline.design/aga-a262187371bf78740dbd5fedcd367b3c/" frameborder="0"></iframe>
+      <div class="iframe-wrap">
+        <iframe class="iframe-content" src="https://my.spline.design/aga-a262187371bf78740dbd5fedcd367b3c/" frameborder="0"></iframe>
+      </div>
 
       <div class="text-content text-content-right">
         <div class="title-card">
@@ -16,7 +18,7 @@
         <div class="number-card">
           <div class="number">05</div>
           <h1 class="title">Arche Guild Alliance</h1>
-          <p class="desc">AGA is the first DAO alliance that integrate with Players, Games & Guilds in ONE which form Arche ecosystem.</p>
+          <p class="desc">AGA is a decentralized autonomous organization (DAO) formed by Game guilds in Metaverse. AGA is dedicated to helping players, guilds, and games to get more opportunities to collaborate empowered by the Arche Network.</p>
           <div class="footer">
             <a class="footer-link">WHY AGA?</a>
             <div class="footer-btn">
@@ -115,7 +117,7 @@ onMounted(() => {
       }
 
       .number-card {
-        width: 515px;
+        max-width: 538px;
 
         .number {
           transition: .5s;
@@ -123,13 +125,13 @@ onMounted(() => {
         }
 
         .title {
-          width: 360px;
+          max-width: 360px;
           transition: .5s;
           transform: translateX(100%);
         }
 
         .desc {
-          width: 360px;
+          max-width: 538px;
         }
 
         &.active {
@@ -144,7 +146,7 @@ onMounted(() => {
       }
     }
 
-    .iframe-content {
+    .iframe-wrap {
       left: 0;
       z-index: -1;
       width: 50%;

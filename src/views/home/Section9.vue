@@ -60,7 +60,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
 import config from '@/config'
 import gsap from 'gsap'
 import ScrollTrigger from 'gsap/ScrollTrigger'
@@ -120,25 +120,21 @@ const socialList = [
   },
 ]
 
-onMounted(() => {
-  gsap.timeline({
-    scrollTrigger: {
-      trigger: '.home-section-9',
-      start: 'top 80%',
-      end: 'top top',
-      // markers: true,
-      scrub: true,
-    },
-  })
-    .from('.home-section-9 .content-title', {
-      rotate: 360 * 3,
-      scale: 0.1,
-    })
-    .from('.home-section-9 .content-arche .box-1', { x: innerWidth * -1 }, '>')
-    .from('.home-section-9 .content-arche .box-2', { x: innerWidth * 1 }, '<')
-    .from('.home-section-9 .content-arche .box-3', { x: innerWidth * -1 }, '<')
-    .from('.home-section-9 .content-arche .box-4', { x: innerWidth * 1 }, '<')
-})
+// onMounted(() => {
+//   gsap.timeline({
+//     scrollTrigger: {
+//       trigger: '.home-section-9',
+//       start: 'top 80%',
+//       end: 'top top',
+//       // markers: true,
+//       scrub: true,
+//     },
+//   })
+//     .from('.home-section-9 .content-arche .box-1', { x: innerWidth * -1 }, '>')
+//     .from('.home-section-9 .content-arche .box-2', { x: innerWidth * 1 }, '<')
+//     .from('.home-section-9 .content-arche .box-3', { x: innerWidth * -1 }, '<')
+//     .from('.home-section-9 .content-arche .box-4', { x: innerWidth * 1 }, '<')
+// })
 </script>
 
 <style lang="scss">
@@ -221,7 +217,7 @@ onMounted(() => {
 
     .content-arche-padding {
       width: 100%;
-      padding: 100px 120px 80px;
+      padding: 100px 120px 0;
       background: #0024a3;
 
       .content-arche {
@@ -260,14 +256,13 @@ onMounted(() => {
         }
 
         .box-2 {
-          max-width: 450px;
           margin-bottom: 60px;
           line-height: 36px;
           text-align: left;
           letter-spacing: 0;
 
           h1 {
-            font-size: 20px;
+            font-size: 28px;
             font-style: normal;
             font-weight: 900;
             line-height: 36px;
@@ -276,6 +271,7 @@ onMounted(() => {
           }
 
           h2 {
+            max-width: 458px;
             font-size: 18px;
             font-style: normal;
             font-weight: 400;

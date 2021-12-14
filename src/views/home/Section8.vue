@@ -7,9 +7,7 @@
         <h1> from the physical world to the Metaverse. </h1>
       </div>
       <div class="text">
-        <p>
-          Arche Network is Committed to building a user-friendly decentralized marketplace with a DPaaS service architecture that helps more people understand what it’s all about, why it’s so exciting, and how you can play it and earn from it - either as a developer or as a user.
-        </p>
+        Arche Network is Committed to building a user-friendly decentralized marketplace with a DPaaS service architecture that helps more people understand what it’s all about, why it’s so exciting, and how you can play it and earn from it - either as a developer or as a user.
       </div>
       <div class="line"></div>
     </div>
@@ -50,17 +48,18 @@ onMounted(() => {
     padding: 120px 120px 0 120px;
 
     .title {
-      max-width: 900px;
+      max-width: 1065px;
       font-size: 36px;
       font-style: normal;
       font-weight: 900;
       line-height: 56px;
       text-align: center;
+      text-transform: uppercase;
       letter-spacing: 0;
     }
 
     .text {
-      max-width: 650px;
+      max-width: 835px;
       margin-top: 35px;
       margin-bottom: 40px;
       font-size: 18px;
@@ -69,6 +68,7 @@ onMounted(() => {
       line-height: 36px;
       text-align: center;
       letter-spacing: 0;
+      opacity: .6;
     }
 
     .line {

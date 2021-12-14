@@ -25,7 +25,7 @@
         <div class="line"></div>
         <div class="number-card">
           <div class="number">03</div>
-          <h1 class="title">Teach to Win</h1>
+          <h1 class="title">Cooperate to win</h1>
           <p class="desc">Share your understanding of the games, help more players with your strategics and win your prizes! </p>
         </div>
       </div>
@@ -175,7 +175,7 @@ onMounted(() => {
       .box {
         box-sizing: border-box;
         width: 300%;
-        height: 20%;
+        // height: 20%;
         padding: 1vh 0;
 
         .img {
@@ -184,6 +184,8 @@ onMounted(() => {
       }
 
       .box1 {
+        height: 21.9%;
+
         .img {
           background: url('/images/home/section2_img_1.png') repeat-x;
           background-size: auto 100%;
@@ -191,6 +193,8 @@ onMounted(() => {
       }
 
       .box2 {
+        height: 17.6%;
+
         .img {
           background: url('/images/home/section2_img_2.png') repeat-x;
           background-size: auto 100%;
@@ -198,6 +202,8 @@ onMounted(() => {
       }
 
       .box3 {
+        height: 21%;
+
         .img {
           background: url('/images/home/section2_img_3.png') repeat-x;
           background-size: auto 100%;
@@ -205,6 +211,8 @@ onMounted(() => {
       }
 
       .box4 {
+        height: 21.9%;
+
         .img {
           background: url('/images/home/section2_img_4.png') repeat-x;
           background-size: auto 100%;
@@ -212,6 +220,8 @@ onMounted(() => {
       }
 
       .box5 {
+        height: 17.6%;
+
         .img {
           background: url('/images/home/section2_img_5.png') repeat-x;
           background-size: auto 100%;

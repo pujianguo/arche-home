@@ -19,7 +19,11 @@
         </div>
         <div class="number-card">
           <h1 class="title">A Smart Way to Enter Metaverse</h1>
-          <p class="desc">Explore the ultimate destination for trading, sharing, earning, and creating NFTs assets in Metaverse. </p>
+          <div class="desc">
+            <p>Arche is the ultimate destination for players in Metaverse.</p>
+            <p>Empower Players, Developers, and Guilds to</p>
+            <p>connect Web 2.0 to Web 3.0. </p>
+          </div>
           <div class="footer">
             <div class="footer-btn">
               <span class="text">Explore</span>
@@ -184,10 +188,13 @@ onMounted(() => {
         }
 
         .desc {
-          max-width: 441px;
-          margin: 0;
-          font-size: 22px;
-          line-height: 32px;
+          max-width: 770px;
+
+          p {
+            margin: 0;
+            font-size: 22px;
+            line-height: 32px;
+          }
         }
 
         .footer {

@@ -43,7 +43,7 @@ onMounted(() => {
     scrollTrigger: {
       trigger: '.home-section-6',
       start: 'top 90%',
-      end: 'center 10%',
+      end: 'bottom top',
       // markers: true,
       scrub: true,
       // pin: true,

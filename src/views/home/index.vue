@@ -73,7 +73,6 @@ import Section9 from './Section9.vue'
         margin-bottom: 5px;
 
         .text {
-          margin-right: 20px;
           font-family: 'Cindie Mono';
           font-size: 16px;
           font-style: normal;
@@ -86,6 +85,8 @@ import Section9 from './Section9.vue'
         .line {
           width: 100%;
           height: 1px;
+          margin-right: 20px;
+          margin-left: 20px;
           background: #fff;
         }
       }
@@ -111,7 +112,7 @@ import Section9 from './Section9.vue'
     .number-card {
       display: flex;
       flex-direction: column;
-      width: 420px;
+      max-width: 420px;
 
       .number {
         box-sizing: border-box;
@@ -235,12 +236,27 @@ import Section9 from './Section9.vue'
     }
   }
 
-  .iframe-content {
+  .iframe-wrap {
     position: absolute;
     top: 0;
-    z-index: -1;
     width: 50%;
     height: 100%;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      content: '';
+      background: transparent;
+    }
+
+    .iframe-content {
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 </style>

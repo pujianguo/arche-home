@@ -25,7 +25,9 @@
         </div>
       </div>
 
-      <iframe class="iframe-content" src="https://my.spline.design/archecoin-32464c6f27c84f65e1e55f794034d281/" frameborder="0"></iframe>
+      <div class="iframe-wrap">
+        <iframe class="iframe-content" src="https://my.spline.design/archecoin-32464c6f27c84f65e1e55f794034d281/" frameborder="0"></iframe>
+      </div>
     </div>
   </section>
 </template>
@@ -130,7 +132,7 @@ onMounted(() => {
       }
     }
 
-    .iframe-content {
+    .iframe-wrap {
       right: 0;
       z-index: -1;
       width: 50%;
