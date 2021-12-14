@@ -64,6 +64,8 @@ import { ref } from 'vue'
 import config from '@/config'
 
 const investorList = [
+  { id: 19, imgSrc: 'images/home/logo-ivc.png', class: 'ae-3' },
+  { id: 20, imgSrc: 'images/home/logo-ygg.png', class: 'ae-3' },
   { id: 1, imgSrc: config.imgUrl + 'inverstor-logo-01.png', class: 'ae-3' },
   { id: 2, imgSrc: config.imgUrl + 'inverstor-logo-02.png', class: 'ae-6' },
   { id: 3, imgSrc: config.imgUrl + 'inverstor-logo-03.png', class: 'ae-7' },
@@ -73,10 +75,10 @@ const investorList = [
   { id: 7, imgSrc: config.imgUrl + 'inverstor-logo-07.png', class: 'ae-7' },
   { id: 8, imgSrc: config.imgUrl + 'inverstor-logo-08.png', class: 'ae-8' },
   { id: 9, imgSrc: config.imgUrl + 'inverstor-logo-09.png', class: 'ae-4' },
-  { id: 10, imgSrc: config.imgUrl + 'inverstor-logo-10.png', class: 'ae-5' },
+  // { id: 10, imgSrc: config.imgUrl + 'inverstor-logo-10.png', class: 'ae-5' },
   { id: 11, imgSrc: config.imgUrl + 'inverstor-logo-11.png', class: 'ae-5' },
   { id: 12, imgSrc: config.imgUrl + 'inverstor-logo-12.png', class: 'ae-5' },
-  { id: 13, imgSrc: config.imgUrl + 'inverstor-logo-13.png', class: 'ae-5' },
+  // { id: 13, imgSrc: config.imgUrl + 'inverstor-logo-13.png', class: 'ae-5' },
   { id: 14, imgSrc: config.imgUrl + 'inverstor-logo-14.png', class: 'ae-5' },
   { id: 15, imgSrc: config.imgUrl + 'inverstor-logo-15.png', class: 'ae-5' },
   { id: 16, imgSrc: config.imgUrl + 'inverstor-logo-16.png', class: 'ae-5' },
