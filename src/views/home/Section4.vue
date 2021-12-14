@@ -2,7 +2,9 @@
   <section class="home-section-4">
     <div class="container">
       <div class="iframe-wrap">
-        <iframe class="iframe-content" src="https://my.spline.design/aga-a262187371bf78740dbd5fedcd367b3c/" frameborder="0"></iframe>
+        <div class="iframe-content">
+          <iframe class="iframe" src="https://my.spline.design/aga-a262187371bf78740dbd5fedcd367b3c/" frameborder="0"></iframe>
+        </div>
       </div>
 
       <div class="text-content text-content-right">

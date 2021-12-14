@@ -68,13 +68,7 @@
             </div>
           </div>
           <div class="item item-7"></div>
-          <div class="item item-8">
-            <div class="item-content">
-              <a-svg class="text-p" name="text_decentralized-protocol-as-a-service"></a-svg>
-              <a-svg class="text-dp" name="text_dp"></a-svg>
-              <a-svg class="text-aas" name="text_aas"></a-svg>
-            </div>
-          </div>
+          <div class="item item-8"></div>
           <div class="item item-9"></div>
           <div class="item item-10"></div>
           <div class="item item-11">
@@ -224,7 +218,6 @@
           position: relative;
           box-sizing: border-box;
           overflow: hidden;
-          font-size: 2em;
           text-align: center;
           background: #101113;
           transition: all .5s linear;
@@ -251,14 +244,14 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            padding: 20px;
+            padding: 1vw;
 
             .title {
               flex: 1;
 
               h1 {
                 font-family: Cindie Mono;
-                font-size: 32px;
+                font-size: 24px;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 42px;
@@ -274,7 +267,7 @@
               line-height: 24px;
               text-align: left;
               letter-spacing: 0;
-              opacity: 0;
+              // opacity: 0;
               transition: all .5s linear;
             }
 
@@ -284,13 +277,14 @@
               width: 100%;
               height: 26px;
               margin-top: 9px;
+              white-space: nowrap;
               cursor: pointer;
-              opacity: 0;
+              // opacity: 0;
               transition: all .5s linear;
 
               span {
                 font-family: Cindie Mono;
-                font-size: 16px;
+                font-size: 14px;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 26px;
@@ -369,47 +363,21 @@
 
         .item-8 {
           grid-area: h;
+          $padding: 1vw;
 
           .item-content {
-            top: 20px;
-            right: 20px;
-            bottom: 20px;
-            left: 20px;
-
-            .text-p {
-              position: absolute;
-              top: 0;
-              left: 0;
-              z-index: 1;
-              width: 292px;
-              height: 121px;
-            }
-
-            .text-dp {
-              position: absolute;
-              bottom: 60px;
-              left: 0;
-              z-index: 1;
-              width: 199px;
-              height: 75px;
-            }
-
-            .text-aas {
-              position: absolute;
-              right: 0;
-              bottom: 0;
-              z-index: 1;
-              width: 308px;
-              height: 74px;
-            }
+            top: $padding;
+            right: $padding;
+            bottom: $padding;
+            left: $padding;
           }
 
           &::before {
-            top: 20px;
-            right: 20px;
-            bottom: 20px;
-            left: 20px;
-            background: url('/images/home/section7_item8_bg.png') no-repeat center / cover;
+            top: $padding;
+            right: $padding;
+            bottom: $padding;
+            left: $padding;
+            background: url('/images/home/section7_item8_bg.svg') no-repeat center / 100%;
           }
 
           &:hover {

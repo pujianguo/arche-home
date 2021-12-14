@@ -239,6 +239,9 @@ import Section9 from './Section9.vue'
   .iframe-wrap {
     position: absolute;
     top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 50%;
     height: 100%;
 
@@ -254,8 +257,17 @@ import Section9 from './Section9.vue'
     }
 
     .iframe-content {
+      position: relative;
       width: 100%;
-      height: 100%;
+      padding-top: 100%;
+
+      .iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 }
