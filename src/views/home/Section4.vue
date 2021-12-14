@@ -112,13 +112,13 @@ useInitGsap(initGsap)
 
         .number {
           transition: .5s;
-          transform: translateX(-300px) rotate(-720deg);
+          // transform: translateX(-300px) rotate(-720deg);
         }
 
         .title {
           max-width: 360px;
           transition: .5s;
-          transform: translateX(100%);
+          // transform: translateX(100%);
         }
 
         .desc {

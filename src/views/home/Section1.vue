@@ -180,6 +180,7 @@
 
       .number-card {
         width: auto;
+        max-width: 770px;
         margin-top: 7px;
 
         .title {
