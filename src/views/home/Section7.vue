@@ -282,7 +282,7 @@
               line-height: 24px;
               text-align: left;
               letter-spacing: 0;
-              // opacity: 0;
+              opacity: 0;
               transition: all .5s linear;
             }
 
@@ -294,7 +294,7 @@
               margin-top: 9px;
               white-space: nowrap;
               cursor: pointer;
-              // opacity: 0;
+              opacity: 0;
               transition: all .5s linear;
 
               span {

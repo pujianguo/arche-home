@@ -1,10 +1,10 @@
 <template>
   <section class="home-section-3">
-    <div class="bg-box">
+    <!-- <div class="bg-box">
       <div class="bg-1"></div>
       <div class="bg-2"></div>
       <div class="bg-3"></div>
-    </div>
+    </div> -->
     <div class="container">
       <div class="text-content">
         <div class="title-card">
@@ -53,12 +53,23 @@ const initGsap = (gsap, ScrollTrigger) => {
   })
     .from('.home-section-3 .line-box', { x: 505 }, 0)
     .from('.home-section-3 .title-box', { rotationX: 90 })
+
+  gsap.utils.toArray('.home-section-3 .container .number-card').forEach((box, i) => {
+    ScrollTrigger.create({
+      trigger: box,
+      toggleClass: 'active',
+      start: 'top 90%',
+      end: 'top top',
+      // markers: true,
+    })
+  })
 }
 useInitGsap(initGsap)
 
 </script>
 
 <style lang="scss">
+
 .home-section-3 {
   position: relative;
   z-index: 30;
@@ -93,7 +104,7 @@ useInitGsap(initGsap)
       width: 836px;
       height: 836px;
       background: #fa00ff;
-      filter: blur(989.041px);
+      // filter: blur(989.041px);
     }
 
     .bg-2 {
@@ -103,7 +114,7 @@ useInitGsap(initGsap)
       width: 560px;
       height: 560px;
       background: #012fd2;
-      filter: blur(989.041px);
+      // filter: blur(989.041px);
     }
 
     .bg-3 {
@@ -113,7 +124,7 @@ useInitGsap(initGsap)
       width: 514px;
       height: 514px;
       background: #00ff47;
-      filter: blur(989.041px);
+      // filter: blur(989.041px);
     }
   }
 

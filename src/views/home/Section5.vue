@@ -1,10 +1,10 @@
 <template>
   <section class="home-section-5">
-    <div class="bg-box">
+    <!-- <div class="bg-box">
       <div class="bg-1"></div>
       <div class="bg-2"></div>
       <div class="bg-3"></div>
-    </div>
+    </div> -->
     <div class="container">
       <div class="text-content">
         <div class="title-card">
@@ -27,7 +27,6 @@
 
       <div class="iframe-wrap">
         <div class="iframe-content">
-          <!-- <iframe class="iframe" src="https://my.spline.design/archecoin-32464c6f27c84f65e1e55f794034d281/" frameborder="0"></iframe> -->
           <iframe class="iframe" src="/iframe/archecoin.html" frameborder="0"></iframe>
         </div>
       </div>
@@ -74,7 +73,7 @@
       width: 637px;
       height: 637px;
       background: #012fd2;
-      filter: blur(683.594px);
+      // filter: blur(683.594px);
     }
 
     .bg-2 {
@@ -84,7 +83,7 @@
       width: 370px;
       height: 370px;
       background: #0ff;
-      filter: blur(683.594px);
+      // filter: blur(683.594px);
     }
 
     .bg-3 {
@@ -94,7 +93,7 @@
       width: 295px;
       height: 295px;
       background: #00ff47;
-      filter: blur(683.594px);
+      // filter: blur(683.594px);
     }
   }
 
