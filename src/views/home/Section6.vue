@@ -19,8 +19,8 @@
 
         <div class="number-card">
           <div class="number">07</div>
-          <h1 class="title">Stake Arche to earn the APY</h1>
-          <p class="desc">You could gain the right to vote in ArcheDAO for management and participate in the collective building of decentralized governance of Arche Network.</p>
+          <h1 class="title">Custom Your Store in Metaverse</h1>
+          <p class="desc">Empower your project with Arche's DPaaS solution and build your homepage in Metaverse.</p>
           <div class="footer">
             <div class="footer-btn disable">
               <span class="text">coming soon</span>
