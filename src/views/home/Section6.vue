@@ -131,7 +131,7 @@ useInitGsap(initGsap)
         width: 507px;
 
         .title {
-          width: 401px;
+          width: 451px;
         }
       }
     }
