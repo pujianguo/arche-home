@@ -62,9 +62,6 @@
 <script setup>
 import { ref } from 'vue'
 import config from '@/config'
-import gsap from 'gsap'
-import ScrollTrigger from 'gsap/ScrollTrigger'
-gsap.registerPlugin(ScrollTrigger)
 
 const investorList = [
   { id: 1, imgSrc: config.imgUrl + 'inverstor-logo-01.png', class: 'ae-3' },
@@ -120,21 +117,6 @@ const socialList = [
   },
 ]
 
-// onMounted(() => {
-//   gsap.timeline({
-//     scrollTrigger: {
-//       trigger: '.home-section-9',
-//       start: 'top 80%',
-//       end: 'top top',
-//       // markers: true,
-//       scrub: true,
-//     },
-//   })
-//     .from('.home-section-9 .content-arche .box-1', { x: innerWidth * -1 }, '>')
-//     .from('.home-section-9 .content-arche .box-2', { x: innerWidth * 1 }, '<')
-//     .from('.home-section-9 .content-arche .box-3', { x: innerWidth * -1 }, '<')
-//     .from('.home-section-9 .content-arche .box-4', { x: innerWidth * 1 }, '<')
-// })
 </script>
 
 <style lang="scss">

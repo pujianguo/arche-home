@@ -15,12 +15,9 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
-import gsap from 'gsap'
-import ScrollTrigger from 'gsap/ScrollTrigger'
-gsap.registerPlugin(ScrollTrigger)
+import useInitGsap from '@/hooks/useInitGsap'
 
-onMounted(() => {
+const initGsap = (gsap, ScrollTrigger) => {
   gsap.timeline({
     scrollTrigger: {
       trigger: '.home-section-8',
@@ -32,7 +29,9 @@ onMounted(() => {
     .from('.home-section-8 .title', { x: innerWidth * -1 })
     .from('.home-section-8 .text', { x: innerWidth * 1 })
     .from('.home-section-8 .line', { y: innerHeight * 1, scale: 0 })
-})
+}
+useInitGsap(initGsap)
+
 </script>
 
 <style lang="scss">

@@ -39,12 +39,9 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
-import gsap from 'gsap'
-import ScrollTrigger from 'gsap/ScrollTrigger'
-gsap.registerPlugin(ScrollTrigger)
+import useInitGsap from '@/hooks/useInitGsap'
 
-onMounted(() => {
+const initGsap = (gsap, ScrollTrigger) => {
   gsap.timeline({
     scrollTrigger: {
       trigger: '.home-section-3',
@@ -56,17 +53,9 @@ onMounted(() => {
   })
     .from('.home-section-3 .line-box', { x: 505 }, 0)
     .from('.home-section-3 .title-box', { rotationX: 90 })
+}
+useInitGsap(initGsap)
 
-  gsap.utils.toArray('.home-section-3 .container .number-card').forEach((box, i) => {
-    ScrollTrigger.create({
-      trigger: box,
-      toggleClass: 'active',
-      start: 'top 90%',
-      end: 'top top',
-      // markers: true,
-    })
-  })
-})
 </script>
 
 <style lang="scss">

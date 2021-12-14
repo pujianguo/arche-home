@@ -115,6 +115,21 @@
 </template>
 
 <script setup>
+// import useInitGsap from '@/hooks/useInitGsap'
+//
+// const initGsap = (gsap, ScrollTrigger) => {
+//   gsap.timeline({
+//     scrollTrigger: {
+//       trigger: '.home-section-7',
+//       start: 'top 90%',
+//       end: 'bottom top',
+//       // markers: true,
+//       scrub: true,
+//       // pin: true,
+//     },
+//   })
+// }
+// useInitGsap(initGsap)
 
 </script>
 
@@ -261,7 +276,7 @@
             }
 
             p {
-              font-size: 16px;
+              font-size: 14px;
               font-style: normal;
               font-weight: 400;
               line-height: 24px;
@@ -284,7 +299,7 @@
 
               span {
                 font-family: Cindie Mono;
-                font-size: 14px;
+                font-size: 13px;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 26px;
