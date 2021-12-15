@@ -3,7 +3,7 @@ install:
 	rm -rf yarn.lock
 	yarn install
 
-local-release:
+build-release:
 	rm -rf dist
 	yarn build:release
 
