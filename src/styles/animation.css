@@ -1,0 +1,1018 @@
+
+/***
+ *                                       _           _   ______ _                           _
+ *         /\         ( )               | |         | | |  ___/| |                         | |
+ *        /  \   _ __  _ _ __ ___   __ _| |_ ___  __| | | |___ | | ___ _ __ ___   ___ _ __ | |_ ___
+ *       / /\ \ | '_ \| | '_ ` _ \ / _` | __/ _ \/ _` | |  __/ | |/ _ \ '_ ` _ \ / _ \ '_ \| __/ __/
+ *      / ____ \| | | | | | | | | | (_| | ||  __/ (_| | | |____| |  __/ | | | | |  __/ | | | |_\__ \
+ *     /_/    \_\_| |_|_|_| |_| |_|\__,_|\__\___/\__,_| |_____/|_|\___/_| |_| |_|\___/_| |_|\__|___/
+ *
+ * anim
+ */
+.animated [class*=ae-]:not(.done) {
+  transition-timing-function: cubic-bezier(.25, .1, .2, 1);
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Speed */
+.animated.fast .animate [class*=ae-]:not(.done),
+.animated.fast .animate [class*=ae-]:not(.done),
+.animated.animate .fast [class*=ae-]:not(.done),
+.animated.animate [class*=ae-].fast:not(.done) {
+  transition-duration: 700ms;
+}
+
+.animated .animate [class*=ae-]:not(.done),
+.animated.animate [class*=ae-]:not(.done) {
+  transition-duration: 800ms;
+}
+
+.animated.slow .animate [class*=ae-]:not(.done),
+.animated .animate.slow [class*=ae-]:not(.done),
+.animated .animate .slow [class*=ae-]:not(.done),
+.animated .animate [class*=ae-].slow:not(.done) {
+  transition-duration: 1000ms;
+}
+
+/* Delays */
+.animated .animate .ae-1:not(.done),
+.animated.animate .ae-1:not(.done) {
+  transition-delay: 10ms;
+}
+
+.animated .animate .ae-2:not(.done),
+.animated.animate .ae-2:not(.done) {
+  transition-delay: 160ms;
+}
+
+.animated .animate .ae-3:not(.done),
+.animated.animate .ae-3:not(.done) {
+  transition-delay: 310ms;
+}
+
+.animated .animate .ae-4:not(.done),
+.animated.animate .ae-4:not(.done) {
+  transition-delay: 460ms;
+}
+
+.animated .animate .ae-5:not(.done),
+.animated.animate .ae-5:not(.done) {
+  transition-delay: 610ms;
+}
+
+.animated .animate .ae-6:not(.done),
+.animated.animate .ae-6:not(.done) {
+  transition-delay: 760ms;
+}
+
+.animated .animate .ae-7:not(.done),
+.animated.animate .ae-7:not(.done) {
+  transition-delay: 910ms;
+}
+
+.animated .animate .ae-8:not(.done),
+.animated.animate .ae-8:not(.done) {
+  transition-delay: 1060ms;
+}
+
+.animated .animate .ae-9:not(.done),
+.animated.animate .ae-9:not(.done) {
+  transition-delay: 1210ms;
+}
+
+.animated .animate .ae-10:not(.done),
+.animated.animate .ae-10:not(.done) {
+  transition-delay: 1360ms;
+}
+
+.animated.fast .animate .ae-1:not(.done),
+.animated.fast.animate .ae-1:not(.done),
+.animated.animate .ae-1.fast:not(.done),
+.animated.animate .fast .ae-1:not(.done) {
+  transition-delay: 10ms;
+}
+
+.animated.fast .animate .ae-2:not(.done),
+.animated.fast.animate .ae-2:not(.done),
+.animated.animate .ae-2.fast:not(.done),
+.animated.animate .fast .ae-2:not(.done) {
+  transition-delay: 110ms;
+}
+
+.animated.fast .animate .ae-3:not(.done),
+.animated.fast.animate .ae-3:not(.done),
+.animated.animate .ae-3.fast:not(.done),
+.animated.animate .fast .ae-3:not(.done) {
+  transition-delay: 210ms;
+}
+
+.animated.fast .animate .ae-4:not(.done),
+.animated.fast.animate .ae-4:not(.done),
+.animated.animate .ae-4.fast:not(.done),
+.animated.animate .fast .ae-4:not(.done) {
+  transition-delay: 310ms;
+}
+
+.animated.fast .animate .ae-5:not(.done),
+.animated.fast.animate .ae-5:not(.done),
+.animated.animate .ae-5.fast:not(.done),
+.animated.animate .fast .ae-5:not(.done) {
+  transition-delay: 410ms;
+}
+
+.animated.fast .animate .ae-6:not(.done),
+.animated.fast.animate .ae-6:not(.done),
+.animated.animate .ae-6.fast:not(.done),
+.animated.animate .fast .ae-6:not(.done) {
+  transition-delay: 510ms;
+}
+
+.animated.fast .animate .ae-7:not(.done),
+.animated.fast.animate .ae-7:not(.done),
+.animated.animate .ae-7.fast:not(.done),
+.animated.animate .fast .ae-7:not(.done) {
+  transition-delay: 610ms;
+}
+
+.animated.fast .animate .ae-8:not(.done),
+.animated.fast.animate .ae-8:not(.done),
+.animated.animate .ae-8.fast:not(.done),
+.animated.animate .fast .ae-8:not(.done) {
+  transition-delay: 710ms;
+}
+
+.animated.fast .animate .ae-9:not(.done),
+.animated.fast.animate .ae-9:not(.done),
+.animated.animate .ae-9.fast:not(.done),
+.animated.animate .fast .ae-9:not(.done) {
+  transition-delay: 810ms;
+}
+
+.animated.fast .animate .ae-10:not(.done),
+.animated.fast.animate .ae-10:not(.done),
+.animated.animate .ae-10.fast:not(.done),
+.animated.animate .fast .ae-10:not(.done) {
+  transition-delay: 910ms;
+}
+
+.animated.slow .animate .ae-1:not(.done),
+.animated.slow.animate .ae-1:not(.done),
+.animated.animate .ae-1.slow:not(.done),
+.animated.animate .slow .ae-1:not(.done) {
+  transition-delay: 10ms;
+}
+
+.animated.slow .animate .ae-2:not(.done),
+.animated.slow.animate .ae-2:not(.done),
+.animated.animate .ae-2.slow:not(.done),
+.animated.animate .slow .ae-2:not(.done) {
+  transition-delay: 210ms;
+}
+
+.animated.slow .animate .ae-3:not(.done),
+.animated.slow.animate .ae-3:not(.done),
+.animated.animate .ae-3.slow:not(.done),
+.animated.animate .slow .ae-3:not(.done) {
+  transition-delay: 410ms;
+}
+
+.animated.slow .animate .ae-4:not(.done),
+.animated.slow.animate .ae-4:not(.done),
+.animated.animate .ae-4.slow:not(.done),
+.animated.animate .slow .ae-4:not(.done) {
+  transition-delay: 610ms;
+}
+
+.animated.slow .animate .ae-5:not(.done),
+.animated.slow.animate .ae-5:not(.done),
+.animated.animate .ae-5.slow:not(.done),
+.animated.animate .slow .ae-5:not(.done) {
+  transition-delay: 810ms;
+}
+
+.animated.slow .animate .ae-6:not(.done),
+.animated.slow.animate .ae-6:not(.done),
+.animated.animate .ae-6.slow:not(.done),
+.animated.animate .slow .ae-6:not(.done) {
+  transition-delay: 1010ms;
+}
+
+.animated.slow .animate .ae-7:not(.done),
+.animated.slow.animate .ae-7:not(.done),
+.animated.animate .ae-7.slow:not(.done),
+.animated.animate .slow .ae-7:not(.done) {
+  transition-delay: 1210ms;
+}
+
+.animated.slow .animate .ae-8:not(.done),
+.animated.slow.animate .ae-8:not(.done),
+.animated.animate .ae-8.slow:not(.done),
+.animated.animate .slow .ae-8:not(.done) {
+  transition-delay: 1410ms;
+}
+
+.animated.slow .animate .ae-9:not(.done),
+.animated.slow.animate .ae-9:not(.done),
+.animated.animate .ae-9.slow:not(.done),
+.animated.animate .slow .ae-9:not(.done) {
+  transition-delay: 1610ms;
+}
+
+.animated.slow .animate .ae-10:not(.done),
+.animated.slow.animate .ae-10:not(.done),
+.animated.animate .ae-10.slow:not(.done),
+.animated.animate .slow .ae-10:not(.done) {
+  transition-delay: 1810ms;
+}
+
+/* Directions */
+.animated:not(.animateOnEvent) [class*=ae-]:not(.done),
+.animated:not(.animateOnEvent) .fromBottom [class*=ae-]:not(.done),
+.animated:not(.animateOnEvent).fromBottom [class*=ae-]:not(.done),
+.slides.animated:not(.animateOnEvent) [class*=ae-].fromBottom:not(.done),
+.popup.animated:not(.animateOnEvent) [class*=ae-].fromBottom:not(.done) {
+  visibility: hidden;
+  opacity: 0;
+  transform: translate3d(0, 50px, 0);
+}
+
+.animated .fromTop [class*=ae-]:not(.done),
+.animated.fromTop [class*=ae-]:not(.done),
+.slides.animated [class*=ae-].fromTop:not(.done),
+.popup.animated [class*=ae-].fromTop:not(.done) {
+  transform: translate3d(0, -50px, 0);
+}
+
+.animated .fromLeft [class*=ae-]:not(.done),
+.animated.fromLeft [class*=ae-]:not(.done),
+.slides.animated [class*=ae-].fromLeft:not(.done),
+.popup.animated [class*=ae-].fromLeft:not(.done) {
+  transform: translate3d(-50px, 0, 0);
+}
+
+.animated .fromRight [class*=ae-]:not(.done),
+.animated.fromRight [class*=ae-]:not(.done),
+.slides.animated [class*=ae-].fromRight:not(.done),
+.popup.animated [class*=ae-].fromRight:not(.done) {
+  transform: translate3d(50px, 0, 0);
+}
+
+.animated .fromCenter [class*=ae-]:not(.done),
+.animated.fromCenter [class*=ae-]:not(.done),
+.slides.animated [class*=ae-].fromCenter:not(.done),
+.popup.animated [class*=ae-].fromCenter:not(.done) {
+  transform: scale(.9) translate3d(0, 0, 0);
+}
+
+.animated .fromAbove [class*=ae-]:not(.done),
+.animated.fromAbove [class*=ae-]:not(.done),
+.slides.animated [class*=ae-].fromAbove:not(.done),
+.popup.animated [class*=ae-].fromAbove:not(.done) {
+  transform: scale(1.1) translate3d(0, 0, 0);
+}
+
+.animated .fromBottomLeft [class*=ae-]:not(.done),
+.animated.fromBottomLeft [class*=ae-]:not(.done),
+.slides.animated [class*=ae-].fromBottomLeft:not(.done),
+.popup.animated [class*=ae-].fromBottomLeft:not(.done) {
+  transform: translate3d(-50px, 50px, 0);
+}
+
+.animated .fromTopLeft [class*=ae-]:not(.done),
+.animated.fromTopLeft [class*=ae-]:not(.done),
+.slides.animated [class*=ae-].fromTopLeft:not(.done),
+.popup.animated [class*=ae-].fromTopLeft:not(.done) {
+  transform: translate3d(-50px, -50px, 0);
+}
+
+.animated .fromBottomRight [class*=ae-]:not(.done),
+.animated.fromBottomRight [class*=ae-]:not(.done),
+.slides.animated [class*=ae-].fromBottomRight:not(.done),
+.popup.animated [class*=ae-].fromBottomRight:not(.done) {
+  transform: translate3d(50px, 50px, 0);
+}
+
+.animated .fromTopRight [class*=ae-]:not(.done),
+.animated.fromTopRight [class*=ae-]:not(.done),
+.slides.animated [class*=ae-].fromTopRight:not(.done),
+.popup.animated [class*=ae-].fromTopRight:not(.done) {
+  transform: translate3d(50px, -50px, 0);
+}
+
+.animated .fadeIn [class*=ae-]:not(.done),
+.animated.fadeIn [class*=ae-]:not(.done),
+.slides.animated [class*=ae-].fadeIn:not(.done),
+.popup.animated [class*=ae-].fadeIn:not(.done) {
+  transform: scale(1) translate3d(0, 0, 0);
+}
+
+.animated .fromBlur [class*=ae-]:not(.done),
+.animated.fromBlur [class*=ae-]:not(.done),
+.slides.animated [class*=ae-].fromBlur:not(.done),
+.popup.animated [class*=ae-].fromBlur:not(.done) {
+  filter: blur(10px);
+  transform: scale(1) translate3d(0, 0, 0);
+}
+
+/* Final Step */
+.slides.animated .animate.active [class*=ae-]:not(.done),
+.popup.animated .animate.active [class*=ae-]:not(.done),
+.slides .animated.animate.active [class*=ae-]:not(.done) {
+  visibility: visible;
+  filter: none;
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* Animated on scroll */
+.animateOnEvent {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* hide elements */
+.animateOnEvent [class*=ae-]:not(.done):not(.do) {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* Speed */
+.animateOnEvent [class*=ae-].do {
+  visibility: visible;
+  animation-duration: 800ms;
+  animation-fill-mode: backwards;
+}
+
+.animateOnEvent.fast [class*=ae-].do,
+.animateOnEvent .fast [class*=ae-].do,
+.animateOnEvent [class*=ae-].do.fast {
+  animation-duration: 700ms;
+}
+
+.animateOnEvent.slow [class*=ae-].do,
+.animateOnEvent .slow [class*=ae-].do,
+.animateOnEvent [class*=ae-].do.slow {
+  animation-duration: 1000ms;
+}
+
+/* Directions */
+.animateOnEvent [class*=ae-].do {
+  animation-name: fromBottom;
+}
+
+/* generate directions */
+.animateOnEvent.fromBottom [class*=ae-].do,
+.animateOnEvent .fromBottom [class*=ae-].do,
+.animateOnEvent [class*=ae-].do.fromBottom {
+  animation-name: fromBottom;
+}
+
+.animateOnEvent.fromTop [class*=ae-].do,
+.animateOnEvent .fromTop [class*=ae-].do,
+.animateOnEvent [class*=ae-].do.fromTop {
+  animation-name: fromTop;
+}
+
+.animateOnEvent.fromLeft [class*=ae-].do,
+.animateOnEvent .fromLeft [class*=ae-].do,
+.animateOnEvent [class*=ae-].do.fromLeft {
+  animation-name: fromLeft;
+}
+
+.animateOnEvent.fromRight [class*=ae-].do,
+.animateOnEvent .fromRight [class*=ae-].do,
+.animateOnEvent [class*=ae-].do.fromRight {
+  animation-name: fromRight;
+}
+
+.animateOnEvent.fromCenter [class*=ae-].do,
+.animateOnEvent .fromCenter [class*=ae-].do,
+.animateOnEvent [class*=ae-].do.fromCenter {
+  animation-name: fromCenter;
+}
+
+.animateOnEvent.fromAbove [class*=ae-].do,
+.animateOnEvent .fromAbove [class*=ae-].do,
+.animateOnEvent [class*=ae-].do.fromAbove {
+  animation-name: fromAbove;
+}
+
+.animateOnEvent.fromBottomLeft [class*=ae-].do,
+.animateOnEvent .fromBottomLeft [class*=ae-].do,
+.animateOnEvent [class*=ae-].do.fromBottomLeft {
+  animation-name: fromBottomLeft;
+}
+
+.animateOnEvent.fromTopLeft [class*=ae-].do,
+.animateOnEvent .fromTopLeft [class*=ae-].do,
+.animateOnEvent [class*=ae-].do.fromTopLeft {
+  animation-name: fromTopLeft;
+}
+
+.animateOnEvent.fromBottomRight [class*=ae-].do,
+.animateOnEvent .fromBottomRight [class*=ae-].do,
+.animateOnEvent [class*=ae-].do.fromBottomRight {
+  animation-name: fromBottomRight;
+}
+
+.animateOnEvent.fromTopRight [class*=ae-].do,
+.animateOnEvent .fromTopRight [class*=ae-].do,
+.animateOnEvent [class*=ae-].do.fromTopRight {
+  animation-name: fromTopRight;
+}
+
+.animateOnEvent.fadeIn [class*=ae-].do,
+.animateOnEvent .fadeIn [class*=ae-].do,
+.animateOnEvent [class*=ae-].do.fadeIn {
+  animation-name: fadeIn;
+}
+
+.animateOnEvent.fromBlur [class*=ae-].do,
+.animateOnEvent .fromBlur [class*=ae-].do,
+.animateOnEvent [class*=ae-].do.fromBlur {
+  animation-name: fromBlur;
+}
+
+@keyframes fromBottom {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 50px, 0);
+  }
+}
+
+@keyframes fromTop {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -50px, 0);
+  }
+}
+
+@keyframes fromLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-25px, 0, 0);
+  }
+}
+
+@keyframes fromRight {
+  from {
+    opacity: 0;
+    transform: translate3d(25px, 0, 0);
+  }
+}
+
+@keyframes fromCenter {
+  from {
+    opacity: 0;
+    transform: scale(.9) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fromAbove {
+  from {
+    opacity: 0;
+    transform: scale(1.1) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fromBottomLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-50px, 50px, 0);
+  }
+}
+
+@keyframes fromTopLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-50px, -50px, 0);
+  }
+}
+
+@keyframes fromBottomRight {
+  from {
+    opacity: 0;
+    transform: translate3d(50px, 50px, 0);
+  }
+}
+
+@keyframes fromTopRight {
+  from {
+    opacity: 0;
+    transform: translate3d(50px, -50px, 0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fromBlur {
+  from {
+    filter: blur(10px);
+    opacity: 0;
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+}
+
+/* Delays */
+.animateOnEvent .ae-1 {
+  animation-delay: 10ms;
+}
+
+.animateOnEvent .ae-2 {
+  animation-delay: 160ms;
+}
+
+.animateOnEvent .ae-3 {
+  animation-delay: 310ms;
+}
+
+.animateOnEvent .ae-4 {
+  animation-delay: 460ms;
+}
+
+.animateOnEvent .ae-5 {
+  animation-delay: 610ms;
+}
+
+.animateOnEvent .ae-6 {
+  animation-delay: 760ms;
+}
+
+.animateOnEvent .ae-7 {
+  animation-delay: 910ms;
+}
+
+.animateOnEvent .ae-8 {
+  animation-delay: 1060ms;
+}
+
+.animateOnEvent .ae-9 {
+  animation-delay: 1210ms;
+}
+
+.animateOnEvent .ae-10 {
+  animation-delay: 1360ms;
+}
+
+.animateOnEvent.fast .ae-1,
+.animateOnEvent .ae-1,
+.animateOnEvent .fast .ae-1.fast,
+.animateOnEvent .ae-1.fast {
+  animation-delay: 10ms;
+}
+
+.animateOnEvent.fast .ae-2,
+.animateOnEvent .ae-2,
+.animateOnEvent .fast .ae-2.fast,
+.animateOnEvent .ae-2.fast {
+  animation-delay: 110ms;
+}
+
+.animateOnEvent.fast .ae-3,
+.animateOnEvent .ae-3,
+.animateOnEvent .fast .ae-3.fast,
+.animateOnEvent .ae-3.fast {
+  animation-delay: 210ms;
+}
+
+.animateOnEvent.fast .ae-4,
+.animateOnEvent .ae-4,
+.animateOnEvent .fast .ae-4.fast,
+.animateOnEvent .ae-4.fast {
+  animation-delay: 310ms;
+}
+
+.animateOnEvent.fast .ae-5,
+.animateOnEvent .ae-5,
+.animateOnEvent .fast .ae-5.fast,
+.animateOnEvent .ae-5.fast {
+  animation-delay: 410ms;
+}
+
+.animateOnEvent.fast .ae-6,
+.animateOnEvent .ae-6,
+.animateOnEvent .fast .ae-6.fast,
+.animateOnEvent .ae-6.fast {
+  animation-delay: 510ms;
+}
+
+.animateOnEvent.fast .ae-7,
+.animateOnEvent .ae-7,
+.animateOnEvent .fast .ae-7.fast,
+.animateOnEvent .ae-7.fast {
+  animation-delay: 610ms;
+}
+
+.animateOnEvent.fast .ae-8,
+.animateOnEvent .ae-8,
+.animateOnEvent .fast .ae-8.fast,
+.animateOnEvent .ae-8.fast {
+  animation-delay: 710ms;
+}
+
+.animateOnEvent.fast .ae-9,
+.animateOnEvent .ae-9,
+.animateOnEvent .fast .ae-9.fast,
+.animateOnEvent .ae-9.fast {
+  animation-delay: 810ms;
+}
+
+.animateOnEvent.fast .ae-10,
+.animateOnEvent .ae-10,
+.animateOnEvent .fast .ae-10.fast,
+.animateOnEvent .ae-10.fast {
+  animation-delay: 910ms;
+}
+
+.animateOnEvent.slow .ae-1,
+.animateOnEvent .slow .ae-1,
+.animateOnEvent .ae-1.slow {
+  animation-delay: 10ms;
+}
+
+.animateOnEvent.slow .ae-2,
+.animateOnEvent .slow .ae-2,
+.animateOnEvent .ae-2.slow {
+  animation-delay: 210ms;
+}
+
+.animateOnEvent.slow .ae-3,
+.animateOnEvent .slow .ae-3,
+.animateOnEvent .ae-3.slow {
+  animation-delay: 410ms;
+}
+
+.animateOnEvent.slow .ae-4,
+.animateOnEvent .slow .ae-4,
+.animateOnEvent .ae-4.slow {
+  animation-delay: 610ms;
+}
+
+.animateOnEvent.slow .ae-5,
+.animateOnEvent .slow .ae-5,
+.animateOnEvent .ae-5.slow {
+  animation-delay: 810ms;
+}
+
+.animateOnEvent.slow .ae-6,
+.animateOnEvent .slow .ae-6,
+.animateOnEvent .ae-6.slow {
+  animation-delay: 1010ms;
+}
+
+.animateOnEvent.slow .ae-7,
+.animateOnEvent .slow .ae-7,
+.animateOnEvent .ae-7.slow {
+  animation-delay: 1210ms;
+}
+
+.animateOnEvent.slow .ae-8,
+.animateOnEvent .slow .ae-8,
+.animateOnEvent .ae-8.slow {
+  animation-delay: 1410ms;
+}
+
+.animateOnEvent.slow .ae-9,
+.animateOnEvent .slow .ae-9,
+.animateOnEvent .ae-9.slow {
+  animation-delay: 1610ms;
+}
+
+.animateOnEvent.slow .ae-10,
+.animateOnEvent .slow .ae-10,
+.animateOnEvent .ae-10.slow {
+  animation-delay: 1810ms;
+}
+
+.slides:not(.scroll) .rolling-element {
+  transition: 1s;
+  transform: translate3d(0, 0, 0);
+}
+
+.slides:not(.scroll).fast .rolling-element {
+  transition-duration: .7s;
+}
+
+.slides:not(.scroll).slow .rolling-element {
+  transition-duration: 1.4s;
+}
+
+.slides:not(.scroll) .slide.before .rolling-element {
+  transform: translateY(100%);
+}
+
+.slides:not(.scroll) .slide.before .rolling-element.pct-10 {
+  transform: translateY(10%);
+}
+
+.slides:not(.scroll) .slide.before .rolling-element.pct-20 {
+  transform: translateY(20%);
+}
+
+.slides:not(.scroll) .slide.before .rolling-element.pct-30 {
+  transform: translateY(30%);
+}
+
+.slides:not(.scroll) .slide.before .rolling-element.pct-40 {
+  transform: translateY(40%);
+}
+
+.slides:not(.scroll) .slide.before .rolling-element.pct-50 {
+  transform: translateY(50%);
+}
+
+.slides:not(.scroll) .slide.before .rolling-element.pct-60 {
+  transform: translateY(60%);
+}
+
+.slides:not(.scroll) .slide.before .rolling-element.pct-70 {
+  transform: translateY(70%);
+}
+
+.slides:not(.scroll) .slide.before .rolling-element.pct-80 {
+  transform: translateY(80%);
+}
+
+.slides:not(.scroll) .slide.before .rolling-element.pct-90 {
+  transform: translateY(90%);
+}
+
+.slides:not(.scroll) .slide.before .rolling-element.inverse {
+  transform: translateY(-100%);
+}
+
+.slides:not(.scroll) .slide.before .rolling-element.inverse.pct-10 {
+  transform: translateY(-10%);
+}
+
+.slides:not(.scroll) .slide.before .rolling-element.inverse.pct-20 {
+  transform: translateY(-20%);
+}
+
+.slides:not(.scroll) .slide.before .rolling-element.inverse.pct-30 {
+  transform: translateY(-30%);
+}
+
+.slides:not(.scroll) .slide.before .rolling-element.inverse.pct-40 {
+  transform: translateY(-40%);
+}
+
+.slides:not(.scroll) .slide.before .rolling-element.inverse.pct-50 {
+  transform: translateY(-50%);
+}
+
+.slides:not(.scroll) .slide.before .rolling-element.inverse.pct-60 {
+  transform: translateY(-60%);
+}
+
+.slides:not(.scroll) .slide.before .rolling-element.inverse.pct-70 {
+  transform: translateY(-70%);
+}
+
+.slides:not(.scroll) .slide.before .rolling-element.inverse.pct-80 {
+  transform: translateY(-80%);
+}
+
+.slides:not(.scroll) .slide.before .rolling-element.inverse.pct-90 {
+  transform: translateY(-90%);
+}
+
+.slides:not(.scroll) .slide.after .rolling-element {
+  transform: translateY(-100%);
+}
+
+.slides:not(.scroll) .slide.after .rolling-element.pct-10 {
+  transform: translateY(-10%);
+}
+
+.slides:not(.scroll) .slide.after .rolling-element.pct-20 {
+  transform: translateY(-20%);
+}
+
+.slides:not(.scroll) .slide.after .rolling-element.pct-30 {
+  transform: translateY(-30%);
+}
+
+.slides:not(.scroll) .slide.after .rolling-element.pct-40 {
+  transform: translateY(-40%);
+}
+
+.slides:not(.scroll) .slide.after .rolling-element.pct-50 {
+  transform: translateY(-50%);
+}
+
+.slides:not(.scroll) .slide.after .rolling-element.pct-60 {
+  transform: translateY(-60%);
+}
+
+.slides:not(.scroll) .slide.after .rolling-element.pct-70 {
+  transform: translateY(-70%);
+}
+
+.slides:not(.scroll) .slide.after .rolling-element.pct-80 {
+  transform: translateY(-80%);
+}
+
+.slides:not(.scroll) .slide.after .rolling-element.pct-90 {
+  transform: translateY(-90%);
+}
+
+.slides:not(.scroll) .slide.after .rolling-element.inverse {
+  transform: translateY(100%);
+}
+
+.slides:not(.scroll) .slide.after .rolling-element.inverse.pct-10 {
+  transform: translateY(10%);
+}
+
+.slides:not(.scroll) .slide.after .rolling-element.inverse.pct-20 {
+  transform: translateY(20%);
+}
+
+.slides:not(.scroll) .slide.after .rolling-element.inverse.pct-30 {
+  transform: translateY(30%);
+}
+
+.slides:not(.scroll) .slide.after .rolling-element.inverse.pct-40 {
+  transform: translateY(40%);
+}
+
+.slides:not(.scroll) .slide.after .rolling-element.inverse.pct-50 {
+  transform: translateY(50%);
+}
+
+.slides:not(.scroll) .slide.after .rolling-element.inverse.pct-60 {
+  transform: translateY(60%);
+}
+
+.slides:not(.scroll) .slide.after .rolling-element.inverse.pct-70 {
+  transform: translateY(70%);
+}
+
+.slides:not(.scroll) .slide.after .rolling-element.inverse.pct-80 {
+  transform: translateY(80%);
+}
+
+.slides:not(.scroll) .slide.after .rolling-element.inverse.pct-90 {
+  transform: translateY(90%);
+}
+
+
+
+/***
+ *      ____             _                                   _    ______  __  __          _
+ *     |  _ \           | |                                 | |  |  ____|/ _|/ _|        | |
+ *     | |_) | __ _  ___| | ____ _ _ __ ___  _   _ _ __   __| |  | |__  | |_| |_ ___  ___| |_ ___
+ *     |  _ < / _` |/ __| |/ / _` | '__/ _ \| | | | '_ \ / _` |  |  __| |  _|  _/ _ \/ __| __/ __|
+ *     | |_) | (_| | (__|   < (_| | | | (_) | |_| | | | | (_| |  | |____| | | ||  __/ (__| |_\__ \
+ *     |____/ \__,_|\___|_|\_\__, |_|  \___/ \__,_|_| |_|\__,_|  |______|_| |_| \___|\___|\__|___/
+ *                            __/ |
+ *                           |___/
+ */
+
+/* KEN BURNS */
+.slides.animated .kenBurns .background,
+.slides.animated .kenBurns.zoomin .background,
+.slides.animateOnEvent .kenBurns .background,
+.slides.animateOnEvent .kenBurns.zoomin .background {
+  z-index: 1;
+  opacity: .2;
+  transform: scale(1.08) rotate(-.02deg);
+}
+
+.slides.animated .kenBurns:not(.video) .background,
+.slides.animated .kenBurns.zoomin:not(.video) .background,
+.slides.animateOnEvent .kenBurns:not(.video) .background,
+.slides.animateOnEvent .kenBurns.zoomin:not(.video) .background {
+  transition: transform 5s cubic-bezier(.3, 0, .7, 1), opacity 1s ease;
+}
+
+.animated .active.kenBurns:not(.video) .background,
+.animated .active.kenBurns.zoomin:not(.video) .background,
+.animated .active .kenBurns.zoomin:not(.video) .background,
+.animateOnEvent .active.kenBurns:not(.video) .background,
+.animateOnEvent .active.kenBurns.zoomin:not(.video) .background,
+.animateOnEvent .active .kenBurns.zoomin:not(.video) .background {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.slides.animated .kenBurns.zoomin:not(.video) .background,
+.slides.animateOnEvent .kenBurns.zoomin:not(.video) .background {
+  transform: translate3d(0, 0, 0);
+}
+
+.animated .active.kenBurns.zoomin:not(.video) .background,
+.windows .slides.animated .active.kenBurns.zoomin:not(.video) .background,
+.animateOnEvent .active.kenBurns.zoomin:not(.video) .background,
+.windows .slides.animateOnEvent .active.kenBurns.zoomin:not(.video) .background {
+  transform: scale(1.08) rotate(-.02deg);
+}
+
+.mobile .kenBurns .background,
+.mobile .kenBurns.zoomin .background {
+  transition: 0s;
+  transform: none;
+}
+
+/* PARALLAX */
+.slides.animated .parallax:not(.video) .background,
+.slides.animateOnEvent .parallax:not(.video) .background {
+  transition: transform-origin 1s, transform 1s;
+  transform: translate3d(0, 0, 0) scale(1.25);
+}
+
+.slides.animated.fast .parallax:not(.video) .background,
+.slides.animateOnEvent.fast .parallax:not(.video) .background {
+  transition: transform-origin .6s, transform .6s;
+}
+
+.slides.animated.slow .parallax:not(.video) .background,
+.slides.animateOnEvent.slow .parallax:not(.video) .background {
+  transition: transform-origin 1.4s, transform 1.4s;
+}
+
+.slides.animated .parallax.animate:not(.video) .background,
+.slides.animateOnEvent .parallax.animate:not(.video) .background {
+  transform-origin: center;
+}
+
+.slides.animated .slide.after.parallax:not(.video) .background,
+.slides.animateOnEvent .slide.after.parallax:not(.video) .background {
+  transform-origin: top center;
+}
+
+.slides.animated .slide.before.parallax:not(.video) .background,
+.slides.animateOnEvent .slide.before.parallax:not(.video) .background {
+  transform-origin: bottom center;
+}
+
+/* horizontal */
+.slides.animated.horizontal .slide.after.parallax:not(.video) .background,
+.slides.animateOnEvent.horizontal .slide.after.parallax:not(.video) .background {
+  transform-origin: left center;
+}
+
+.slides.animated.horizontal .slide.before.parallax:not(.video) .background,
+.slides.animateOnEvent.horizontal .slide.before.parallax:not(.video) .background {
+  transform-origin: right center;
+}
+
+/* zoom */
+.slides.animated.zoom .slide.after.parallax:not(.video) .background,
+.slides.animateOnEvent.zoom .slide.after.parallax:not(.video) .background {
+  transform: translate3d(0, 0, 0) scale(1);
+  transform-origin: center;
+}
+
+.slides.animated.zoom .slide.animate.parallax:not(.video) .background,
+.slides.animateOnEvent.zoom .slide.animate.parallax:not(.video) .background {
+  transform: translate3d(0, 0, 0) scale(1.1);
+  transform-origin: center;
+}
+
+.slides.animated.zoom .slide.before.parallax:not(.video) .background,
+.slides.animateOnEvent.zoom .slide.before.parallax:not(.video) .background {
+  transform: translate3d(0, 0, 0) scale(1);
+  transform-origin: center;
+}
+
+/* plain */
+.slides.animated.plain .slide.after.parallax:not(.video) .background,
+.slides.animateOnEvent.plain .slide.after.parallax:not(.video) .background {
+  transform: translate3d(0, 0, 0) scale(1);
+  transform-origin: center;
+}
+
+.slides.animated.plain .slide.animate.parallax:not(.video) .background,
+.slides.animateOnEvent.plain .slide.animate.parallax:not(.video) .background {
+  transform: translate3d(0, 0, 0) scale(1);
+  transform-origin: center;
+}
+
+.slides.animated.plain .slide.before.parallax:not(.video) .background,
+.slides.animateOnEvent.plain .slide.before.parallax:not(.video) .background {
+  transform: translate3d(0, 0, 0) scale(1);
+  transform-origin: center;
+}
+
+/* SCENIC */
+.slides.animated .scenic:not(.video) .background,
+.slides.animateOnEvent .scenic:not(.video) .background {
+  animation: scenic 140s cubic-bezier(.2, 0, .8, 1) infinite;
+}
+
+@keyframes scenic {
+  50% {
+    transform: scale(1.5) rotate(-.02deg);
+  }
+}

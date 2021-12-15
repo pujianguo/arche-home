@@ -1,5 +1,5 @@
 <template>
-  <div class="home-header">
+  <div class="home-header fromTop ae-1 do">
     <div class="left">
       <a target="_blank" href="https://arche.network" class="logo flex-center" title="ARCHE">
         <a-svg class="logo-main" name="logo-main"></a-svg>

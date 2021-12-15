@@ -9,23 +9,23 @@
         </div>
     </div>
     <div class="container">
-      <div class="text-content">
+      <div class="text-content animate">
         <div class="title-card">
-          <div class="title-box">
-            <h1>Seek</h1>
-            <h1>Trade</h1>
-            <h1>Enjoy</h1>
+          <div class="title-box fromLeft">
+            <h1 class="ae-2 do">Seek</h1>
+            <h1 class="ae-3 do">Trade</h1>
+            <h1 class="ae-4 do">Enjoy</h1>
           </div>
         </div>
         <div class="number-card">
-          <h1 class="title">A Smart Way to Enter Metaverse</h1>
-          <div class="desc">
+          <h1 class="title fromRight ae-3 do">A Smart Way to Enter Metaverse</h1>
+          <div class="desc fromCenter ae-3 do">
             <p>Arche is the ultimate destination for players in Metaverse.</p>
             <p>Empower Players, Developers, and Guilds to</p>
             <p>connect Web 2.0 to Web 3.0. </p>
           </div>
           <div class="footer">
-            <div class="footer-btn">
+            <div class="footer-btn fromBlur ae-1 do">
               <span class="text">Explore</span>
               <a-svg class="icon" name="union"></a-svg>
             </div>
@@ -37,22 +37,6 @@
 </template>
 
 <script setup>
-// import useInitGsap from '@/hooks/useInitGsap'
-
-// const initGsap = (gsap) => {
-//   gsap.timeline({
-//     scrollTrigger: {
-//       trigger: '.home-section-1',
-//       start: 'top bottom',
-//       end: 'bottom top',
-//       // markers: true,
-//       scrub: true,
-//     },
-//   })
-//   // .fromTo('.home-section-1 .box', { x: innerWidth * -0.5 }, { x: 0 }, 0)
-// }
-// useInitGsap(initGsap)
-
 </script>
 
 <style lang="scss">
@@ -168,7 +152,6 @@
             &:nth-child(2) {
               color: #00ff47;
               text-indent: 2em;
-              transform: translateX();
             }
 
             &:nth-child(3) {
