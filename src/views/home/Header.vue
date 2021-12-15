@@ -11,7 +11,11 @@
     <div class="right">
       <a class="getapp" href="https://app.arche.network">
         <div class="text">Explore</div>
-        <a-svg class="icon" name="union"></a-svg>
+        <div class="archeArrow">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </a>
     </div>
   </div>
@@ -55,87 +59,209 @@ onMounted(() => {
 </script>
 
 <style lang="scss">
-.home-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  height: 90px;
-  padding: 0 46px;
-
-  .left {
+  .home-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    box-sizing: border-box;
     display: flex;
-    flex: 1;
     align-items: center;
     justify-content: space-between;
-    width: auto;
+    width: 100%;
+    height: 90px;
+    padding: 0 46px;
 
-    .logo-main {
-      width: 207px;
-      height: 39px;
-    }
-  }
+    .left {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      justify-content: space-between;
+      width: auto;
 
-  .center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: auto;
-
-    .menu-item {
-      height: 40px;
-      padding: 0 18px;
-      margin: 0 2px;
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 40px;
-      color: #fff;
-      letter-spacing: 0;
-      cursor: pointer;
-
-      &:hover {
-        color: #0116ff;
-      }
-
-      &.active {
-        color: #000;
-        background: #fff;
-        border-radius: 10px;
+      .logo-main {
+        width: 207px;
+        height: 39px;
       }
     }
-  }
 
-  .right {
-    display: flex;
-    flex: 1;
-    align-items: center;
-    justify-content: flex-end;
-    width: auto;
-
-    .getapp {
+    .center {
       display: flex;
       align-items: center;
-      color: #fff;
+      justify-content: center;
+      width: auto;
 
-      .text {
-        margin-right: 14px;
-        font-family: Cindie Mono;
-        font-size: 20px;
-        line-height: 32px;
+      .menu-item {
+        height: 40px;
+        padding: 0 18px;
+        margin: 0 2px;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 40px;
+        color: #fff;
         letter-spacing: 0;
-      }
+        cursor: pointer;
 
-      .icon {
-        width: 32px;
-        height: 26px;
+        &:hover {
+          color: #0116ff;
+        }
+
+        &.active {
+          color: #000;
+          background: #fff;
+          border-radius: 10px;
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      justify-content: flex-end;
+      width: auto;
+
+      .getapp {
+        display: flex;
+        align-items: center;
+        color: #fff;
+
+        .text {
+          margin-right: 14px;
+          font-family: Cindie Mono;
+          font-size: 20px;
+          line-height: 32px;
+          letter-spacing: 0;
+          transition: all 0.25s cubic-bezier(0.08, 0.82, 0.17, 1);
+        }
+        .archeArrow {
+          width: 50px;
+          height: 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          span:nth-child(1) {
+            display: block;
+            width: 12px;
+            height: 6px;
+            background: #00ff47;
+            position: absolute;
+            right: 2px;
+            top: 5px;
+            transform: rotate(-120deg);
+            transition: all 0.25s cubic-bezier(0.08, 0.82, 0.17, 1);
+          }
+          span:nth-child(2) {
+            display: block;
+            width: 20px;
+            height: 6px;
+            background: #00ff47;
+            transform: rotate(0deg);
+            transition: all 0.25s cubic-bezier(0.08, 0.82, 0.17, 1);
+          }
+          span:nth-child(3) {
+            display: block;
+            width: 12px;
+            height: 6px;
+            background: #00ff47;
+            position: absolute;
+            right: 2px;
+            bottom: 5px;
+            transform: rotate(-60deg);
+            transition: all 0.25s cubic-bezier(0.08, 0.82, 0.17, 1);
+          }
+        }
+        &:hover {
+          .text {
+            transform: translate3d(18px, 0, 0) rotate(0deg);
+          }
+          .archeArrow {
+            span:nth-child(1) {
+              transform: translate3d(9px, 1px, 0) rotate(-155deg);
+            }
+            span:nth-child(2) {
+              transform: translate3d(12px, 0, 0) rotate(0deg);
+            }
+            span:nth-child(3) {
+              transform: translate3d(9px, -1px, 0) rotate(-25deg);
+            }
+          }
+        }
+        .icon {
+          width: 32px;
+          height: 26px;
+        }
       }
     }
   }
-}
+  @media screen and (min-width: 1100px) and (max-width: 1400px) {
+    .home-header {
+      padding: 0 30px;
+      .left .logo-main {
+        width: 162px;
+        height: 30px;
+      }
+      .right .getapp {
+        transform:scale(90%);
+        transform-origin: center right;
+      }
+      .center .menu-item{
+        padding:0 15px;
+        font-size: 16px;
+      }
+    }
+  }
+  @media screen and (min-width: 900px) and (max-width: 1099px) {
+    .home-header {
+      padding: 0 20px;
+      .left .logo-main {
+        width: 130px;
+        height: 24px;
+      }
+      .right .getapp {
+        transform:scale(70%);
+        transform-origin: center right;
+      }
+      .center .menu-item{
+        padding:0 8px;
+        font-size: 14px;
+        line-height: 32px;
+        height: 32px;
+        &.active{
+          border-radius:8px;
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 769px) and (max-width: 899px) {
+    .home-header {
+      padding: 0 20px;
+      height:60px;
+      .left .logo-main {
+        width: 130px;
+        height: 24px;
+      }
+      .right .getapp {
+        transform:scale(70%);
+        transform-origin: center right;
+      }
+      .center .menu-item{
+        padding:0 5px;
+        font-size: 12px;
+        line-height: 26px;
+        height: 26px;
+        margin:0;
+        &.active{
+          border-radius:6px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .home-header {
+      display: none;
+    }
+  }
 </style>

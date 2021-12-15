@@ -27,7 +27,7 @@
 
       <div class="iframe-wrap">
         <div class="iframe-content">
-          <iframe class="iframe" src="/iframe/archecoin.html" frameborder="0"></iframe>
+          <iframe class="iframe" src="/iframe/archecoin.html" frameborder="0" width="1080" height="1080"></iframe>
         </div>
       </div>
     </div>
@@ -116,7 +116,7 @@ useInitGsap(initGsap)
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 120px;
+    padding: 100px;
 
     .text-content {
       .title-card {
@@ -152,8 +152,41 @@ useInitGsap(initGsap)
     .iframe-wrap {
       right: 0;
       z-index: -1;
-      width: 70%;
+      width: 60%;
+      top:0%;
+      right:0%;
+      iframe{
+        transform:scale(90%);
+        transform-origin: center center;
+      }
     }
   }
+}
+@media screen and (min-width: 1100px) and (max-width: 1400px) {
+.home-section-5 .container .text-content .title-card{
+  margin-bottom: 60px;
+}
+.home-section-5 .container .text-content .number-card {
+    max-width: 470px;
+}
+}
+@media screen and (min-width: 900px) and (max-width: 1099px) {
+.home-section-5 .container .text-content .title-card{
+  margin-bottom: 50px;
+}
+.home-section-5 .container .text-content .number-card {
+    max-width: 420px;
+}
+}
+@media screen and (min-width: 769px) and (max-width: 899px) {
+.home-section-5 .container .text-content .title-card{
+  margin-bottom: 40px;
+}
+.home-section-5 .container .text-content .number-card {
+    max-width: 360px;
+}
+}
+@media screen and (max-width: 768px) {
+
 }
 </style>

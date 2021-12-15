@@ -44,14 +44,14 @@ useInitGsap(initGsap)
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 120px 120px 0 120px;
+    padding: 120px 100px 0 120px;
 
     .title {
       max-width: 1065px;
       font-size: 36px;
       font-style: normal;
       font-weight: 900;
-      line-height: 56px;
+      line-height: 1.5;
       text-align: center;
       text-transform: uppercase;
       letter-spacing: 0;
@@ -64,7 +64,7 @@ useInitGsap(initGsap)
       font-size: 18px;
       font-style: normal;
       font-weight: 400;
-      line-height: 36px;
+      line-height: 2;
       text-align: center;
       letter-spacing: 0;
       opacity: .6;
@@ -76,5 +76,50 @@ useInitGsap(initGsap)
       background: #fff;
     }
   }
+}
+@media screen and (min-width: 1100px) and (max-width: 1400px) {
+.home-section-8 .container{
+  padding:100px 100px 0 100px;
+  .title{
+    font-size: 32px;
+  }
+  .text{
+    font-size: 16px;
+  }
+  .line{
+    height: 90px;
+  }
+}
+}
+@media screen and (min-width: 900px) and (max-width: 1099px) {
+.home-section-8 .container{
+  padding:80px 80px 0 80px;
+  .title{
+    font-size: 28px;
+  }
+  .text{
+    font-size: 15px;
+  }
+  .line{
+    height: 80px;
+  }
+}
+}
+@media screen and (min-width: 769px) and (max-width: 899px) {
+.home-section-8 .container{
+  padding:60px 60px 0 60px;
+  .title{
+    font-size: 24px;
+  }
+  .text{
+    font-size: 14px;
+  }
+  .line{
+    height: 70px;
+  }
+}
+}
+@media screen and (max-width: 768px) {
+
 }
 </style>

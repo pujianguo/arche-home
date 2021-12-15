@@ -46,8 +46,8 @@ const initGsap = (gsap, ScrollTrigger) => {
       // pin: true,
     },
   })
-    .fromTo('.home-section-6 .bg-box1', { y: innerHeight * -0.4 }, { y: innerHeight * 0.4 }, 0)
-    .fromTo('.home-section-6 .bg-box2', { y: innerHeight * 0.4 }, { y: innerHeight * -0.4 }, 0)
+    .fromTo('.home-section-6 .bg-box1', { y: innerHeight * 0.25 }, { y: innerHeight * -0.25 }, 0)
+    .fromTo('.home-section-6 .bg-box2', { y: innerHeight * 0.5 }, { y: innerHeight * -0.5 }, 0)
 
   gsap.utils.toArray('.home-section-6 .container .number-card').forEach((box, i) => {
     ScrollTrigger.create({
@@ -86,7 +86,8 @@ useInitGsap(initGsap)
       left: 0;
       z-index: 1;
       content: '';
-      background: linear-gradient(90deg, #000 27.44%, rgba(0, 0, 0, .72) 45.55%, rgba(0, 0, 0, 0) 100%);
+      background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.1) 11.28%, rgba(0, 0, 0, 0) 48.96%, rgba(0, 0, 0, 0.1) 83.33%, #000000 100%), linear-gradient(90deg, #000000 27.44%, rgba(0, 0, 0, 0.72) 45.55%, rgba(0, 0, 0, 0) 100%);
+transform: matrix(-1, 0, 0, 1, 0, 0);
       transform: matrix(-1, 0, 0, 1, 0, 0);
     }
 
@@ -94,14 +95,14 @@ useInitGsap(initGsap)
       width: 30%;
       height: 100%;
       margin-right: 1%;
-      background: url('/images/home/section6_img_1.png') no-repeat top center;
+      background: url('https://media.arche.network/arche2.0/images/section6_img_1.png') no-repeat top center;
       background-size: cover;
     }
 
     .bg-box2 {
       width: 50%;
       height: 100%;
-      background: url('/images/home/section6_img_2.png') no-repeat top center;
+      background: url('https://media.arche.network/arche2.0/images/section6_img_2.png') no-repeat top center;
       background-size: cover;
     }
   }
@@ -112,7 +113,7 @@ useInitGsap(initGsap)
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    padding: 120px;
+    padding: 100px;
 
     .text-content {
       display: flex;
@@ -132,6 +133,8 @@ useInitGsap(initGsap)
           h1 {
             color: rgba(0, 255, 71, 1);
             text-align: right;
+            font-size: 50px;
+            line-height: 1.8;
           }
         }
       }
@@ -173,5 +176,72 @@ useInitGsap(initGsap)
       }
     }
   }
+}
+@media screen and (min-width: 1100px) and (max-width: 1400px) {
+  .home-section-6 .container{
+    padding:80px;
+  }
+.home-section-6 .container .text-content{
+  .line-box{
+          .line{
+            width: 160px;
+          }
+        }
+  .title-card{
+  margin-bottom: 40px;
+  .title-box h1{
+  font-size: 40px;
+}
+}
+.number-card{
+  width: 470px;
+}
+}
+}
+@media screen and (min-width: 900px) and (max-width: 1099px) {
+  .home-section-6 .container{
+    padding:60px;
+  }
+.home-section-6 .container .text-content{
+  .title-card .line-box{
+          .line{
+            width: 210px;
+          }
+        }
+        .title-card{
+  margin-bottom: 36px;
+  .title-box h1{
+  font-size: 36px;
+}
+}
+.number-card{
+  width: 430px;
+}
+}
+}
+@media screen and (min-width: 769px) and (max-width: 899px) {
+  .home-section-6 .container{
+    padding:50px;
+  }
+.home-section-6 .container .text-content{
+  .title-card .line-box{
+          .line{
+            width: 185px;
+          }
+        }
+        .title-card{
+  margin-bottom: 32px;
+  .title-box h1{
+  font-size: 32px;
+  line-height: 2;
+}
+}
+.number-card{
+  width: 380px;
+}
+}
+}
+@media screen and (max-width: 768px) {
+
 }
 </style>

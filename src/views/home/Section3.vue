@@ -25,14 +25,18 @@
           <div class="footer">
             <div class="footer-btn">
               <span class="text">BE archer</span>
-              <a-svg class="icon" name="union"></a-svg>
+              <div class="archeArrow">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
             </div>
             <a class="footer-link">what is archer?</a>
           </div>
         </div>
       </div>
       <div class="img-content">
-        <img src="/images/home/section3_img_1.png" alt="">
+        <img src="https://media.arche.network/arche2.0/images/section3_img_1.png" alt="">
       </div>
     </div>
   </section>
@@ -133,7 +137,7 @@ useInitGsap(initGsap)
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 120px;
+    padding: 100px;
 
     .text-content {
       .title-card {
@@ -192,11 +196,95 @@ useInitGsap(initGsap)
       flex: 1;
       align-items: center;
       justify-content: center;
-
+      padding:30px;
       img {
         width: 100%;
       }
     }
   }
+}
+@media screen and (min-width: 1100px) and (max-width: 1400px) {
+  .home-section-3 .container{
+    padding:80px;
+    .img-content{
+      padding:0;
+    }
+  }
+.home-section-3 .container .text-content{
+  .title-card {
+    margin-bottom: 60px;
+    .line-box{
+      .text{
+        font-weight: 300;
+      }
+      .line{
+        width: 60px;
+        margin-left: 10px;
+        margin-right: 10px;
+        flex:none;
+      }
+    }
+}
+  .number-card {
+    max-width: 530px;
+}
+}
+}
+@media screen and (min-width: 900px) and (max-width: 1099px) {
+  .home-section-3 .container{
+    padding:60px;
+    .img-content{
+      padding:0;
+    }
+  }
+.home-section-3 .container .text-content{
+  .title-card {
+    margin-bottom: 50px;
+    .line-box{
+      .text{
+        font-weight: 300;
+      }
+      .line{
+        width: 60px;
+        margin-left: 10px;
+        margin-right: 10px;
+        flex:none;
+      }
+    }
+}
+  .number-card {
+    max-width: 480px;
+}
+}
+}
+@media screen and (min-width: 769px) and (max-width: 899px) {
+  .home-section-3 .container{
+    padding:50px;
+    .img-content{
+      padding:0;
+    }
+  }
+.home-section-3 .container .text-content{
+  .title-card {
+    margin-bottom: 40px;
+    .line-box{
+      .text{
+        font-weight: 200;
+      }
+      .line{
+        width: 40px;
+        margin-left: 5px;
+        margin-right: 5px;
+        flex:none;
+      }
+    }
+}
+  .number-card {
+    max-width: 400px;
+}
+}
+}
+@media screen and (max-width: 768px) {
+
 }
 </style>

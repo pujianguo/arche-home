@@ -83,7 +83,7 @@ useInitGsap(initGsap)
   z-index: 2;
   width: 100%;
   min-height: 100vh;
-  overflow: hidden;
+  overflow-y: hidden;
 
   .container {
     position: relative;
@@ -91,7 +91,7 @@ useInitGsap(initGsap)
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 120px;
+    padding: 100px;
 
     .text-content {
       .number-card {
@@ -155,6 +155,8 @@ useInitGsap(initGsap)
       right: 0;
       bottom: 0;
       left: 0;
+      width: 100%;
+      height: 100%;
       z-index: 1;
       content: '';
       background:
@@ -164,7 +166,7 @@ useInitGsap(initGsap)
 
     .background {
       position: absolute;
-      top: -20%;
+      top: 0%;
       right: 0;
       bottom: -20%;
       left: 0;
@@ -175,7 +177,7 @@ useInitGsap(initGsap)
         box-sizing: border-box;
         width: 300%;
         // height: 20%;
-        padding: 1vh 0;
+        padding: 12px 0;
 
         .img {
           height: 100%;
@@ -183,50 +185,67 @@ useInitGsap(initGsap)
       }
 
       .box1 {
-        height: 21.9%;
+        height: 15%;
 
         .img {
-          background: url('/images/home/section2_img_1.png') repeat-x;
+          background: url('https://media.arche.network/arche2.0/images/section2_img_1.png') repeat-x;
           background-size: auto 100%;
         }
       }
 
       .box2 {
-        height: 17.6%;
+        height: 15%;
 
         .img {
-          background: url('/images/home/section2_img_2.png') repeat-x;
+          background: url('https://media.arche.network/arche2.0/images/section2_img_2.png') repeat-x;
           background-size: auto 100%;
         }
       }
 
       .box3 {
-        height: 21%;
+        height: 15%;
 
         .img {
-          background: url('/images/home/section2_img_3.png') repeat-x;
+          background: url('https://media.arche.network/arche2.0/images/section2_img_3.png') repeat-x;
           background-size: auto 100%;
         }
       }
 
       .box4 {
-        height: 21.9%;
+        height: 15%;
 
         .img {
-          background: url('/images/home/section2_img_4.png') repeat-x;
+          background: url('https://media.arche.network/arche2.0/images/section2_img_4.png') repeat-x;
           background-size: auto 100%;
         }
       }
 
       .box5 {
-        height: 17.6%;
+        height: 15%;
 
         .img {
-          background: url('/images/home/section2_img_5.png') repeat-x;
+          background: url('https://media.arche.network/arche2.0/images/section2_img_5.png') repeat-x;
           background-size: auto 100%;
         }
       }
     }
   }
 }
+@media screen and (min-width: 1100px) and (max-width: 1400px) {
+  .home-section-2 .container{
+    padding:80px;
+  }
+  }
+  @media screen and (min-width: 900px) and (max-width: 1099px) {
+    .home-section-2 .container{
+    padding:60px;
+  }
+  }
+  @media screen and (min-width: 769px) and (max-width: 899px) {
+    .home-section-2 .container{
+    padding:50px;
+  }
+  }
+  @media screen and (max-width: 768px) {
+  }
 </style>
