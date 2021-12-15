@@ -28,7 +28,7 @@ jobs:
       run: yarn install
 
     - name: 'Step 4: Build code'
-      run: yarn build:release --if-present
+      run: yarn build:release
 
     - name: 'Step 5: Deploy to release server'
       uses: easingthemes/ssh-deploy@main
