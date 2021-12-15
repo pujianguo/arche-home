@@ -43,7 +43,7 @@ const initGsap = (gsap, ScrollTrigger) => {
       trigger: '.home-section-4',
       // start: 'top bottom',
       // end: 'bottom top',
-      start: 'top 80%',
+      start: 'top 60%',
       end: 'top 20%',
       // markers: true,
       scrub: true,
@@ -53,6 +53,15 @@ const initGsap = (gsap, ScrollTrigger) => {
     .from('.home-section-4 .title-box .h2', { rotationY: -90 })
     .from('.home-section-4 .title-box .h3', { rotationY: 90 })
     .from('.home-section-4 .title-box .img', { rotationY: 90 })
+
+  gsap.utils.toArray('.home-section-4 .container .number-card').forEach((box, i) => {
+    ScrollTrigger.create({
+      trigger: box,
+      toggleClass: 'active',
+      start: 'top 90%',
+      end: 'top top',
+    })
+  })
 }
 useInitGsap(initGsap)
 
@@ -112,13 +121,13 @@ useInitGsap(initGsap)
 
         .number {
           transition: .5s;
-          // transform: translateX(-300px) rotate(-720deg);
+          transform: translateX(-300px) rotate(-720deg);
         }
 
         .title {
           max-width: 360px;
           transition: .5s;
-          // transform: translateX(100%);
+          transform: translateX(100%);
         }
 
         .desc {

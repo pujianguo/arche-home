@@ -35,6 +35,19 @@
 </template>
 
 <script setup>
+import useInitGsap from '@/hooks/useInitGsap'
+
+const initGsap = (gsap, ScrollTrigger) => {
+  gsap.utils.toArray('.home-section-5 .container .number-card').forEach((box, i) => {
+    ScrollTrigger.create({
+      trigger: box,
+      toggleClass: 'active',
+      start: 'top 90%',
+      end: 'top top',
+    })
+  })
+}
+useInitGsap(initGsap)
 
 </script>
 
@@ -111,10 +124,27 @@
       }
 
       .number-card {
-        width: 590px;
+        max-width: 590px;
+
+        .number {
+          transition: .5s;
+          transform: translateX(300px) rotate(720deg);
+        }
 
         .title {
-          width: 401px;
+          max-width: 401px;
+          transition: .5s;
+          transform: translateX(-100%);
+        }
+
+        &.active {
+          .number {
+            transform: translateX(0) rotate(0);
+          }
+
+          .title {
+            transform: translateX(0);
+          }
         }
       }
     }

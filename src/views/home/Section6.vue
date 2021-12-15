@@ -48,6 +48,15 @@ const initGsap = (gsap, ScrollTrigger) => {
   })
     .fromTo('.home-section-6 .bg-box1', { y: innerHeight * -0.4 }, { y: innerHeight * 0.4 }, 0)
     .fromTo('.home-section-6 .bg-box2', { y: innerHeight * 0.4 }, { y: innerHeight * -0.4 }, 0)
+
+  gsap.utils.toArray('.home-section-6 .container .number-card').forEach((box, i) => {
+    ScrollTrigger.create({
+      trigger: box,
+      toggleClass: 'active',
+      start: 'top 90%',
+      end: 'top top',
+    })
+  })
 }
 useInitGsap(initGsap)
 
@@ -128,10 +137,27 @@ useInitGsap(initGsap)
       }
 
       .number-card {
-        width: 507px;
+        max-width: 507px;
+
+        .number {
+          transition: .5s;
+          transform: translateX(-300px) rotate(-720deg);
+        }
 
         .title {
-          width: 451px;
+          max-width: 451px;
+          transition: .5s;
+          transform: translateX(100%);
+        }
+
+        &.active {
+          .number {
+            transform: translateX(0) rotate(0);
+          }
+
+          .title {
+            transform: translateX(0);
+          }
         }
       }
     }

@@ -60,7 +60,6 @@ const initGsap = (gsap, ScrollTrigger) => {
       toggleClass: 'active',
       start: 'top 90%',
       end: 'top top',
-      // markers: true,
     })
   })
 }

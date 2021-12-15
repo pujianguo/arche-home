@@ -2,10 +2,10 @@
   <section class="home-section-1">
     <div class="background-wrap">
         <div class="box">
-          <div class="box-item"></div>
-          <div class="box-item"></div>
-          <div class="box-item"></div>
-          <div class="box-item"></div>
+          <div class="box-item fromCenter slow ae-1 do"></div>
+          <div class="box-item fromCenter slow ae-1 do"></div>
+          <div class="box-item fromCenter slow ae-1 do"></div>
+          <div class="box-item fromCenter slow ae-1 do"></div>
         </div>
     </div>
     <div class="container">
