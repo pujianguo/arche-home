@@ -6,8 +6,14 @@
         <a-svg class="logo-main" name="logo-main"></a-svg>
       </a>
     </div>
-    <ul class="center">
-      <li :class="['menu-item', {active: item.routeName === routeName}]" v-for="item in menuList" :key="item.id">{{item.title}}</li>
+    <ul class="center" ref="ulRef">
+      <li v-for="(item, index) in menuList" :key="item.id"
+        :class="['menu-item', {active: index === currentItem}]"
+        @mouseenter="mouseenterHandler"
+        @mouseleave="mouseleaveHandler"
+      >
+        {{item.title}}
+      </li>
     </ul>
     <div class="right">
       <a class="getapp" href="https://app.arche.network">
@@ -23,7 +29,7 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import useInitGsap from '@/hooks/useInitGsap'
 
@@ -55,247 +61,286 @@ const routeName = computed(() => {
   return route.name
 })
 
+const currentItem = ref(0)
+const ulRef = ref(null)
+const l = ref('0')
+const w = ref('90px')
+const setCurrent = (el) => {
+  l.value = el.offsetLeft + 'px'
+  w.value = el.offsetWidth + 'px'
+}
+const mouseenterHandler = (e) => {
+  const el = e.target
+  setCurrent(el)
+}
+const mouseleaveHandler = () => {
+  const el = ulRef.value.children[currentItem.value]
+  setCurrent(el)
+}
+
+onMounted(() => {
+  mouseleaveHandler()
+})
 </script>
 
 <style lang="scss">
-  .home-header {
-    position: fixed;
+.home-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 90px;
+  padding: 0 46px;
+
+  .background {
+    position: absolute;
     top: 0;
+    right: 0;
+    bottom: 0;
     left: 0;
-    z-index: 999;
-    box-sizing: border-box;
+    z-index: 1;
+    content: '';
+    background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%);
+  }
+
+  .left {
     display: flex;
+    flex: 1;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
-    height: 90px;
-    padding: 0 46px;
+    width: auto;
 
-    .background {
+    .logo-main {
+      width: 207px;
+      height: 39px;
+    }
+  }
+
+  .center {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+
+    .menu-item {
+      height: 40px;
+      padding: 0 18px;
+      margin: 0 2px;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 40px;
+      color: #fff;
+      letter-spacing: 0;
+      cursor: pointer;
+      transition: all .4s ease-in-out;
+
+      &:hover {
+        color: #0116ff !important;
+      }
+
+      &.active {
+        color: #000;
+      }
+    }
+
+    &::before {
       position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index: 1;
-      content: '';
-      background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%);
+      left: v-bind(l);
+      z-index: -1;
+      width: v-bind(w);
+      height: 40px;
+      content: "";
+      background: #fff;
+      // background-color: rgba(0, 0, 0, .3);
+      border-radius: 10px;
+      transition: all .4s ease-in-out;
     }
 
-    .left {
-      display: flex;
-      flex: 1;
-      align-items: center;
-      justify-content: space-between;
-      width: auto;
-
-      .logo-main {
-        width: 207px;
-        height: 39px;
-      }
-    }
-
-    .center {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: auto;
-
+    &:hover {
       .menu-item {
-        height: 40px;
-        padding: 0 18px;
-        margin: 0 2px;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 40px;
         color: #fff;
-        letter-spacing: 0;
-        cursor: pointer;
-
-        &:hover {
-          color: #0116ff;
-        }
-
-        &.active {
-          color: #000;
-          background: #fff;
-          border-radius: 10px;
-        }
       }
     }
+  }
 
-    .right {
+  .right {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-end;
+    width: auto;
+
+    .getapp {
       display: flex;
-      flex: 1;
       align-items: center;
-      justify-content: flex-end;
-      width: auto;
+      color: #fff;
 
-      .getapp {
+      .text {
+        margin-right: 14px;
+        font-family: Cindie Mono;
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: 0;
+        transition: all .25s cubic-bezier(.08, .82, .17, 1);
+      }
+
+      .archeArrow {
+        position: relative;
         display: flex;
         align-items: center;
-        color: #fff;
+        justify-content: center;
+        width: 50px;
+        height: 30px;
 
-        .text {
-          margin-right: 14px;
-          font-family: Cindie Mono;
-          font-size: 20px;
-          line-height: 32px;
-          letter-spacing: 0;
+        span:nth-child(1) {
+          position: absolute;
+          top: 5px;
+          right: 2px;
+          display: block;
+          width: 12px;
+          height: 6px;
+          background: #00ff47;
           transition: all .25s cubic-bezier(.08, .82, .17, 1);
+          transform: rotate(-120deg);
+        }
+
+        span:nth-child(2) {
+          display: block;
+          width: 20px;
+          height: 6px;
+          background: #00ff47;
+          transition: all .25s cubic-bezier(.08, .82, .17, 1);
+          transform: rotate(0deg);
+        }
+
+        span:nth-child(3) {
+          position: absolute;
+          right: 2px;
+          bottom: 5px;
+          display: block;
+          width: 12px;
+          height: 6px;
+          background: #00ff47;
+          transition: all .25s cubic-bezier(.08, .82, .17, 1);
+          transform: rotate(-60deg);
+        }
+      }
+
+      &:hover {
+        .text {
+          transform: translate3d(18px, 0, 0) rotate(0deg);
         }
 
         .archeArrow {
-          position: relative;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 50px;
-          height: 30px;
-
           span:nth-child(1) {
-            position: absolute;
-            top: 5px;
-            right: 2px;
-            display: block;
-            width: 12px;
-            height: 6px;
-            background: #00ff47;
-            transition: all .25s cubic-bezier(.08, .82, .17, 1);
-            transform: rotate(-120deg);
+            transform: translate3d(9px, 1px, 0) rotate(-155deg);
           }
 
           span:nth-child(2) {
-            display: block;
-            width: 20px;
-            height: 6px;
-            background: #00ff47;
-            transition: all .25s cubic-bezier(.08, .82, .17, 1);
-            transform: rotate(0deg);
+            transform: translate3d(12px, 0, 0) rotate(0deg);
           }
 
           span:nth-child(3) {
-            position: absolute;
-            right: 2px;
-            bottom: 5px;
-            display: block;
-            width: 12px;
-            height: 6px;
-            background: #00ff47;
-            transition: all .25s cubic-bezier(.08, .82, .17, 1);
-            transform: rotate(-60deg);
+            transform: translate3d(9px, -1px, 0) rotate(-25deg);
           }
         }
-
-        &:hover {
-          .text {
-            transform: translate3d(18px, 0, 0) rotate(0deg);
-          }
-
-          .archeArrow {
-            span:nth-child(1) {
-              transform: translate3d(9px, 1px, 0) rotate(-155deg);
-            }
-
-            span:nth-child(2) {
-              transform: translate3d(12px, 0, 0) rotate(0deg);
-            }
-
-            span:nth-child(3) {
-              transform: translate3d(9px, -1px, 0) rotate(-25deg);
-            }
-          }
-        }
-
-        .icon {
-          width: 32px;
-          height: 26px;
-        }
-      }
-    }
-  }
-
-  @media screen and (min-width: 1100px) and (max-width: 1400px) {
-    .home-header {
-      padding: 0 30px;
-
-      .left .logo-main {
-        width: 162px;
-        height: 30px;
       }
 
-      .right .getapp {
-        transform: scale(90%);
-        transform-origin: center right;
-      }
-
-      .center .menu-item {
-        padding: 0 15px;
-        font-size: 16px;
-      }
-    }
-  }
-
-  @media screen and (min-width: 900px) and (max-width: 1099px) {
-    .home-header {
-      padding: 0 20px;
-
-      .left .logo-main {
-        width: 130px;
-        height: 24px;
-      }
-
-      .right .getapp {
-        transform: scale(70%);
-        transform-origin: center right;
-      }
-
-      .center .menu-item {
-        height: 32px;
-        padding: 0 8px;
-        font-size: 14px;
-        line-height: 32px;
-
-        &.active {
-          border-radius: 8px;
-        }
-      }
-    }
-  }
-
-  @media screen and (min-width: 769px) and (max-width: 899px) {
-    .home-header {
-      height: 60px;
-      padding: 0 20px;
-
-      .left .logo-main {
-        width: 130px;
-        height: 24px;
-      }
-
-      .right .getapp {
-        transform: scale(70%);
-        transform-origin: center right;
-      }
-
-      .center .menu-item {
+      .icon {
+        width: 32px;
         height: 26px;
-        padding: 0 5px;
-        margin: 0;
-        font-size: 12px;
-        line-height: 26px;
-
-        &.active {
-          border-radius: 6px;
-        }
       }
     }
   }
+}
 
-  @media screen and (max-width: 768px) {
-    .home-header {
-      display: none;
+@media screen and (min-width: 1100px) and (max-width: 1400px) {
+  .home-header {
+    padding: 0 30px;
+
+    .left .logo-main {
+      width: 162px;
+      height: 30px;
+    }
+
+    .right .getapp {
+      transform: scale(90%);
+      transform-origin: center right;
+    }
+
+    .center .menu-item {
+      padding: 0 15px;
+      font-size: 16px;
     }
   }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1099px) {
+  .home-header {
+    padding: 0 20px;
+
+    .left .logo-main {
+      width: 130px;
+      height: 24px;
+    }
+
+    .right .getapp {
+      transform: scale(70%);
+      transform-origin: center right;
+    }
+
+    .center .menu-item {
+      height: 32px;
+      padding: 0 8px;
+      font-size: 14px;
+      line-height: 32px;
+
+      &.active {
+        border-radius: 8px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 899px) {
+  .home-header {
+    height: 60px;
+    padding: 0 20px;
+
+    .left .logo-main {
+      width: 130px;
+      height: 24px;
+    }
+
+    .right .getapp {
+      transform: scale(70%);
+      transform-origin: center right;
+    }
+
+    .center .menu-item {
+      height: 26px;
+      padding: 0 5px;
+      margin: 0;
+      font-size: 12px;
+      line-height: 26px;
+
+      &.active {
+        border-radius: 6px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home-header {
+    display: none;
+  }
+}
 </style>
