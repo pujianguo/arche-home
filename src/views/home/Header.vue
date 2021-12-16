@@ -19,6 +19,27 @@
       </a>
     </div>
   </div>
+  <div class="home-header-mb">
+    <div class="left">
+      <a target="_blank" href="https://arche.network" class="logo flex-center" title="ARCHE">
+        <a-svg class="logo-main" name="logo-main"></a-svg>
+      </a>
+    </div>
+    <div class="right">
+      <a class="menu" href="#">
+        <div class="archeMenu active">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="home-header-nav active">
+    <ul class="">
+      <li :class="['menu-item', {active: item.routeName === routeName}]" v-for="item in menuList" :key="item.id">{{item.title}}</li>
+    </ul>
+  </div>
 </template>
 
 <script setup>
@@ -204,13 +225,16 @@ onMounted(() => {
         height: 30px;
       }
       .right .getapp {
-        transform:scale(90%);
+        transform: scale(90%);
         transform-origin: center right;
       }
-      .center .menu-item{
-        padding:0 15px;
+      .center .menu-item {
+        padding: 0 15px;
         font-size: 16px;
       }
+    }
+    .home-header-mb,.home-header-nav  {
+      display: none;
     }
   }
   @media screen and (min-width: 900px) and (max-width: 1099px) {
@@ -221,47 +245,165 @@ onMounted(() => {
         height: 24px;
       }
       .right .getapp {
-        transform:scale(70%);
+        transform: scale(70%);
         transform-origin: center right;
       }
-      .center .menu-item{
-        padding:0 8px;
+      .center .menu-item {
+        padding: 0 8px;
         font-size: 14px;
         line-height: 32px;
         height: 32px;
-        &.active{
-          border-radius:8px;
+        &.active {
+          border-radius: 8px;
         }
       }
+    }
+    .home-header-mb,.home-header-nav {
+      display: none;
     }
   }
   @media screen and (min-width: 769px) and (max-width: 899px) {
     .home-header {
       padding: 0 20px;
-      height:60px;
+      height: 60px;
       .left .logo-main {
         width: 130px;
         height: 24px;
       }
       .right .getapp {
-        transform:scale(70%);
+        transform: scale(70%);
         transform-origin: center right;
       }
-      .center .menu-item{
-        padding:0 5px;
+      .center .menu-item {
+        padding: 0 5px;
         font-size: 12px;
         line-height: 26px;
         height: 26px;
-        margin:0;
-        &.active{
-          border-radius:6px;
+        margin: 0;
+        &.active {
+          border-radius: 6px;
         }
       }
+    }
+    .home-header-mb,.home-header-nav {
+      display: none;
     }
   }
   @media screen and (max-width: 768px) {
     .home-header {
       display: none;
+    }
+    .home-header-mb {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 60px;
+      padding: 0 4vw;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+      .left {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: space-between;
+        width: auto;
+        .logo-main {
+          width: 133px;
+          height: 24px;
+        }
+      }
+      .right {
+        a.menu {
+          display: block;
+          width: 30px;
+          height: 30px;
+          padding: 7px;
+          box-sizing: border-box;
+          .archeMenu {
+            width: 16px;
+            height: 16px;
+            position: relative;
+            span {
+              display: block;
+              width: 16px;
+              height: 3px;
+              background: rgba(255, 255, 255, 1);
+              transition:all 0.25s cubic-bezier(0.08, 0.82, 0.17, 1);
+            }
+            span:nth-child(1) {
+              position: absolute;
+              top: 0;
+              left:0;
+            }
+            span:nth-child(2) {
+              position: absolute;
+              top: 6px;
+              left:0;
+            }
+            span:nth-child(3) {
+              position: absolute;
+              top: 12px;
+              left:0;
+            }
+            &.active {
+              span:nth-child(1) {
+              transform: translate3d(-6px,2px,0px) rotate(-30deg) ;
+              width: 8px;
+              background: #00ff47;
+              }
+              span:nth-child(2) {
+                transform:translate3d(-1px,0px,0px)  rotate(0deg)  ;
+                width: 12px;
+                background: #00ff47;
+              }
+              span:nth-child(3) {
+              transform:translate3d(-6px,-2px,0px)  rotate(30deg) ;
+              width: 8px;
+              background: #00ff47;
+              }
+            }
+          }
+        }
+      }
+    }
+    .home-header-nav{
+      display: block;
+      opacity:0;
+      width: 100vw;
+      height: 100px;
+      position: fixed;
+      top:0;
+      left:0;
+      z-index:998;
+      backdrop-filter: blur(20px);
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+      ul{
+        text-align: right;
+        padding: 18vw 7vw;
+        li{
+          font-family: Inter;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 30px;
+          line-height: 2.2;
+          color: #FFFFFF;
+          opacity:0.6;
+          transition:all 0.25s cubic-bezier(0.08, 0.82, 0.17, 1);
+          &.active{
+            text-decoration: underline;
+            opacity:1;
+          }
+        }
+      }
+      &.active {
+        opacity:1;
+        height: 100vh;
+      }
     }
   }
 </style>
