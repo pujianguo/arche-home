@@ -65,12 +65,13 @@ const initGsap = (gsap, ScrollTrigger) => {
 useInitGsap(initGsap)
 
 const menuList = [
-  { id: 1, title: 'INDEX', routeName: 'Home', href: '' },
-  { id: 2, title: 'STORE', routeName: '', href: '' },
-  { id: 3, title: 'NEWS', routeName: '', href: '' },
-  { id: 4, title: 'SERVICE', routeName: '', href: '' },
-  { id: 5, title: 'ABOUT', routeName: '', href: '' },
-  { id: 6, title: 'SUPPORT', routeName: '', href: '' },
+  { id: 1, title: 'HOME', routeName: 'Home', href: '' },
+  { id: 2, title: 'EXPLORE', routeName: '', href: '' },
+  { id: 3, title: 'STAKING', routeName: '', href: '' },
+  { id: 4, title: 'AGA', routeName: '', href: '' },
+  { id: 5, title: 'DEVELOPER', routeName: '', href: '' },
+  { id: 6, title: 'COMMUNITY', routeName: '', href: '' },
+  { id: 6, title: 'ABOUT', routeName: '', href: '' },
 ]
 
 const route = useRoute()
@@ -154,9 +155,9 @@ onMounted(() => {
 
       .menu-item {
         height: 40px;
-        padding: 0 18px;
+        padding: 0 16px;
         margin: 0 2px;
-        font-size: 18px;
+        font-size: 16px;
         font-style: normal;
         font-weight: 700;
         line-height: 40px;
@@ -306,8 +307,8 @@ onMounted(() => {
       }
 
       .center .menu-item {
-        padding: 0 15px;
-        font-size: 16px;
+        padding: 0 13px;
+        font-size: 15px;
       }
     }
   }
@@ -327,10 +328,9 @@ onMounted(() => {
       }
 
       .center .menu-item {
-        height: 32px;
         padding: 0 8px;
-        font-size: 14px;
-        line-height: 32px;
+        margin: 0;
+        font-size: 13px;
 
         &.active {
           border-radius: 8px;
@@ -355,11 +355,9 @@ onMounted(() => {
       }
 
       .center .menu-item {
-        height: 26px;
-        padding: 0 5px;
+        padding: 0 6px;
         margin: 0;
         font-size: 12px;
-        line-height: 26px;
 
         &.active {
           border-radius: 6px;
@@ -472,8 +470,9 @@ onMounted(() => {
       width: 100vw;
       height: 100px;
       background: linear-gradient(180deg, rgba(0, 0, 0, .9) 0%, rgba(0, 0, 0, 0) 100%);
-      opacity: 0;
-      backdrop-filter: blur(20px);
+      transition: transform .5s cubic-bezier(.08, .82, .17, 1), backdrop-filter .5s ease-out;
+      transform: translateY(-100vh);
+      backdrop-filter: blur(0);
 
       ul {
         padding: 18vw 7vw;
@@ -498,7 +497,8 @@ onMounted(() => {
 
       &.active {
         height: 100vh;
-        opacity: 1;
+        backdrop-filter: blur(20px);
+        transform: translateY(0);
       }
     }
   }
