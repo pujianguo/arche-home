@@ -140,8 +140,13 @@
   min-height: 100vh;
   overflow: hidden;
 
+  section .container {
+    max-width: 100%;
+  }
+
   .container {
     padding: 0 18px;
+    max-width: 100%;
 
     .header {
       box-sizing: border-box;

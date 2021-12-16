@@ -30,8 +30,7 @@ import Section9 from './Section9.vue'
 
 <style lang="scss">
 .home-page {
-  max-width: 1680px;
-  margin: 0 auto;
+
   // overflow-x: hidden;
   color: #fff;
   background: #000;
@@ -43,6 +42,20 @@ import Section9 from './Section9.vue'
 
     .container {
       box-sizing: border-box;
+      max-width: 1680px;
+      margin: 0 auto;
+    }
+  }
+
+  .home-section-9 {
+    .container {
+      max-width: 100%;
+
+      .content-investor-padding,
+      .content-arche-padding,
+      .content-footer * {
+        max-width: 1680px;
+      }
     }
   }
 

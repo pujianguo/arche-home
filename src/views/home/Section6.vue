@@ -86,7 +86,7 @@ useInitGsap(initGsap)
       left: 0;
       z-index: 1;
       content: '';
-      background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, .1) 11.28%, rgba(0, 0, 0, 0) 48.96%, rgba(0, 0, 0, .1) 83.33%, #000 100%), linear-gradient(90deg, #000 27.44%, rgba(0, 0, 0, .72) 45.55%, rgba(0, 0, 0, 0) 100%);
+      background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, .1) 11.28%, rgba(0, 0, 0, 0) 48.96%, rgba(0, 0, 0, .1) 83.33%, #000 100%), linear-gradient(90deg, #000 27.44%, rgba(0, 0, 0, .72) 45.55%, rgba(0, 0, 0, .5) 100%);
       transform: matrix(-1, 0, 0, 1, 0, 0);
       transform: matrix(-1, 0, 0, 1, 0, 0);
     }

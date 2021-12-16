@@ -162,7 +162,7 @@ useInitGsap(initGsap)
       content: '';
       background:
         linear-gradient(180deg, #000 3.66%, rgba(0, 0, 0, .1) 21.66%, rgba(0, 0, 0, 0) 48.96%, rgba(0, 0, 0, .1) 83.33%, #000 100%),
-        linear-gradient(90deg, #000 7.08%, rgba(0, 0, 0, .72) 32.89%, rgba(0, 0, 0, 0) 100%);
+        linear-gradient(90deg, #000 7.08%, rgba(0, 0, 0, .72) 32.89%, rgba(0, 0, 0, .4) 100%);
     }
 
     .background {
@@ -334,9 +334,7 @@ useInitGsap(initGsap)
         width: 100%;
         height: 100%;
         content: '';
-        background:
-          linear-gradient(180deg, #000 3.66%, rgba(0, 0, 0, .1) 21.66%, rgba(0, 0, 0, 0) 48.96%, rgba(0, 0, 0, .1) 83.33%, #000 100%),
-          linear-gradient(90deg, #000 7.08%, rgba(0, 0, 0, .72) 32.89%, rgba(0, 0, 0, 0) 100%);
+        background: linear-gradient(180deg, #000 3.66%, rgba(0, 0, 0, .7) 21.66%, rgba(0, 0, 0, .6) 48.96%, rgba(0, 0, 0, .7) 83.33%, #000 100%);
       }
 
       .background {
