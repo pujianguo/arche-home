@@ -29,8 +29,8 @@
       </a>
     </div>
     <div class="right">
-      <a class="menu" href="#">
-        <div class="archeMenu active">
+      <a class="menu" href="#" @click="openMenuHandle">
+        <div class="archeMenu" :class="{active: openMenu}">
           <span></span>
           <span></span>
           <span></span>
@@ -38,7 +38,7 @@
       </a>
     </div>
   </div>
-  <div class="home-header-nav active">
+  <div class="home-header-nav" :class="{active: openMenu}">
     <ul class="">
       <li :class="['menu-item', {active: item.routeName === routeName}]" v-for="item in menuList" :key="item.id">{{item.title}}</li>
     </ul>
@@ -93,6 +93,11 @@ const mouseenterHandler = (e) => {
 const mouseleaveHandler = () => {
   const el = ulRef.value.children[currentItem.value]
   setCurrent(el)
+}
+
+const openMenu = ref(false)
+const openMenuHandle = () => {
+  openMenu.value = !openMenu.value
 }
 
 onMounted(() => {
@@ -158,7 +163,7 @@ onMounted(() => {
         color: #fff;
         letter-spacing: 0;
         cursor: pointer;
-        transition: all 0.4s ease-in-out;
+        transition: all .4s ease-in-out;
 
         &:hover {
           color: #0116ff !important;
@@ -179,7 +184,7 @@ onMounted(() => {
         background: #fff;
         // background-color: rgba(0, 0, 0, .3);
         border-radius: 10px;
-        transition: all 0.4s ease-in-out;
+        transition: all .4s ease-in-out;
       }
 
       &:hover {
@@ -208,7 +213,7 @@ onMounted(() => {
           font-size: 20px;
           line-height: 32px;
           letter-spacing: 0;
-          transition: all 0.25s cubic-bezier(0.08, 0.82, 0.17, 1);
+          transition: all .25s cubic-bezier(.08, .82, .17, 1);
         }
 
         .archeArrow {
@@ -227,7 +232,7 @@ onMounted(() => {
             width: 12px;
             height: 6px;
             background: #00ff47;
-            transition: all 0.25s cubic-bezier(0.08, 0.82, 0.17, 1);
+            transition: all .25s cubic-bezier(.08, .82, .17, 1);
             transform: rotate(-120deg);
           }
 
@@ -236,7 +241,7 @@ onMounted(() => {
             width: 20px;
             height: 6px;
             background: #00ff47;
-            transition: all 0.25s cubic-bezier(0.08, 0.82, 0.17, 1);
+            transition: all .25s cubic-bezier(.08, .82, .17, 1);
             transform: rotate(0deg);
           }
 
@@ -248,7 +253,7 @@ onMounted(() => {
             width: 12px;
             height: 6px;
             background: #00ff47;
-            transition: all 0.25s cubic-bezier(0.08, 0.82, 0.17, 1);
+            transition: all .25s cubic-bezier(.08, .82, .17, 1);
             transform: rotate(-60deg);
           }
         }
@@ -280,10 +285,12 @@ onMounted(() => {
       }
     }
   }
+
   .home-header-mb,
   .home-header-nav {
     display: none;
   }
+
   @media screen and (min-width: 1100px) and (max-width: 1400px) {
     .home-header {
       padding: 0 30px;
@@ -360,10 +367,12 @@ onMounted(() => {
       }
     }
   }
+
   @media screen and (max-width: 768px) {
     .home-header {
       display: none;
     }
+
     .home-header-mb {
       position: fixed;
       top: 0;
@@ -376,104 +385,120 @@ onMounted(() => {
       width: 100%;
       height: 60px;
       padding: 0 4vw;
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+      background: linear-gradient(180deg, rgba(0, 0, 0, .9) 0%, rgba(0, 0, 0, 0) 100%);
+
       .left {
         display: flex;
         flex: 1;
         align-items: center;
         justify-content: space-between;
         width: auto;
+
         .logo-main {
           width: 133px;
           height: 24px;
         }
       }
+
       .right {
         a.menu {
+          box-sizing: border-box;
           display: block;
           width: 30px;
           height: 30px;
           padding: 7px;
-          box-sizing: border-box;
+
           .archeMenu {
+            position: relative;
             width: 16px;
             height: 16px;
-            position: relative;
+
             span {
               display: block;
               width: 16px;
               height: 3px;
               background: rgba(255, 255, 255, 1);
-              transition: all 0.25s cubic-bezier(0.08, 0.82, 0.17, 1);
+              transition: all .25s cubic-bezier(.08, .82, .17, 1);
             }
+
             span:nth-child(1) {
               position: absolute;
               top: 0;
               left: 0;
             }
+
             span:nth-child(2) {
               position: absolute;
               top: 6px;
               left: 0;
             }
+
             span:nth-child(3) {
               position: absolute;
               top: 12px;
               left: 0;
             }
+
             &.active {
               span:nth-child(1) {
-                transform: translate3d(-6px, 2px, 0px) rotate(-30deg);
                 width: 8px;
                 background: #00ff47;
+                transform: translate3d(-6px, 2px, 0) rotate(-30deg);
               }
+
               span:nth-child(2) {
-                transform: translate3d(-1px, 0px, 0px) rotate(0deg);
                 width: 12px;
                 background: #00ff47;
+                transform: translate3d(-1px, 0, 0) rotate(0deg);
               }
+
               span:nth-child(3) {
-                transform: translate3d(-6px, -2px, 0px) rotate(30deg);
                 width: 8px;
                 background: #00ff47;
+                transform: translate3d(-6px, -2px, 0) rotate(30deg);
               }
             }
           }
         }
       }
     }
+
     .home-header-nav {
-      display: block;
-      opacity: 0;
-      width: 100vw;
-      height: 100px;
       position: fixed;
       top: 0;
       left: 0;
       z-index: 998;
+      display: block;
+      width: 100vw;
+      height: 100px;
+      background: linear-gradient(180deg, rgba(0, 0, 0, .9) 0%, rgba(0, 0, 0, 0) 100%);
+      opacity: 0;
       backdrop-filter: blur(20px);
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+
       ul {
-        text-align: right;
         padding: 18vw 7vw;
+        text-align: right;
+
         li {
           font-family: Inter;
+          font-size: 30px;
           font-style: normal;
           font-weight: 600;
-          font-size: 30px;
           line-height: 2.2;
-          color: #ffffff;
-          opacity: 0.6;
-          transition: all 0.25s cubic-bezier(0.08, 0.82, 0.17, 1);
+          color: #fff;
+          opacity: .6;
+          transition: all .25s cubic-bezier(.08, .82, .17, 1);
+
           &.active {
             text-decoration: underline;
             opacity: 1;
           }
         }
       }
+
       &.active {
-        opacity: 1;
         height: 100vh;
+        opacity: 1;
       }
     }
   }
