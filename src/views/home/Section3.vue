@@ -317,7 +317,7 @@ useInitGsap(initGsap)
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 8vw 4vw;
+      padding: 8vw 6vw;
 
       .text-content {
         .title-card {

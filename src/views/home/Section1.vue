@@ -302,7 +302,7 @@ const mousemoveHandler = (e) => {
   @media screen and (max-width: 768px) {
     .home-section-1 {
       .container {
-        padding: 4vw;
+        padding: 6vw;
 
         .text-content {
           padding-top: 36vh;

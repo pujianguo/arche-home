@@ -150,43 +150,108 @@ useInitGsap(initGsap)
     }
 
     .iframe-wrap {
+      top: 0%;
       right: 0;
+      right: 0%;
       z-index: -1;
       width: 60%;
-      top:0%;
-      right:0%;
-      iframe{
-        transform:scale(90%);
+
+      iframe {
+        transform: scale(90%);
         transform-origin: center center;
       }
     }
   }
 }
-@media screen and (min-width: 1100px) and (max-width: 1400px) {
-.home-section-5 .container .text-content .title-card{
-  margin-bottom: 60px;
-}
-.home-section-5 .container .text-content .number-card {
-    max-width: 470px;
-}
-}
-@media screen and (min-width: 900px) and (max-width: 1099px) {
-.home-section-5 .container .text-content .title-card{
-  margin-bottom: 50px;
-}
-.home-section-5 .container .text-content .number-card {
-    max-width: 420px;
-}
-}
-@media screen and (min-width: 769px) and (max-width: 899px) {
-.home-section-5 .container .text-content .title-card{
-  margin-bottom: 40px;
-}
-.home-section-5 .container .text-content .number-card {
-    max-width: 360px;
-}
-}
-@media screen and (max-width: 768px) {
 
+@media screen and (min-width: 1100px) and (max-width: 1400px) {
+  .home-section-5 .container .text-content .title-card {
+    margin-bottom: 60px;
+  }
+
+  .home-section-5 .container .text-content .number-card {
+    max-width: 470px;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1099px) {
+  .home-section-5 .container .text-content .title-card {
+    margin-bottom: 50px;
+  }
+
+  .home-section-5 .container .text-content .number-card {
+    max-width: 420px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 899px) {
+  .home-section-5 .container .text-content .title-card {
+    margin-bottom: 40px;
+  }
+
+  .home-section-5 .container .text-content .number-card {
+    max-width: 360px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home-section-5 {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+
+    .container {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 8vw 6vw;
+
+      .text-content {
+        .title-card {
+          margin-bottom: 60vw;
+        }
+
+        .number-card {
+          max-width: 100vw;
+
+          .number {
+            transition: .5s;
+            transform: translateX(300px) rotate(720deg);
+          }
+
+          .title {
+            max-width: 80vw;
+            transition: .5s;
+            transform: translateX(-100%);
+          }
+
+          &.active {
+            .number {
+              transform: translateX(0) rotate(0);
+            }
+
+            .title {
+              transform: translateX(0);
+            }
+          }
+        }
+      }
+
+      .iframe-wrap {
+        top: 0%;
+        right: 0;
+        right: 0%;
+        width: 100%;
+        height: 75%;
+
+        iframe {
+          transform: scale(110%);
+          transform-origin: center center;
+        }
+      }
+    }
+  }
 }
 </style>

@@ -254,7 +254,7 @@ useInitGsap(initGsap)
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      padding: 100px;
+      padding: 8vw 6vw;
 
       .text-content {
         .title-card {
@@ -262,22 +262,20 @@ useInitGsap(initGsap)
 
           .title-box {
             position: relative;
-            width: 420px;
-            margin-right: 70px;
+            width: 100vw;
+            margin-right: 0;
+            margin-bottom: 50vw;
+            text-align: right;
 
             .img {
-              position: absolute;
-              top: 0;
-              right: -70px;
-              z-index: -1;
-              width: 250px;
-              height: 250px;
+              display: none;
             }
 
             h1 {
+              display: inline;
               margin-top: 0;
-              font-size: 70px;
-              line-height: 98px;
+              margin-left: .7em;
+              font-size: 32px;
 
               &:nth-child(2) {
                 text-indent: 1.1em;
@@ -291,7 +289,7 @@ useInitGsap(initGsap)
         }
 
         .number-card {
-          max-width: 538px;
+          max-width: 100vw;
 
           .number {
             transition: .5s;
@@ -305,7 +303,7 @@ useInitGsap(initGsap)
           }
 
           .desc {
-            max-width: 538px;
+            max-width: 90vw;
           }
 
           &.active {
@@ -321,12 +319,13 @@ useInitGsap(initGsap)
       }
 
       .iframe-wrap {
-        left: -6%;
+        left: 0;
         z-index: -1;
-        width: 70%;
+        width: 100%;
+        height: 80%;
 
         iframe {
-          transform: scale(170%);
+          transform: scale(200%);
           transform-origin: center center;
         }
       }

@@ -382,7 +382,7 @@ onMounted(() => {
       justify-content: space-between;
       width: 100%;
       height: 60px;
-      padding: 0 4vw;
+      padding: 0 6vw;
       background: linear-gradient(180deg, rgba(0, 0, 0, .9) 0%, rgba(0, 0, 0, 0) 100%);
 
       .left {
