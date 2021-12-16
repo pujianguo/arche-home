@@ -127,8 +127,9 @@ onMounted(() => {
       bottom: 0;
       left: 0;
       z-index: 0;
+      height: 140px;
       content: "";
-      background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%);
+      background: linear-gradient(180deg, rgba(0, 0, 0, .95) 36%, rgba(0, 0, 0, 0) 100%);
     }
 
     .left {
@@ -209,11 +210,11 @@ onMounted(() => {
         color: #fff;
 
         .text {
-          margin-right: 14px;
+          margin-right: 0;
           font-family: Cindie Mono;
           font-size: 20px;
           line-height: 32px;
-          letter-spacing: 0;
+          letter-spacing: 1.5px;
           transition: all .25s cubic-bezier(.08, .82, .17, 1);
         }
 
@@ -261,6 +262,7 @@ onMounted(() => {
 
         &:hover {
           .text {
+            letter-spacing: 0;
             transform: translate3d(18px, 0, 0) rotate(0deg);
           }
 

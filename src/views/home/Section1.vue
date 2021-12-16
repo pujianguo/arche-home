@@ -47,13 +47,19 @@ const style = ref('')
 const mousemoveHandler = (e) => {
   console.log('window.innerWidth', window.innerWidth)
   console.log('e.pageX', e.pageX)
-  const m = -(window.innerWidth / 2 - e.pageX) / 30
-  const n = (window.innerHeight / 2 - e.pageY) / 10
-  style.value = `
-    transform: rotateY(${m}deg) rotateX(${n}deg);
-    -webkit-transform: rotateY(${m}deg) rotateX(${n}deg);
-    -moz-transform: rotateY(${m}deg) rotateX(${n}deg)')
-  `
+  const m = -(window.innerWidth / 2 - e.pageX) / 80
+  const n = -(window.innerHeight / 2 - e.pageY) / 80
+  // style.value = `
+  //   transform: rotate(${m}deg) ;
+  //   transform-origin:50% 70%;
+  //   -webkit-transform: rotate(${m}deg) ;
+  //   -moz-transform: rotate(${m}deg) ')
+  // `
+  // style.value = `
+  //   transform: rotateY(${m}deg) rotateX(${n}deg);
+  //   -webkit-transform: rotateY(${m}deg) rotateX(${n}deg);
+  //   -moz-transform: rotateY(${m}deg) rotateX(${n}deg)')
+  // `
 }
 </script>
 
@@ -69,7 +75,7 @@ const mousemoveHandler = (e) => {
       right: 0;
       bottom: 0;
       left: 0;
-      transition: transform .05s linear;
+      transition: transform .1s linear;
 
       .box {
         position: absolute;
