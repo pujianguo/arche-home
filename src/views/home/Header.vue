@@ -103,7 +103,7 @@ onMounted(() => {
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 1;
+    z-index: 0;
     content: '';
     background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%);
   }
