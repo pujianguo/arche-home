@@ -66,11 +66,10 @@ useInitGsap(initGsap)
 
 const menuList = [
   { id: 1, title: 'HOME', routeName: 'Home', href: '' },
-  { id: 2, title: 'EXPLORE', routeName: '', href: '' },
-  { id: 3, title: 'STAKING', routeName: '', href: '' },
-  { id: 4, title: 'AGA', routeName: '', href: '' },
-  { id: 5, title: 'DEVELOPER', routeName: '', href: '' },
-  { id: 6, title: 'COMMUNITY', routeName: '', href: '' },
+  { id: 2, title: 'STAKING', routeName: '', href: '' },
+  { id: 3, title: 'AGA', routeName: '', href: '' },
+  { id: 4, title: 'DEVELOPER', routeName: '', href: '' },
+  { id: 5, title: 'COMMUNITY', routeName: '', href: '' },
   { id: 6, title: 'ABOUT', routeName: '', href: '' },
 ]
 
