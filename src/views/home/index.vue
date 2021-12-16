@@ -10,7 +10,6 @@
     <Section7 />
     <Section8 />
     <Section9 />
-
   </div>
   <span data-text="scroll to explore" class="effect-shine"></span>
 </template>
