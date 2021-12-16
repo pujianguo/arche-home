@@ -63,14 +63,16 @@
         height: 300px;
         transform-origin: 50% 50%;
         animation: rotateX 1s ease-in-out forwards;
+
         @keyframes rotateX {
           from {
-            transform: rotate(30deg) translate3d(-80px, 0px, 0px) scale(0.6);
             opacity: 0;
+            transform: rotate(30deg) translate3d(-80px, 0, 0) scale(.6);
           }
+
           to {
-            transform: rotate(-30deg) translate3d(0px, 0px, 0px) scale(1);
             opacity: 1;
+            transform: rotate(-30deg) translate3d(0, 0, 0) scale(1);
           }
         }
 
@@ -199,19 +201,24 @@
       }
     }
   }
+
   @media screen and (min-width: 1100px) and (max-width: 1400px) {
-    .home-section-1 .background-wrap{
-      transform: scale(0.85);
+    .home-section-1 .background-wrap {
+      transform: scale(.85);
       transform-origin: right top;
     }
+
     .home-section-1 .container {
       padding: 100px 80px;
+
       .text-content {
         .title-card .title-box h1 {
           font-size: 70px;
         }
+
         .number-card .desc {
           max-width: 640px;
+
           p {
             font-size: 18px;
           }
@@ -219,20 +226,25 @@
       }
     }
   }
+
   @media screen and (min-width: 900px) and (max-width: 1099px) {
-    .home-section-1 .background-wrap{
-      transform: scale(0.7);
+    .home-section-1 .background-wrap {
+      transform: scale(.7);
       transform-origin: right top;
     }
+
     .home-section-1 .container {
       padding: 80px 60px;
+
       .text-content {
         .title-card .title-box h1 {
           font-size: 60px;
           line-height: 110px;
         }
+
         .number-card .desc {
           max-width: 580px;
+
           p {
             font-size: 16px;
             line-height: 1.8;
@@ -241,20 +253,25 @@
       }
     }
   }
+
   @media screen and (min-width: 769px) and (max-width: 899px) {
-    .home-section-1 .background-wrap{
-      transform: scale(0.6);
+    .home-section-1 .background-wrap {
+      transform: scale(.6);
       transform-origin: right top;
     }
+
     .home-section-1 .container {
       padding: 70px 50px;
+
       .text-content {
         .title-card .title-box h1 {
           font-size: 50px;
           line-height: 90px;
         }
+
         .number-card .desc {
           max-width: 580px;
+
           p {
             font-size: 14px;
             line-height: 1.8;
@@ -263,6 +280,7 @@
       }
     }
   }
+
   @media screen and (max-width: 768px) {
   }
 </style>

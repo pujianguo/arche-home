@@ -1,5 +1,6 @@
 <template>
   <div class="home-header fromTop ae-1 do">
+    <div class="background"></div>
     <div class="left">
       <a target="_blank" href="https://arche.network" class="logo flex-center" title="ARCHE">
         <a-svg class="logo-main" name="logo-main"></a-svg>
@@ -22,11 +23,23 @@
 </template>
 
 <script setup>
-import { computed, onMounted } from 'vue'
+import { computed } from 'vue'
 import { useRoute } from 'vue-router'
-import gsap from 'gsap'
-import ScrollTrigger from 'gsap/ScrollTrigger'
-gsap.registerPlugin(ScrollTrigger)
+import useInitGsap from '@/hooks/useInitGsap'
+
+const initGsap = (gsap, ScrollTrigger) => {
+  gsap.timeline({
+    scrollTrigger: {
+      trigger: '.home-section-1',
+      start: 'bottom top',
+      end: '120% top',
+      // markers: true,
+      scrub: true,
+    },
+  })
+    .from('.home-header .background', { y: innerHeight * -1 }, 0)
+}
+useInitGsap(initGsap)
 
 const menuList = [
   { id: 1, title: 'INDEX', routeName: 'Home', href: '' },
@@ -42,20 +55,6 @@ const routeName = computed(() => {
   return route.name
 })
 
-onMounted(() => {
-  // gsap.timeline({
-  //   scrollTrigger: {
-  //     trigger: '.home-header',
-  //     start: 'top top',
-  //     end: 'top top',
-  //     // markers: true,
-  //     scrub: true,
-  //   },
-  // })
-  //   .from('.home-header .left', { x: innerWidth * -1 }, 0)
-  //   .from('.home-header .center', { y: innerHeight * -1 }, 0)
-  //   .from('.home-header .right', { x: innerWidth * 1 }, 0)
-})
 </script>
 
 <style lang="scss">
@@ -71,6 +70,17 @@ onMounted(() => {
     width: 100%;
     height: 90px;
     padding: 0 46px;
+
+    .background {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      content: '';
+      background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 100%);
+    }
 
     .left {
       display: flex;
@@ -133,62 +143,71 @@ onMounted(() => {
           font-size: 20px;
           line-height: 32px;
           letter-spacing: 0;
-          transition: all 0.25s cubic-bezier(0.08, 0.82, 0.17, 1);
+          transition: all .25s cubic-bezier(.08, .82, .17, 1);
         }
+
         .archeArrow {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           width: 50px;
           height: 30px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          position: relative;
+
           span:nth-child(1) {
+            position: absolute;
+            top: 5px;
+            right: 2px;
             display: block;
             width: 12px;
             height: 6px;
             background: #00ff47;
-            position: absolute;
-            right: 2px;
-            top: 5px;
+            transition: all .25s cubic-bezier(.08, .82, .17, 1);
             transform: rotate(-120deg);
-            transition: all 0.25s cubic-bezier(0.08, 0.82, 0.17, 1);
           }
+
           span:nth-child(2) {
             display: block;
             width: 20px;
             height: 6px;
             background: #00ff47;
+            transition: all .25s cubic-bezier(.08, .82, .17, 1);
             transform: rotate(0deg);
-            transition: all 0.25s cubic-bezier(0.08, 0.82, 0.17, 1);
           }
+
           span:nth-child(3) {
+            position: absolute;
+            right: 2px;
+            bottom: 5px;
             display: block;
             width: 12px;
             height: 6px;
             background: #00ff47;
-            position: absolute;
-            right: 2px;
-            bottom: 5px;
+            transition: all .25s cubic-bezier(.08, .82, .17, 1);
             transform: rotate(-60deg);
-            transition: all 0.25s cubic-bezier(0.08, 0.82, 0.17, 1);
           }
         }
+
         &:hover {
           .text {
             transform: translate3d(18px, 0, 0) rotate(0deg);
           }
+
           .archeArrow {
             span:nth-child(1) {
               transform: translate3d(9px, 1px, 0) rotate(-155deg);
             }
+
             span:nth-child(2) {
               transform: translate3d(12px, 0, 0) rotate(0deg);
             }
+
             span:nth-child(3) {
               transform: translate3d(9px, -1px, 0) rotate(-25deg);
             }
           }
         }
+
         .icon {
           width: 32px;
           height: 26px;
@@ -196,69 +215,84 @@ onMounted(() => {
       }
     }
   }
+
   @media screen and (min-width: 1100px) and (max-width: 1400px) {
     .home-header {
       padding: 0 30px;
+
       .left .logo-main {
         width: 162px;
         height: 30px;
       }
+
       .right .getapp {
-        transform:scale(90%);
+        transform: scale(90%);
         transform-origin: center right;
       }
-      .center .menu-item{
-        padding:0 15px;
+
+      .center .menu-item {
+        padding: 0 15px;
         font-size: 16px;
       }
     }
   }
+
   @media screen and (min-width: 900px) and (max-width: 1099px) {
     .home-header {
       padding: 0 20px;
+
       .left .logo-main {
         width: 130px;
         height: 24px;
       }
+
       .right .getapp {
-        transform:scale(70%);
+        transform: scale(70%);
         transform-origin: center right;
       }
-      .center .menu-item{
-        padding:0 8px;
+
+      .center .menu-item {
+        height: 32px;
+        padding: 0 8px;
         font-size: 14px;
         line-height: 32px;
-        height: 32px;
-        &.active{
-          border-radius:8px;
+
+        &.active {
+          border-radius: 8px;
         }
       }
     }
   }
+
   @media screen and (min-width: 769px) and (max-width: 899px) {
     .home-header {
+      height: 60px;
       padding: 0 20px;
-      height:60px;
+
       .left .logo-main {
         width: 130px;
         height: 24px;
       }
+
       .right .getapp {
-        transform:scale(70%);
+        transform: scale(70%);
         transform-origin: center right;
       }
-      .center .menu-item{
-        padding:0 5px;
+
+      .center .menu-item {
+        height: 26px;
+        padding: 0 5px;
+        margin: 0;
         font-size: 12px;
         line-height: 26px;
-        height: 26px;
-        margin:0;
-        &.active{
-          border-radius:6px;
+
+        &.active {
+          border-radius: 6px;
         }
       }
     }
   }
+
   @media screen and (max-width: 768px) {
     .home-header {
       display: none;
