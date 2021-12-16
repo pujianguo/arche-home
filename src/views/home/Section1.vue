@@ -1,11 +1,11 @@
 <template>
-  <section class="home-section-1">
-    <div class="background-wrap">
+  <section class="home-section-1" @mousemove="mousemoveHandler">
+    <div class="background-wrap" :style="style">
       <div class="box">
-        <div class="box-item "></div>
-        <div class="box-item "></div>
-        <div class="box-item "></div>
-        <div class="box-item "></div>
+        <div class="box-item"></div>
+        <div class="box-item"></div>
+        <div class="box-item"></div>
+        <div class="box-item"></div>
       </div>
     </div>
     <div class="container">
@@ -42,18 +42,34 @@
 </template>
 
 <script setup>
+import { ref } from 'vue'
+const style = ref('')
+const mousemoveHandler = (e) => {
+  console.log('window.innerWidth', window.innerWidth)
+  console.log('e.pageX', e.pageX)
+  const m = -(window.innerWidth / 2 - e.pageX) / 30
+  const n = (window.innerHeight / 2 - e.pageY) / 10
+  style.value = `
+    transform: rotateY(${m}deg) rotateX(${n}deg);
+    -webkit-transform: rotateY(${m}deg) rotateX(${n}deg);
+    -moz-transform: rotateY(${m}deg) rotateX(${n}deg)')
+  `
+}
 </script>
 
 <style lang="scss">
   .home-section-1 {
     z-index: 3;
+    perspective: 500px;
 
     .background-wrap {
+      transform-style: preserve-3d;
       position: absolute;
       top: 0;
       right: 0;
       bottom: 0;
       left: 0;
+      transition: transform .05s linear;
 
       .box {
         position: absolute;
@@ -102,7 +118,7 @@
 
             &::before {
               content: "SEEK";
-              transform: rotate(90deg) translateX(calc(-50% + 30px - 80px)); // 60 / 2 - 80
+              transform: rotate(90deg) translateX(calc(-50% + 30px - 80px)) translateZ(80px); // 60 / 2 - 80
             }
           }
 
@@ -118,6 +134,7 @@
             &::before {
               padding-left: 80px;
               content: "TRADE";
+              transform: translateZ(80px);
             }
           }
 
@@ -129,11 +146,11 @@
             width: 300px;
             height: 600px;
             padding: 0;
-            background: linear-gradient(180deg, #FA00FF 20.23%, rgba(250, 0, 255, 0) 100.09%);
+            background: linear-gradient(180deg, #fa00ff 20.23%, rgba(250, 0, 255, 0) 100.09%);
 
             &::before {
               content: "enjoy";
-              transform: rotate(90deg) translateX(calc(50% - 30px + 80px)); // 60 / 2 - 80
+              transform: rotate(90deg) translateX(calc(50% - 30px + 80px)) translateZ(80px); // 60 / 2 - 80
             }
           }
 
@@ -153,6 +170,7 @@
       z-index: 2;
       width: 100%;
       padding: 150px 100px 200px;
+      // transform: translateZ(80px);
 
       .text-content {
         .title-card {
