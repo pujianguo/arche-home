@@ -72,6 +72,176 @@ useInitGsap(initGsap)
 </script>
 
 <style lang="scss">
+.home-section-4 {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+
+  .container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 100px;
+
+    .text-content {
+      .title-card {
+        margin-bottom: 13px;
+
+        .title-box {
+          position: relative;
+          width: 420px;
+          margin-right: 70px;
+
+          .img {
+            position: absolute;
+            top: 0;
+            right: -70px;
+            z-index: -1;
+            width: 250px;
+            height: 250px;
+          }
+
+          h1 {
+            margin-top: 0;
+            font-size: 70px;
+            line-height: 98px;
+
+            &:nth-child(2) {
+              text-indent: 1.1em;
+            }
+
+            &:nth-child(3) {
+              text-indent: 2em;
+            }
+          }
+        }
+      }
+
+      .number-card {
+        max-width: 538px;
+
+        .number {
+          transition: .5s;
+          transform: translateX(-300px) rotate(-720deg);
+        }
+
+        .title {
+          max-width: 360px;
+          transition: .5s;
+          transform: translateX(100%);
+        }
+
+        .desc {
+          max-width: 538px;
+        }
+
+        &.active {
+          .number {
+            transform: translateX(0) rotate(0);
+          }
+
+          .title {
+            transform: translateX(0);
+          }
+        }
+      }
+    }
+
+    .iframe-wrap {
+      left: -6%;
+      z-index: -1;
+      width: 70%;
+
+      iframe {
+        transform: scale(170%);
+        transform-origin: center center;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1100px) and (max-width: 1400px) {
+  .home-section-4 .container .text-content .title-card {
+    margin-bottom: 13px;
+
+    .title-box {
+      position: relative;
+      width: 320px;
+      margin-right: 70px;
+
+      h1 {
+        font-size: 60px;
+        line-height: 74px;
+      }
+
+      .img {
+        width: 180px;
+        height: 180px;
+      }
+    }
+  }
+
+  .home-section-4 .container .text-content .number-card {
+    max-width: 500px;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1099px) {
+  .home-section-4 .container .text-content .title-card {
+    margin-bottom: 13px;
+
+    .title-box {
+      position: relative;
+      width: 260px;
+      margin-right: 70px;
+
+      h1 {
+        font-size: 50px;
+        line-height: 64px;
+      }
+
+      .img {
+        width: 156px;
+        height: 156px;
+      }
+    }
+  }
+
+  .home-section-4 .container .text-content .number-card {
+    max-width: 460px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 899px) {
+  .home-section-4 .container .text-content .title-card {
+    margin-bottom: 13px;
+
+    .title-box {
+      position: relative;
+      width: 200px;
+      margin-right: 70px;
+
+      h1 {
+        font-size: 40px;
+        line-height: 52px;
+      }
+
+      .img {
+        width: 128px;
+        height: 128px;
+      }
+    }
+  }
+
+  .home-section-4 .container .text-content .number-card {
+    max-width: 380px;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .home-section-4 {
     position: relative;
     width: 100%;
@@ -97,7 +267,7 @@ useInitGsap(initGsap)
 
             .img {
               position: absolute;
-              top: 0px;
+              top: 0;
               right: -70px;
               z-index: -1;
               width: 250px;
@@ -124,13 +294,13 @@ useInitGsap(initGsap)
           max-width: 538px;
 
           .number {
-            transition: 0.5s;
+            transition: .5s;
             transform: translateX(-300px) rotate(-720deg);
           }
 
           .title {
             max-width: 360px;
-            transition: 0.5s;
+            transition: .5s;
             transform: translateX(100%);
           }
 
@@ -154,6 +324,7 @@ useInitGsap(initGsap)
         left: -6%;
         z-index: -1;
         width: 70%;
+
         iframe {
           transform: scale(170%);
           transform-origin: center center;
@@ -161,69 +332,5 @@ useInitGsap(initGsap)
       }
     }
   }
-  @media screen and (min-width: 1100px) and (max-width: 1400px) {
-    .home-section-4 .container .text-content .title-card {
-      margin-bottom: 13px;
-      .title-box {
-        position: relative;
-        width: 320px;
-        margin-right: 70px;
-        h1 {
-          font-size: 60px;
-          line-height: 74px;
-        }
-        .img {
-          width: 180px;
-          height: 180px;
-        }
-      }
-    }
-    .home-section-4 .container .text-content .number-card {
-    max-width: 500px;
 }
-  }
-  @media screen and (min-width: 900px) and (max-width: 1099px) {
-    .home-section-4 .container .text-content .title-card {
-      margin-bottom: 13px;
-      .title-box {
-        position: relative;
-        width: 260px;
-        margin-right: 70px;
-        h1 {
-          font-size: 50px;
-          line-height: 64px;
-        }
-        .img {
-          width: 156px;
-          height: 156px;
-        }
-      }
-    }
-    .home-section-4 .container .text-content .number-card {
-    max-width: 460px;
-}
-  }
-  @media screen and (min-width: 769px) and (max-width: 899px) {
-    .home-section-4 .container .text-content .title-card {
-      margin-bottom: 13px;
-      .title-box {
-        position: relative;
-        width: 200px;
-        margin-right: 70px;
-        h1 {
-          font-size: 40px;
-          line-height: 52px;
-        }
-        .img {
-          width: 128px;
-          height: 128px;
-        }
-      }
-    }
-    .home-section-4 .container .text-content .number-card {
-    max-width: 380px;
-}
-  }
-  @media screen and (max-width: 768px) {
-  }
 </style>

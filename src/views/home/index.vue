@@ -599,11 +599,10 @@ import Section9 from './Section9.vue'
           margin-bottom: 5px;
 
           .text {
-            font-family: "Cindie Mono";
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 16px;
+            font-family: Cindie Mono;
+            font-size: 10px;
+            font-weight: 200;
+            line-height: 12px;
             text-align: left;
             letter-spacing: 0;
           }
@@ -611,20 +610,20 @@ import Section9 from './Section9.vue'
           .line {
             width: 100%;
             height: 1px;
-            margin-right: 0;
-            margin-left: 20px;
+            margin-right: 10px;
+            margin-left: 10px;
             background: #fff;
           }
         }
 
         .title-box {
           h1 {
-            margin-top: -20px;
+            margin-top: 0;
             font-family: Cindie Mono;
-            font-size: 60px;
+            font-size: 32px;
             font-style: normal;
             font-weight: 400;
-            line-height: 96px;
+            line-height: 1.6;
             text-align: left;
             letter-spacing: 0;
 
@@ -676,7 +675,7 @@ import Section9 from './Section9.vue'
         }
 
         .footer {
-          margin-top: 40px;
+          margin-top: 20px;
 
           .footer-btn {
             height: 44px;
@@ -684,10 +683,10 @@ import Section9 from './Section9.vue'
             padding-right: 24px;
 
             .text {
-              font-size: 12px;
+              font-size: 10px;
               font-style: normal;
               font-weight: normal;
-              line-height: 32px;
+              line-height: 24px;
               color: rgba(255, 255, 255, 1);
               transition: .35s ease;
             }
@@ -768,8 +767,8 @@ import Section9 from './Section9.vue'
           }
 
           .footer-link {
-            margin: 0 40px;
-            font-size: 20px;
+            margin: 0 10px;
+            font-size: 10px;
             font-style: normal;
             font-weight: 700;
             line-height: 36px;

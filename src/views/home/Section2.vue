@@ -252,5 +252,159 @@ useInitGsap(initGsap)
 }
 
 @media screen and (max-width: 768px) {
+  .home-section-2 {
+    .container {
+      padding: 12vw 12vw;
+
+      .text-content {
+        width: 100vw;
+        overflow: hidden;
+
+        .number-card {
+          align-items: center;
+          justify-content: center;
+          width: auto;
+          max-width: 100vw;
+
+          .number {
+            text-align: center;
+            transition: .5s;
+            transform: translateX(300px) rotate(720deg);
+          }
+
+          .title {
+            font-size: 16px;
+            text-align: center;
+            transition: .5s;
+            transform: translateX(-100%);
+          }
+
+          .desc {
+            text-align: center;
+          }
+
+          &.active {
+            .number {
+              transform: translateX(0) rotate(0);
+            }
+
+            .title {
+              transform: translateX(0);
+            }
+          }
+        }
+
+        .line {
+          position: relative;
+          width: 1px;
+          height: 10vh;
+          margin: 30px 4px;
+          opacity: .5;
+
+          &::before {
+            position: absolute;
+            top: 0;
+            left: 37vw;
+            width: 100%;
+            height: 0;
+            content: '';
+            background: #fff;
+            transition: .5s;
+          }
+
+          &.active {
+            &::before {
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    .background-wrap {
+      overflow: hidden;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        content: '';
+        background:
+          linear-gradient(180deg, #000 3.66%, rgba(0, 0, 0, .1) 21.66%, rgba(0, 0, 0, 0) 48.96%, rgba(0, 0, 0, .1) 83.33%, #000 100%),
+          linear-gradient(90deg, #000 7.08%, rgba(0, 0, 0, .72) 32.89%, rgba(0, 0, 0, 0) 100%);
+      }
+
+      .background {
+        position: absolute;
+        top: 0%;
+        right: 0;
+        bottom: -20%;
+        left: 0;
+        height: 140%;
+        transform: rotate(18deg);
+
+        .box {
+          box-sizing: border-box;
+          width: 300%;
+          // height: 20%;
+          padding: 12px 0;
+
+          .img {
+            height: 100%;
+          }
+        }
+
+        .box1 {
+          height: 15%;
+
+          .img {
+            background: url('https://media.arche.network/arche2.0/images/section2_img_1.png') repeat-x;
+            background-size: auto 100%;
+          }
+        }
+
+        .box2 {
+          height: 15%;
+
+          .img {
+            background: url('https://media.arche.network/arche2.0/images/section2_img_2.png') repeat-x;
+            background-size: auto 100%;
+          }
+        }
+
+        .box3 {
+          height: 15%;
+
+          .img {
+            background: url('https://media.arche.network/arche2.0/images/section2_img_3.png') repeat-x;
+            background-size: auto 100%;
+          }
+        }
+
+        .box4 {
+          height: 15%;
+
+          .img {
+            background: url('https://media.arche.network/arche2.0/images/section2_img_4.png') repeat-x;
+            background-size: auto 100%;
+          }
+        }
+
+        .box5 {
+          height: 15%;
+
+          .img {
+            background: url('https://media.arche.network/arche2.0/images/section2_img_5.png') repeat-x;
+            background-size: auto 100%;
+          }
+        }
+      }
+    }
+  }
 }
 </style>
