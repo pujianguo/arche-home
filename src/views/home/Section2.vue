@@ -148,6 +148,7 @@ useInitGsap(initGsap)
     right: 0;
     bottom: 0;
     left: 0;
+    overflow-x: hidden;
 
     &::before {
       position: absolute;
@@ -155,9 +156,9 @@ useInitGsap(initGsap)
       right: 0;
       bottom: 0;
       left: 0;
+      z-index: 1;
       width: 100%;
       height: 100%;
-      z-index: 1;
       content: '';
       background:
         linear-gradient(180deg, #000 3.66%, rgba(0, 0, 0, .1) 21.66%, rgba(0, 0, 0, 0) 48.96%, rgba(0, 0, 0, .1) 83.33%, #000 100%),
@@ -231,21 +232,25 @@ useInitGsap(initGsap)
     }
   }
 }
+
 @media screen and (min-width: 1100px) and (max-width: 1400px) {
-  .home-section-2 .container{
-    padding:80px;
+  .home-section-2 .container {
+    padding: 80px;
   }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1099px) {
+  .home-section-2 .container {
+    padding: 60px;
   }
-  @media screen and (min-width: 900px) and (max-width: 1099px) {
-    .home-section-2 .container{
-    padding:60px;
+}
+
+@media screen and (min-width: 769px) and (max-width: 899px) {
+  .home-section-2 .container {
+    padding: 50px;
   }
-  }
-  @media screen and (min-width: 769px) and (max-width: 899px) {
-    .home-section-2 .container{
-    padding:50px;
-  }
-  }
-  @media screen and (max-width: 768px) {
-  }
+}
+
+@media screen and (max-width: 768px) {
+}
 </style>
