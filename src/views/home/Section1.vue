@@ -127,7 +127,7 @@
             width: 300px;
             height: 600px;
             padding: 0;
-            background: #fa00ff;
+            background: linear-gradient(180deg, #FA00FF 20.23%, rgba(250, 0, 255, 0) 100.09%);
 
             &::before {
               content: "enjoy";
