@@ -142,7 +142,7 @@ useInitGsap(initGsap)
       flex-direction: column;
       align-items: center;
       width: 100%;
-      padding: 20vw 6vw;
+      padding: 20vw 6vw 4vw;
 
       .title {
         max-width: 100vw;
