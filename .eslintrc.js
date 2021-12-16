@@ -17,5 +17,7 @@ module.exports = {
   },
   globals: {
     defineProps: true,
+    defineEmits: true,
+    defineExpose: true,
   },
 }
