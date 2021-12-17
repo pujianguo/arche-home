@@ -19,14 +19,14 @@
           </div>
           <div class="box box-2">
             <h1>
-              Transforming trading into an experience.
+              Transforming E-commerce To De-commerce.
             </h1>
             <h2>
               Join Arche Community and share the collective building of a future world of Metaverse!
             </h2>
           </div>
           <div class="box box-3">
-            <h1>Follow ARCHE</h1>
+            <h1>Follow ARCHE Update</h1>
             <div class="input-box">
               <input class="input" type="text" v-model="inputValue" placeholder="ENTER EMAIL">
               <div class="btn">SIGN UP</div>
