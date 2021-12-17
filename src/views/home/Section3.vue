@@ -196,95 +196,193 @@ useInitGsap(initGsap)
       flex: 1;
       align-items: center;
       justify-content: center;
-      padding:30px;
+      padding: 30px;
+
       img {
         width: 100%;
       }
     }
   }
 }
-@media screen and (min-width: 1100px) and (max-width: 1400px) {
-  .home-section-3 .container{
-    padding:80px;
-    .img-content{
-      padding:0;
-    }
-  }
-.home-section-3 .container .text-content{
-  .title-card {
-    margin-bottom: 60px;
-    .line-box{
-      .text{
-        font-weight: 300;
-      }
-      .line{
-        width: 60px;
-        margin-left: 10px;
-        margin-right: 10px;
-        flex:none;
-      }
-    }
-}
-  .number-card {
-    max-width: 530px;
-}
-}
-}
-@media screen and (min-width: 900px) and (max-width: 1099px) {
-  .home-section-3 .container{
-    padding:60px;
-    .img-content{
-      padding:0;
-    }
-  }
-.home-section-3 .container .text-content{
-  .title-card {
-    margin-bottom: 50px;
-    .line-box{
-      .text{
-        font-weight: 300;
-      }
-      .line{
-        width: 60px;
-        margin-left: 10px;
-        margin-right: 10px;
-        flex:none;
-      }
-    }
-}
-  .number-card {
-    max-width: 480px;
-}
-}
-}
-@media screen and (min-width: 769px) and (max-width: 899px) {
-  .home-section-3 .container{
-    padding:50px;
-    .img-content{
-      padding:0;
-    }
-  }
-.home-section-3 .container .text-content{
-  .title-card {
-    margin-bottom: 40px;
-    .line-box{
-      .text{
-        font-weight: 200;
-      }
-      .line{
-        width: 40px;
-        margin-left: 5px;
-        margin-right: 5px;
-        flex:none;
-      }
-    }
-}
-  .number-card {
-    max-width: 400px;
-}
-}
-}
-@media screen and (max-width: 768px) {
 
+@media screen and (min-width: 1100px) and (max-width: 1400px) {
+  .home-section-3 .container {
+    padding: 80px;
+
+    .img-content {
+      padding: 0;
+    }
+  }
+
+  .home-section-3 .container .text-content {
+    .title-card {
+      margin-bottom: 60px;
+
+      .line-box {
+        .text {
+          font-weight: 300;
+        }
+
+        .line {
+          flex: none;
+          width: 60px;
+          margin-right: 10px;
+          margin-left: 10px;
+        }
+      }
+    }
+
+    .number-card {
+      max-width: 530px;
+    }
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1099px) {
+  .home-section-3 .container {
+    padding: 60px;
+
+    .img-content {
+      padding: 0;
+    }
+  }
+
+  .home-section-3 .container .text-content {
+    .title-card {
+      margin-bottom: 50px;
+
+      .line-box {
+        .text {
+          font-weight: 300;
+        }
+
+        .line {
+          flex: none;
+          width: 60px;
+          margin-right: 10px;
+          margin-left: 10px;
+        }
+      }
+    }
+
+    .number-card {
+      max-width: 480px;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 899px) {
+  .home-section-3 .container {
+    padding: 50px;
+
+    .img-content {
+      padding: 0;
+    }
+  }
+
+  .home-section-3 .container .text-content {
+    .title-card {
+      margin-bottom: 40px;
+
+      .line-box {
+        .text {
+          font-weight: 200;
+        }
+
+        .line {
+          flex: none;
+          width: 40px;
+          margin-right: 5px;
+          margin-left: 5px;
+        }
+      }
+    }
+
+    .number-card {
+      max-width: 400px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home-section-3 {
+    position: relative;
+    z-index: 30;
+    width: 100%;
+    min-height: 100vh;
+
+    .container {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8vw 6vw;
+
+      .text-content {
+        .title-card {
+          margin-bottom: 90vw;
+          overflow: hidden;
+
+          .line-box {
+            max-width: 80vw;
+
+            .line {
+              flex: 1;
+            }
+          }
+
+          .title-box {
+            h1 {
+              &:nth-child(1) {
+                color: #0ff;
+              }
+
+              &:nth-child(2) {
+                color: #fa00ff;
+                text-indent: 0;
+              }
+            }
+          }
+        }
+
+        .number-card {
+          max-width: 100vw;
+
+          .number {
+            transition: .5s;
+            transform: translateX(300px) rotate(720deg);
+          }
+
+          .title {
+            transition: .5s;
+            transform: translateX(-100%);
+          }
+
+          &.active {
+            .number {
+              transform: translateX(0) rotate(0);
+            }
+
+            .title {
+              transform: translateX(0);
+            }
+          }
+        }
+      }
+
+      .img-content {
+        position: absolute;
+        top: 140px;
+        display: block;
+        width: 92vw;
+        padding: 0;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
 }
 </style>

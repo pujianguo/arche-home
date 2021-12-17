@@ -77,49 +77,103 @@ useInitGsap(initGsap)
     }
   }
 }
-@media screen and (min-width: 1100px) and (max-width: 1400px) {
-.home-section-8 .container{
-  padding:100px 100px 0 100px;
-  .title{
-    font-size: 32px;
-  }
-  .text{
-    font-size: 16px;
-  }
-  .line{
-    height: 90px;
-  }
-}
-}
-@media screen and (min-width: 900px) and (max-width: 1099px) {
-.home-section-8 .container{
-  padding:80px 80px 0 80px;
-  .title{
-    font-size: 28px;
-  }
-  .text{
-    font-size: 15px;
-  }
-  .line{
-    height: 80px;
-  }
-}
-}
-@media screen and (min-width: 769px) and (max-width: 899px) {
-.home-section-8 .container{
-  padding:60px 60px 0 60px;
-  .title{
-    font-size: 24px;
-  }
-  .text{
-    font-size: 14px;
-  }
-  .line{
-    height: 70px;
-  }
-}
-}
-@media screen and (max-width: 768px) {
 
+@media screen and (min-width: 1100px) and (max-width: 1400px) {
+  .home-section-8 .container {
+    padding: 100px 100px 0 100px;
+
+    .title {
+      font-size: 32px;
+    }
+
+    .text {
+      font-size: 16px;
+    }
+
+    .line {
+      height: 90px;
+    }
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1099px) {
+  .home-section-8 .container {
+    padding: 80px 80px 0 80px;
+
+    .title {
+      font-size: 28px;
+    }
+
+    .text {
+      font-size: 15px;
+    }
+
+    .line {
+      height: 80px;
+    }
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 899px) {
+  .home-section-8 .container {
+    padding: 60px 60px 0 60px;
+
+    .title {
+      font-size: 24px;
+    }
+
+    .text {
+      font-size: 14px;
+    }
+
+    .line {
+      height: 70px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home-section-8 {
+    min-height: unset !important;
+
+    .container {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding: 20vw 6vw 4vw;
+
+      .title {
+        max-width: 100vw;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 1.5;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0;
+      }
+
+      .text {
+        max-width: 100vw;
+        margin-top: 6vw;
+        margin-bottom: 8vw;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.8;
+        text-align: center;
+        letter-spacing: 0;
+        opacity: .6;
+      }
+
+      .line {
+        width: 1px;
+        height: 50px;
+        background: #fff;
+      }
+    }
+  }
 }
 </style>

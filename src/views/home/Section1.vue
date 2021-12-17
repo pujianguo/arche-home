@@ -47,13 +47,19 @@ const style = ref('')
 const mousemoveHandler = (e) => {
   console.log('window.innerWidth', window.innerWidth)
   console.log('e.pageX', e.pageX)
-  const m = -(window.innerWidth / 2 - e.pageX) / 30
-  const n = (window.innerHeight / 2 - e.pageY) / 10
-  style.value = `
-    transform: rotateY(${m}deg) rotateX(${n}deg);
-    -webkit-transform: rotateY(${m}deg) rotateX(${n}deg);
-    -moz-transform: rotateY(${m}deg) rotateX(${n}deg)')
-  `
+  const m = -(window.innerWidth / 2 - e.pageX) / 80
+  const n = -(window.innerHeight / 2 - e.pageY) / 80
+  // style.value = `
+  //   transform: rotate(${m}deg) ;
+  //   transform-origin:50% 70%;
+  //   -webkit-transform: rotate(${m}deg) ;
+  //   -moz-transform: rotate(${m}deg) ')
+  // `
+  // style.value = `
+  //   transform: rotateY(${m}deg) rotateX(${n}deg);
+  //   -webkit-transform: rotateY(${m}deg) rotateX(${n}deg);
+  //   -moz-transform: rotateY(${m}deg) rotateX(${n}deg)')
+  // `
 }
 </script>
 
@@ -69,7 +75,7 @@ const mousemoveHandler = (e) => {
       right: 0;
       bottom: 0;
       left: 0;
-      transition: transform .05s linear;
+      transition: transform .1s linear;
 
       .box {
         position: absolute;
@@ -300,5 +306,123 @@ const mousemoveHandler = (e) => {
   }
 
   @media screen and (max-width: 768px) {
+    .home-section-1 {
+      .container {
+        padding: 6vw;
+
+        .text-content {
+          padding-top: 36vh;
+
+          .title-card {
+            .title-box {
+              h1 {
+                margin-top: 0;
+                font-size: 40px;
+                line-height: 1.4;
+
+                &:nth-child(1) {
+                  text-indent: 0;
+                }
+
+                &:nth-child(2) {
+                  text-indent: 1em;
+                }
+
+                &:nth-child(3) {
+                  text-indent: 0;
+                }
+              }
+            }
+          }
+
+          .number-card {
+            width: auto;
+            max-width: 770px;
+            margin-top: 7px;
+
+            .desc {
+              max-width: 770px;
+
+              p {
+                display: inline;
+                margin: 0;
+                font-size: 14px;
+                line-height: 1.8;
+              }
+            }
+
+            .footer {
+              margin-top: 40px;
+            }
+          }
+        }
+      }
+
+      .background-wrap .box {
+        top: 120px;
+        right: 80px;
+        width: 110px;
+        height: 110px;
+
+        @keyframes rotateX {
+          from {
+            opacity: 0;
+            transform: rotate(60deg) translate3d(-30px, 0, 0) scale(.6);
+          }
+
+          to {
+            opacity: 1;
+            transform: rotate(-30deg) translate3d(0, 0, 0) scale(1);
+          }
+        }
+
+        .box-item {
+          &::before {
+            font-size: 36px;
+            -webkit-text-stroke: 1px #fff;
+          }
+
+          &:nth-child(1) {
+            bottom: 110px;
+            left: 0;
+            width: 110px;
+            height: 220px;
+
+            &::before {
+              transform: rotate(90deg) translateX(calc(-50% + 30px - 50px));
+            }
+          }
+
+          &:nth-child(2) {
+            top: 0;
+            left: 110px;
+            width: 220px;
+            height: 110px;
+
+            &::before {
+              padding-left: 50px;
+            }
+          }
+
+          &:nth-child(3) {
+            top: 110px;
+            left: 0;
+            width: 110px;
+            height: 220px;
+
+            &::before {
+              transform: rotate(90deg) translateX(calc(50% - 30px + 50px));
+            }
+          }
+
+          &:nth-child(4) {
+            top: 0;
+            right: 110px;
+            width: 360px;
+            height: 110px;
+          }
+        }
+      }
+    }
   }
 </style>
