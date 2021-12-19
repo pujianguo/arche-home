@@ -45,10 +45,10 @@
 import { ref } from 'vue'
 const style = ref('')
 const mousemoveHandler = (e) => {
-  console.log('window.innerWidth', window.innerWidth)
-  console.log('e.pageX', e.pageX)
-  const m = -(window.innerWidth / 2 - e.pageX) / 80
-  const n = -(window.innerHeight / 2 - e.pageY) / 80
+  // console.log('window.innerWidth', window.innerWidth)
+  // console.log('e.pageX', e.pageX)
+  // const m = -(window.innerWidth / 2 - e.pageX) / 80
+  // const n = -(window.innerHeight / 2 - e.pageY) / 80
   // style.value = `
   //   transform: rotate(${m}deg) ;
   //   transform-origin:50% 70%;

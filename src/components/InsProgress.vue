@@ -94,7 +94,6 @@ const style = computed(() => {
   }
   return style
 })
-console.log('insProgress', insProgress)
 
 const start = () => {
   insProgress.start()

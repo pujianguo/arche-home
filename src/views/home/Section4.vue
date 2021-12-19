@@ -3,7 +3,10 @@
     <div class="container">
       <div class="iframe-wrap">
         <div class="iframe-content">
-          <iframe class="iframe" src="/iframe/aga.html" frameborder="0" width="1080" height="1080"></iframe>
+          <div v-if="mobile" class="img-box">
+            <img class="img" src="images/aga.png" alt="">
+          </div>
+          <iframe v-else class="iframe" src="/iframe/aga.html" frameborder="0" width="1080" height="1080"></iframe>
         </div>
       </div>
 
@@ -39,7 +42,10 @@
 </template>
 
 <script setup>
+import { isMobile } from '@/utils/func'
 import useInitGsap from '@/hooks/useInitGsap'
+
+const mobile = isMobile()
 
 const initGsap = (gsap, ScrollTrigger) => {
   gsap.timeline({

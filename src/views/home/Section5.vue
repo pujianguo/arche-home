@@ -27,7 +27,10 @@
 
       <div class="iframe-wrap">
         <div class="iframe-content">
-          <iframe class="iframe" src="/iframe/archecoin.html" frameborder="0" width="1080" height="1080"></iframe>
+          <div v-if="mobile" class="img-box">
+            <img class="img" src="images/archecoin.png" alt="">
+          </div>
+          <iframe v-else class="iframe" src="/iframe/archecoin.html" frameborder="0" width="1080" height="1080"></iframe>
         </div>
       </div>
     </div>
@@ -36,6 +39,8 @@
 
 <script setup>
 import useInitGsap from '@/hooks/useInitGsap'
+import { isMobile } from '@/utils/func'
+const mobile = isMobile()
 
 const initGsap = (gsap, ScrollTrigger) => {
   gsap.utils.toArray('.home-section-5 .container .number-card').forEach((box, i) => {

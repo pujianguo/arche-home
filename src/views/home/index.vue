@@ -362,6 +362,21 @@ import Section9 from './Section9.vue'
         width: 100%;
         height: 100%;
       }
+
+      .img-box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        @include flex-center();
+
+        .img {
+          width: 100%;
+        }
+      }
     }
   }
 }
