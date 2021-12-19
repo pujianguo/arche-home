@@ -28,7 +28,7 @@
       <div class="iframe-wrap">
         <div class="iframe-content">
           <div v-if="mobile" class="img-box">
-            <img class="img" src="images/archecoin.png" alt="">
+            <img class="img" src="/images/archecoin.png" alt="">
           </div>
           <iframe v-else class="iframe" src="/iframe/archecoin.html" frameborder="0" width="1080" height="1080"></iframe>
         </div>
