@@ -37,6 +37,12 @@
             <div class="social">
               <a class="social-item" v-for="item in socialList" :key="item.id" target="_blank" :href="item.href">
                 <img :src="item.imgSrc" :alt="item.title">
+                <div class="popup" v-if="item.title === 'TELEGRAM'">
+                  <a class="popup-item" v-for="telegram in telegramList" :key="telegram.id" :href="telegram.link" target="_blank">
+                    <a-sve class="icon" :name="telegram.icon"></a-sve>
+                    <span>{{telegram.label}}</span>
+                  </a>
+                </div>
               </a>
             </div>
           </div>
@@ -89,9 +95,9 @@ const socialList = [
   },
   {
     id: 2,
-    title: 'TELTGRAM',
+    title: 'TELEGRAM',
     imgSrc: config.imgUrl + 'icon-telegram.png',
-    href: 'https://t.me/ArcheNetwork',
+    // href: 'https://t.me/ArcheNetwork',
   },
   {
     id: 3,
@@ -111,6 +117,17 @@ const socialList = [
     imgSrc: config.imgUrl + 'icon-github.png',
     href: 'https://github.com/Archenetwork',
   },
+]
+const telegramList = [
+  { id: 1, label: 'English', link: 'https://t.me/ArcheNetwork', icon: '' },
+  { id: 2, label: 'Russian', link: 'https://t.me/archerussian', icon: '' },
+  { id: 3, label: 'Vietnamese', link: 'https://t.me/Arche_Network_VNGroup', icon: '' },
+  { id: 4, label: 'Indonesian', link: 'https://t.me/Archeindonesia', icon: '' },
+  { id: 5, label: 'Spanish', link: 'https://t.me/archespanish ', icon: '' },
+  { id: 6, label: 'Indian', link: 'https://t.me/archeindian', icon: '' },
+  { id: 7, label: 'Japan', link: 'https://t.me/archejapan', icon: '' },
+  { id: 8, label: 'Persian', link: 'https://t.me/archearchpersian', icon: '' },
+  { id: 9, label: 'Chinese', link: 'https://t.me/archechinese', icon: '' },
 ]
 
 </script>
@@ -335,6 +352,7 @@ const socialList = [
               margin-top: 29px;
 
               .social-item {
+                position: relative;
                 opacity: 1;
 
                 img {
@@ -343,9 +361,82 @@ const socialList = [
                   transition: all .3s;
                 }
 
+                .popup {
+                  position: absolute;
+                  bottom: 60px;
+                  left: -60px;
+                  box-sizing: border-box;
+                  width: 180px;
+                  height: 300px;
+                  padding: 15px 0;
+                  pointer-events: none;
+                  background: #fff;
+                  opacity: 0;
+                  transition: all .5s;
+
+                  &::after {
+                    position: absolute;
+                    right: 0;
+                    bottom: -30px;
+                    left: 0;
+                    height: 30px;
+                    content: '';
+                    background: transparent;
+                  }
+
+                  &::before {
+                    $w: 10px;
+
+                    position: absolute;
+                    bottom: -9px;
+                    left: 50%;
+                    margin-left: -10px;
+                    content: '';
+                    border-color: #fff transparent transparent transparent;
+                    border-style: solid;
+                    border-width: $w $w 0 $w;
+                  }
+
+                  .popup-item {
+                    box-sizing: border-box;
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    height: 30px;
+                    padding: 0 20px;
+                    cursor: pointer;
+
+                    .icon {
+                      width: 40px;
+                      height: 25px;
+                    }
+
+                    span {
+                      font-weight: 700;
+                      color: #000;
+                      text-align: left;
+                      text-transform: uppercase;
+                    }
+
+                    &:hover {
+                      background: #eee;
+
+                      span {
+                        color: #0038ff;
+                      }
+                    }
+                  }
+                }
+
                 &:hover {
                   img {
                     transform: scale(1.08);
+                  }
+
+                  .popup {
+                    pointer-events: all;
+                    opacity: 1;
+                    transform: translateY(-20px);
                   }
                 }
               }
