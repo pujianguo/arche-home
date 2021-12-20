@@ -12,7 +12,7 @@
       </li>
     </ul>
     <div class="right">
-      <a class="getapp" href="https://app.arche.network">
+      <a class="getapp" href="https://app.arche.network" target="_blank">
         <div class="text">Explore</div>
         <div class="archeArrow">
           <span></span>

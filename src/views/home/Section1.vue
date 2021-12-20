@@ -25,15 +25,14 @@
             <p>connect Web 2.0 to Web 3.0. </p>
           </div>
           <div class="footer">
-            <div class="footer-btn fromLeft ae-8 do">
+            <a class="footer-btn fromLeft ae-8 do" href="https://app.arche.network" target="_blank">
               <span class="text">Explore</span>
-              <!-- <a-svg class="icon" name="union"></a-svg> -->
               <div class="archeArrow">
                 <span></span>
                 <span></span>
                 <span></span>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
