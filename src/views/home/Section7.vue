@@ -145,8 +145,8 @@
   }
 
   .container {
-    padding: 0 18px;
     max-width: 100%;
+    padding: 0 18px;
 
     .header {
       box-sizing: border-box;
@@ -783,6 +783,7 @@
           .item {
             position: relative;
             box-sizing: border-box;
+            min-height: 90px;
             overflow: hidden;
             text-align: center;
             background: #101113;
