@@ -83,7 +83,7 @@ useInitGsap(initGsap)
   z-index: 2;
   width: 100%;
   min-height: 100vh;
-  overflow-y: hidden;
+  overflow: hidden;
 
   .container {
     position: relative;
@@ -148,7 +148,7 @@ useInitGsap(initGsap)
     right: 0;
     bottom: 0;
     left: 0;
-    overflow-x: hidden;
+    overflow: hidden;
 
     &::before {
       position: absolute;

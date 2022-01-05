@@ -1,6 +1,6 @@
 <template>
   <div class="home-page animateOnEvent">
-    <Header />
+    <!-- <Header /> -->
     <Section1 />
     <Section2 />
     <Section3 />
@@ -9,13 +9,13 @@
     <Section6 />
     <Section7 />
     <Section8 />
-    <Section9 />
+    <!-- <Section9 /> -->
   </div>
-  <span data-text="scroll to explore" class="effect-shine"></span>
+  <span data-text="scroll to explore" class="effect-shine" v-if="isHome"></span>
 </template>
 
 <script setup>
-import Header from './Header.vue'
+// import Header from './Header.vue'
 import Section1 from './Section1.vue'
 import Section2 from './Section2.vue'
 import Section3 from './Section3.vue'
@@ -24,8 +24,15 @@ import Section5 from './Section5.vue'
 import Section6 from './Section6.vue'
 import Section7 from './Section7.vue'
 import Section8 from './Section8.vue'
-import Section9 from './Section9.vue'
-
+// import Section9 from './Section9.vue'
+import { watch, ref } from 'vue'
+import { useRoute } from 'vue-router'
+const isHome = ref(true)
+const route = useRoute()
+watch(() => route.name, () => {
+  isHome.value = route.name === 'Home'
+},
+)
 </script>
 
 <style lang="scss">

@@ -5,8 +5,26 @@ const router = createRouter({
   routes: [
     {
       path: '',
-      name: 'Home',
-      component: () => import('@/views/home/index.vue'),
+      name: 'layout',
+      component: () => import('@/views/layout/index.vue'),
+      redirect: '/home',
+      children: [
+        {
+          path: '/home',
+          name: 'Home',
+          component: () => import('@/views/home/index.vue'),
+        },
+        {
+          path: '/developer',
+          name: 'Developer',
+          component: () => import('@/views/developer/index.vue'),
+        },
+        {
+          path: '/staking',
+          name: 'Staking',
+          component: () => import('@/views/staking/index.vue'),
+        },
+      ],
     },
     {
       path: '/:pathMatch(.*)*',
