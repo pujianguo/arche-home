@@ -70,7 +70,7 @@ const menuList = [
   { id: 3, title: 'AGA', routeName: '', href: '' },
   { id: 4, title: 'DEVELOPER', routeName: 'Developer', href: '' },
   { id: 5, title: 'COMMUNITY', routeName: '', href: '' },
-  { id: 6, title: 'ABOUT', routeName: '', href: '' },
+  { id: 6, title: 'ABOUT', routeName: 'About', href: '' },
 ]
 
 const route = useRoute()

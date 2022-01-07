@@ -24,6 +24,11 @@ const router = createRouter({
           name: 'Staking',
           component: () => import('@/views/staking/index.vue'),
         },
+        {
+          path: '/about',
+          name: 'About',
+          component: () => import('@/views/about/index.vue'),
+        },
       ],
     },
     {

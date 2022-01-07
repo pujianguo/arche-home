@@ -40,22 +40,22 @@
 </template>
 
 <script setup>
-import { ref,reactive } from 'vue'
+import { ref, reactive } from 'vue'
 const cardList = ref([
-  {title:"Project Application ",actived:true,left:'0'},
-  {title:"Project Assessment ",actived:false,left:'620px'},
-  {title:"Meeting with Team Arche ",actived:false,left:'1240px'},
-  {title:"Meeting with Team Arche ",actived:false,left:'1860px'},
-  {title:"Meeting with Team Arche ",actived:false,left:'2480px'},
-  {title:"Meeting with Team Arche ",actived:false,left:'3100px'},
-]
+  { title: 'Project Application ', actived: true, left: '0' },
+  { title: 'Project Assessment ', actived: false, left: '620px' },
+  { title: 'Meeting with Team Arche ', actived: false, left: '1240px' },
+  { title: 'Meeting with Team Arche ', actived: false, left: '1860px' },
+  { title: 'Meeting with Team Arche ', actived: false, left: '2480px' },
+  { title: 'Meeting with Team Arche ', actived: false, left: '3100px' },
+],
 )
 const startX = ref(0)
 const startY = ref(0)
 const mousedown = () => {
   event.preventDefault()
   startX.value = event.screenX
-  startY.value =event.screenY
+  startY.value = event.screenY
 }
 const mouseup = () => {
   event.preventDefault()
@@ -64,51 +64,49 @@ const mouseup = () => {
   const X = moveEndX - startX.value
   const Y = moveEndY - startY.value
   if (Math.abs(X) > Math.abs(Y) && X > 0) {
-    changeImg("left")
-
+    changeImg('left')
   }
   if (Math.abs(X) > Math.abs(Y) && X < 0) {
-    changeImg("right")
+    changeImg('right')
   }
 }
 const index = ref(0)
 
 const changeImg = (flag) => {
-  if(flag === 'left'){
-    if(index.value<=0){
-        return
-      }
-      index.value = cardList.value.findIndex((item )=>{
-        return item.actived
-      })
-      cardList.value[index.value].actived =false
-      index.value--
-      cardList.value[index.value].actived =true
-      let bottomCardWrap = document.querySelector(".bottom-card-wrap")
-      console.log(index.value);
-      bottomCardWrap.style.left = `${-index.value*620}px`
-      let bottomLine = document.querySelector(".bottom-line")
-       bottomLine.style.width  =  `${(cardList.value.length-index.value) * 590+(index.value<2?0:30)}px`
+  if (flag === 'left') {
+    if (index.value <= 0) {
+      return
+    }
+    index.value = cardList.value.findIndex((item) => {
+      return item.actived
+    })
+    cardList.value[index.value].actived = false
+    index.value--
+    cardList.value[index.value].actived = true
+    const bottomCardWrap = document.querySelector('.bottom-card-wrap')
+    console.log(index.value)
+    bottomCardWrap.style.left = `${-index.value * 620}px`
+    const bottomLine = document.querySelector('.bottom-line')
+    bottomLine.style.width = `${(cardList.value.length - index.value) * 590 + (index.value < 2 ? 0 : 30)}px`
   }
-  if(flag === 'right') {
-      if(index.value>=5){
-        return
-      }
-      index.value = cardList.value.findIndex((item )=>{
-        return item.actived
-      })
-      cardList.value[index.value].actived =false
-      index.value++
-      cardList.value[index.value].actived =true
-      let bottomCardWrap = document.querySelector(".bottom-card-wrap")
-      bottomCardWrap.style.left = `${-index.value*620}px`
-      let bottomLine = document.querySelector(".bottom-line")
-      if(index.value>3){
-         bottomLine.style.width  =  `${(cardList.value.length-index.value) * 590+(index.value>4?0:30)}px`
-      }
+  if (flag === 'right') {
+    if (index.value >= 5) {
+      return
+    }
+    index.value = cardList.value.findIndex((item) => {
+      return item.actived
+    })
+    cardList.value[index.value].actived = false
+    index.value++
+    cardList.value[index.value].actived = true
+    const bottomCardWrap = document.querySelector('.bottom-card-wrap')
+    bottomCardWrap.style.left = `${-index.value * 620}px`
+    const bottomLine = document.querySelector('.bottom-line')
+    if (index.value > 3) {
+      bottomLine.style.width = `${(cardList.value.length - index.value) * 590 + (index.value > 4 ? 0 : 30)}px`
+    }
   }
 }
-
 
 </script>
 

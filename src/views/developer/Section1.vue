@@ -26,7 +26,7 @@
       </div>
     </div>
     <video muted autoplay="autoplay" class="video" loop>
-        <source src="video/for-developer.mp4" type="video/mp4">
+        <source src="https://media.arche.network/arche2.0/video/ARCHE-Fordeveloper-Slide1.mp4" type="video/mp4">
       </video>
   </section>
 </template>
