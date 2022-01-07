@@ -73,7 +73,7 @@
           </div>
         </div>
         <div class="right">
-          <div class="staffCard" v-for="(item,index) in staffCard" :key="index">
+          <div class="staffCard" v-for="(item,index) in staffCard" :key="index"  @mouseleave="close(index)">
             <!-- ordinary -->
             <div class="ordinary" @mouseenter="open(index)">
               <div class="img">
@@ -265,6 +265,9 @@ const jump = (url) => {
   window.open(url, '_blank')
 }
 const open = (index) => {
+  if (index === 2) {
+    return
+  }
   staffCard.value.forEach(v => {
     v.showDetail = false
   })
