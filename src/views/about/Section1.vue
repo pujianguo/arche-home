@@ -1,6 +1,14 @@
 <template>
   <section class="developer-section-1">
     <div class="section-wrap">
+      <!-- circle -->
+      <div class="circle-wrap">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+        <div class="circle4"></div>
+        <div class="circle5"></div>
+      </div>
       <!-- video -->
       <div class="section-one">
         <video muted autoplay="autoplay" class="video" loop>
@@ -73,7 +81,7 @@
           </div>
         </div>
         <div class="right">
-          <div class="staffCard" v-for="(item,index) in staffCard" :key="index"  @mouseleave="close(index)">
+          <div class="staffCard" v-for="(item,index) in staffCard" :key="index" @mouseleave="close(index)">
             <!-- ordinary -->
             <div class="ordinary" @mouseenter="open(index)">
               <div class="img">
@@ -119,14 +127,7 @@
         </div>
       </div>
     </div>
-    <!-- circle -->
-    <div class="circle-wrap">
-      <div class="circle1"></div>
-      <div class="circle2"></div>
-      <div class="circle3"></div>
-      <div class="circle4"></div>
-      <div class="circle5"></div>
-    </div>
+
   </section>
 </template>
 
@@ -309,7 +310,7 @@ const close = (index) => {
     .section-one {
       .video {
         position: relative;
-        z-index: 0;
+        z-index: -1;
         width: 1680px;
       }
     }
