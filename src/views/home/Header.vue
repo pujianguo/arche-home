@@ -128,7 +128,7 @@ onMounted(() => {
       z-index: 0;
       height: 140px;
       content: "";
-      background: linear-gradient(180deg, rgba(0, 0, 0, .95) 36%, rgba(0, 0, 0, 0) 100%);
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.95) 36%, rgba(0, 0, 0, 0) 100%);
     }
 
     .left {
@@ -164,7 +164,7 @@ onMounted(() => {
         color: #fff;
         letter-spacing: 0;
         cursor: pointer;
-        transition: all .4s ease-in-out;
+        transition: all 0.4s ease-in-out;
 
         &:hover {
           color: #0116ff !important;
@@ -185,7 +185,7 @@ onMounted(() => {
         background: #fff;
         // background-color: rgba(0, 0, 0, .3);
         border-radius: 10px;
-        transition: all .4s ease-in-out;
+        transition: all 0.4s ease-in-out;
       }
 
       &:hover {
@@ -214,7 +214,7 @@ onMounted(() => {
           font-size: 20px;
           line-height: 32px;
           letter-spacing: 1.5px;
-          transition: all .25s cubic-bezier(.08, .82, .17, 1);
+          transition: all 0.25s cubic-bezier(0.08, 0.82, 0.17, 1);
         }
 
         .archeArrow {
@@ -233,7 +233,7 @@ onMounted(() => {
             width: 12px;
             height: 6px;
             background: #00ff47;
-            transition: all .25s cubic-bezier(.08, .82, .17, 1);
+            transition: all 0.25s cubic-bezier(0.08, 0.82, 0.17, 1);
             transform: rotate(-120deg);
           }
 
@@ -242,7 +242,7 @@ onMounted(() => {
             width: 20px;
             height: 6px;
             background: #00ff47;
-            transition: all .25s cubic-bezier(.08, .82, .17, 1);
+            transition: all 0.25s cubic-bezier(0.08, 0.82, 0.17, 1);
             transform: rotate(0deg);
           }
 
@@ -254,7 +254,7 @@ onMounted(() => {
             width: 12px;
             height: 6px;
             background: #00ff47;
-            transition: all .25s cubic-bezier(.08, .82, .17, 1);
+            transition: all 0.25s cubic-bezier(0.08, 0.82, 0.17, 1);
             transform: rotate(-60deg);
           }
         }
@@ -384,7 +384,7 @@ onMounted(() => {
       width: 100%;
       height: 60px;
       padding: 0 6vw;
-      background: linear-gradient(180deg, rgba(0, 0, 0, .9) 0%, rgba(0, 0, 0, 0) 100%);
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
 
       .left {
         display: flex;
@@ -417,7 +417,7 @@ onMounted(() => {
               width: 16px;
               height: 3px;
               background: rgba(255, 255, 255, 1);
-              transition: all .25s cubic-bezier(.08, .82, .17, 1);
+              transition: all 0.25s cubic-bezier(0.08, 0.82, 0.17, 1);
             }
 
             span:nth-child(1) {
@@ -470,8 +470,8 @@ onMounted(() => {
       display: block;
       width: 100vw;
       height: 100px;
-      background: linear-gradient(180deg, rgba(0, 0, 0, .9) 0%, rgba(0, 0, 0, 0) 100%);
-      transition: transform .5s cubic-bezier(.08, .82, .17, 1), backdrop-filter .5s ease-out;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+      transition: transform 0.5s cubic-bezier(0.08, 0.82, 0.17, 1), backdrop-filter 0.5s ease-out;
       transform: translateY(-100vh);
       backdrop-filter: blur(0);
 
@@ -486,8 +486,8 @@ onMounted(() => {
           font-weight: 600;
           line-height: 2.2;
           color: #fff;
-          opacity: .6;
-          transition: all .25s cubic-bezier(.08, .82, .17, 1);
+          opacity: 0.6;
+          transition: all 0.25s cubic-bezier(0.08, 0.82, 0.17, 1);
 
           &.active {
             text-decoration: underline;

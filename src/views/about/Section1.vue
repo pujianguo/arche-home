@@ -1,23 +1,15 @@
 <template>
-  <section class="developer-section-1">
-    <div class="section-wrap">
-      <!-- circle -->
-      <div class="circle-wrap">
-        <div class="circle1"></div>
-        <div class="circle2"></div>
-        <div class="circle3"></div>
-        <div class="circle4"></div>
-        <div class="circle5"></div>
-      </div>
-      <!-- video -->
-      <div class="section-one">
-        <div class="video-cover"></div>
-        <video muted autoplay="autoplay" class="video" loop>
-          <source src="https://media.arche.network/arche2.0/video/ARCHE-About.mp4" type="video/mp4">
-        </video>
-      </div>
-      <!-- section-two -->
-      <div class="section-two">
+  <section class="about-section-1">
+    <div class="container">
+      <div class="text-content">
+        <!-- circle -->
+        <div class="circle-wrap">
+          <div class="circle1"></div>
+          <div class="circle2"></div>
+          <div class="circle3"></div>
+          <div class="circle4"></div>
+          <div class="circle5"></div>
+        </div>
         <div class="title-wrap">
           <div class="title">
             <div>ABOUT</div>
@@ -40,96 +32,12 @@
           </div>
         </div>
       </div>
-      <!-- section-three -->
-      <div class="section-three">
-        <div class="left">
-          <div class="title">who we are</div>
-          <div class="content">
-            <div class="tips-one">We're a <span class="bold">fully distributed team</span> spread across <span class="bold">5 continents</span> and <span class="bold">20 countries</span> </div>
-            <div class="line-one"></div>
-            <div class="tips-two">
-              <div>Unified by a mission to build</div>
-              <div class="bold">"A Smart Way to Enter Metaverse"</div>
-              <div>through a world-class products.</div>
-            </div>
-            <div class="footer">
-              <a class="footer-btn" href="https://app.arche.network" target="_blank">
-                <span class="text">join us</span>
-                <div class="archeArrow">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-              </a>
-            </div>
-            <div class="line-two"></div>
-            <div class="tips-three">The Arche leadership team is comprised of great entrepreneurs and tech industry experts, bringing decades of experience to a global company. </div>
-            <div class="bottom">
-              <div class="text">
-                OUR <br>
-                leadership <br>
-                team
-              </div>
-              <!-- <div class="img">
-                <svg width="182" height="101" viewBox="0 0 182 101" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="66.0469" y="30.8882" width="62.1789" height="22.4068" transform="rotate(150 66.0469 30.8882)" fill="#0038FF" />
-                  <rect width="62.1789" height="22.4068" transform="matrix(-0.866025 -0.5 -0.5 0.866025 182 42.5728)" fill="#00FFFF" />
-                  <rect x="128.148" y="100.551" width="73.3823" height="89.0671" transform="rotate(-180 128.148 100.551)" fill="#FA00FF" />
-                  <rect x="111.066" y="11.4834" width="39.2119" height="11.4835" transform="rotate(-180 111.066 11.4834)" fill="#00FF47" />
-                </svg>
-              </div> -->
-            </div>
-          </div>
-        </div>
-        <div class="right">
-          <div class="staffCard" v-for="(item,index) in staffCard" :key="index" @mouseleave="close(index)">
-            <!-- ordinary -->
-            <div class="ordinary" @mouseenter="open(index)">
-              <div class="img">
-                <img :src="item.src" alt="">
-                <div class="badge" :class="item.badge" v-if="item.badge"></div>
-              </div>
-              <div class="name">{{item.name}}</div>
-              <div class="position">{{item.position}}</div>
-            </div>
-            <!-- hover
-            <div class="hover" :class="{ transition: item.showDetail, }" v-if="item.showDetail" @mouseleave="close(index)">
-              <div class="title">Introduction</div>
-              <div class="info">
-                <div class="img">
-                  <img :src="item.src" alt="">
-                  <div class="badge" :class="item.badge" v-if="item.badge"></div>
-                </div>
-                <div class="right">
-                  <div class="name">{{item.name}}</div>
-                  <div class="position">{{item.position}}</div>
-                </div>
-              </div>
-              <div class="introduction">{{item.introduction}}</div>
-              <div class="twitter" @click="jump(item.twitter)">
-                <div class="left">
-                  <div class="img">
-                    <svg width="22" height="18" viewBox="0 0 22 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M21.194 2.04899C20.8533 2.20009 20.5031 2.32761 20.1452 2.43114C20.5689 1.95197 20.892 1.38815 21.0891 0.771161C21.1334 0.632864 21.0875 0.481486 20.9739 0.391037C20.8603 0.300518 20.7026 0.289675 20.5776 0.363755C19.8175 0.814532 18.9976 1.13848 18.1378 1.32792C17.2717 0.481626 16.0953 0 14.8793 0C12.3124 0 10.224 2.0883 10.224 4.65516C10.224 4.85732 10.2368 5.05837 10.2621 5.25661C7.07681 4.97694 4.11549 3.41133 2.08195 0.916873C2.00948 0.827963 1.89784 0.780045 1.78354 0.789209C1.66916 0.798163 1.5664 0.86266 1.50862 0.961783C1.09618 1.6695 0.878134 2.47892 0.878134 3.30248C0.878134 4.42417 1.27861 5.48844 1.98605 6.32004C1.77094 6.24554 1.5622 6.15243 1.36298 6.04184C1.25602 5.98231 1.12549 5.98321 1.01923 6.04414C0.912901 6.10507 0.846236 6.21714 0.843438 6.33963C0.842948 6.36026 0.842948 6.3809 0.842948 6.40181C0.842948 8.07614 1.74408 9.58355 3.12181 10.4052C3.00344 10.3933 2.88515 10.3762 2.76763 10.3537C2.64647 10.3306 2.52189 10.373 2.44018 10.4654C2.35834 10.5578 2.33127 10.6865 2.36897 10.804C2.87893 12.3962 4.19188 13.5672 5.77911 13.9243C4.46266 14.7488 2.95721 15.1807 1.37683 15.1807C1.04707 15.1807 0.715424 15.1613 0.390842 15.1229C0.2296 15.1037 0.0754241 15.199 0.020511 15.3523C-0.034402 15.5057 0.0237988 15.6767 0.160977 15.7647C2.19122 17.0664 4.53877 17.7545 6.9497 17.7545C11.6893 17.7545 14.6542 15.5195 16.3069 13.6445C18.3677 11.3066 19.5496 8.21213 19.5496 5.15455C19.5496 5.02682 19.5477 4.89783 19.5437 4.76925C20.3568 4.15667 21.0568 3.41531 21.6265 2.56322C21.713 2.4338 21.7036 2.26277 21.6034 2.14364C21.5033 2.02444 21.3364 1.98589 21.194 2.04899Z" fill="white" />
-                    </svg>
-                  </div>
-                  <div class="text">TWITTER</div>
-                </div>
-                <div class="right">
-                  <div class="archeArrow">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            -->
-          </div>
-        </div>
-      </div>
     </div>
-
+    <div class="background-wrap">
+      <video id="slide1-video" poster="https://media.arche.network/arche2.0/video/ARCHE-About-Poster.png" preload="none" x5-video-player-type="h5" x5-playsinline="" webkit-playsinline="" playsinline="" muted="" autoplay="" loop="">
+        <source src="https://media.arche.network/arche2.0/video/ARCHE-About.mp4" type="video/mp4">
+      </video>
+    </div>
   </section>
 </template>
 
@@ -210,61 +118,8 @@ const cardList = ref([
     tips: 'Platform trading number',
     underline: '',
   },
-  // {
-  //   img: `
-  //         <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-  //         <rect x="17.3535" y="39.333" width="39.3331" height="9.25485" transform="rotate(-90 17.3535 39.333)" fill="#0038FF"/>
-  //         <rect x="44" y="30.8103" width="14.7677" height="9.22984" transform="rotate(120 44 30.8103)" fill="#00FFFF"/>
-  //         <rect x="7.38477" y="43.2566" width="14.7677" height="9.22984" transform="rotate(-120 7.38477 43.2566)" fill="#FA00FF"/>
-  //         <rect x="17.3535" y="14.8079" width="14.8078" height="9.25485" transform="rotate(-90 17.3535 14.8079)" fill="#00FF47"/>
-  //         </svg>
-  //         `,
-  //   title: 'value',
-  //   count: '$154M',
-  //   tips: 'Game in ARCHE',
-  //   underline: '',
-  // },
-  // {
-  //   img: `
-  //       <svg width="41" height="44" viewBox="0 0 41 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-  //       <rect y="0.000488281" width="15.3438" height="9.58986" fill="#00FFFF"/>
-  //       <rect x="24.9336" width="15.3438" height="9.58986" fill="#FA00FF"/>
-  //       <rect x="24.9727" y="9.54321" width="15.3438" height="9.58986" transform="rotate(90 24.9727 9.54321)" fill="#00FF47"/>
-  //       <rect x="35.5234" y="44" width="30.6876" height="9.58986" transform="rotate(-180 35.5234 44)" fill="#0038FF"/>
-  //       </svg>
-  //       `,
-  //   title: 'player',
-  //   count: '3469',
-  //   tips: 'Guilds Joined in',
-  //   underline: 'AGA',
-  // },
-  // {
-  //   img: `
-  //       <svg width="44" height="36" viewBox="0 0 44 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-  //       <rect x="18.9766" y="35.7585" width="12.0017" height="7.50105" transform="rotate(-150 18.9766 35.7585)" fill="#00FFFF"/>
-  //       <rect x="8.85938" y="6.00073" width="12.0017" height="7.50105" transform="rotate(-30 8.85938 6.00073)" fill="#FA00FF"/>
-  //       <rect y="14.1025" width="12.0342" height="7.52137" fill="#00FF47"/>
-  //       <rect x="12.0352" y="14.1025" width="31.9658" height="7.52137" fill="#0038FF"/>
-  //       </svg>
-  //       `,
-  //   title: 'archers',
-  //   count: '16584',
-  //   tips: 'ALL PLAYERS 10,657,624+',
-  //   underline: '',
-  // },
 ])
-const staffCard = ref([
-  // badge值为类名 不同颜色 可自行添加相应类名
-  { src: '/images/about-avatar-1.png', badge: 'badge-blue', name: 'Shifu', position: 'Co-Founder & CEO', introduction: '8 years of experience in the Internet, big data and finance. Worked as a regional management leader in a well-known Internet company.', twitter: 'https://www.twitter.com', showDetail: false },
-  { src: '/images/about-avatar-2.png', badge: 'badge-blue', name: 'Jeremy', position: 'Co-Founder', introduction: '8 years of experience in the Internet, big data and finance. Worked as a regional management leader in a well-known Internet company.', twitter: 'https://www.twitter.com', showDetail: false },
-  { src: '', badge: '', name: '', position: '', introduction: '', twitter: '' },
-  { src: '/images/about-avatar-3.png', badge: 'badge-blue', name: 'Eliora', position: 'Co-founder & COO', introduction: '8 years of experience in the Internet, big data and finance. Worked as a regional management leader in a well-known Internet company.', twitter: 'https://www.twitter.com', showDetail: false },
-  { src: '/images/about-avatar-4.png', badge: 'badge-blue', name: 'Elainna', position: 'CMO', introduction: '8 years of experience in the Internet, big data and finance. Worked as a regional management leader in a well-known Internet company.', twitter: 'https://www.twitter.com', showDetail: false },
-  { src: '/images/about-avatar-5.png', badge: 'badge-blue', name: 'Pierre', position: 'CTO', introduction: '8 years of experience in the Internet, big data and finance. Worked as a regional management leader in a well-known Internet company.', twitter: 'https://www.twitter.com', showDetail: false },
-  { src: '/images/about-avatar-6.png', badge: 'badge-blue', name: 'KEY', position: 'CPO', introduction: '8 years of experience in the Internet, big data and finance. Worked as a regional management leader in a well-known Internet company.', twitter: 'https://www.twitter.com', showDetail: false },
-  { src: '/images/about-avatar-7.png', badge: 'badge-blue', name: 'CHAO', position: 'Director of design', introduction: '8 years of experience in the Internet, big data and finance. Worked as a regional management leader in a well-known Internet company.', twitter: 'https://www.twitter.com', showDetail: false },
-  { src: '/images/about-avatar-8.png', badge: 'badge-blue', name: 'Jerry', position: 'Head of marketing', introduction: '8 years of experience in the Internet, big data and finance. Worked as a regional management leader in a well-known Internet company.', twitter: 'https://www.twitter.com', showDetail: false },
-])
+
 const jump = (url) => {
   window.open(url, '_blank')
 }
@@ -283,655 +138,253 @@ const close = (index) => {
 </script>
 
 <style lang="scss" scoped>
-// badge
-.badge-blue {
-  background-color: #1447fd;
-}
-
-.developer-section-1 {
-  position: relative;
-  box-sizing: border-box;
-  // width: 1680px;
-  // min-height: 100vh;
-  margin: 0 auto;
-  // overflow: hidden;
-
-  .bold {
-    font-weight: 900;
-    color: white;
-    text-transform: uppercase;
-  }
-
-  .underline {
-    text-decoration: underline;
-  }
-
-  .section-wrap {
+  .about-section-1 {
     position: relative;
     z-index: 3;
-    // section-one
-    .section-one {
-      .video-cover {
+    box-sizing: border-box;
+    margin: 0 auto;
+    perspective: 500px;
+
+    .background-wrap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 3;
+      width: 100%;
+      height: 100%;
+      min-height: 500px;
+      max-height: 900px;
+      overflow: hidden;
+      background-position: center;
+      background-size: cover;
+      backface-visibility: hidden;
+
+      video {
         position: absolute;
-        z-index: 1;
-        width: 100%;
-        height: 800px;
-        background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 30.43%, rgba(0, 0, 0, 0) 70.54%, #000 100%), url(2.render-0004.png), url(2.png);
+        top: 50%;
+        left: 50%;
+        z-index: -100;
+        width: auto;
+        min-width: 100%;
+        height: auto;
+        min-height: 100%;
+        background-size: cover;
+        transform: translateX(-50%) translateY(-50%);
+
+        @media screen and (min-width: 769px) and (max-width: 1199px) {
+          top: 60px;
+          width: 100vw;
+          min-width: auto;
+          height: 56.25vw;
+          min-height: auto;
+          transform: translateX(-50%) translateY(0%);
+        }
+
+        @media screen and (max-width: 768px) {
+          top: 60px;
+          width: 140vw;
+          min-width: auto;
+          height: 78.75vw;
+          min-height: auto;
+          transform: translateX(-50%) translateY(0%);
+        }
       }
 
-      .video {
-        position: relative;
-        z-index: -1;
-        width: 100%;
-        height: 800px;
-        // width: 1680px;
-      }
-    }
-    // section-two
-    .section-two {
-      position: relative;
-      top: -55px;
-      z-index: 1;
-      box-sizing: border-box;
-      display: flex;
-      justify-content: flex-end;
-      padding: 0 138px 0 120px;
-      margin: 0 120px;
-
-      .title-wrap {
+      &::after {
         position: absolute;
         top: 0;
         left: 0;
-        font-family: Cindie Mono;
-        font-size: 40px;
-        font-style: normal;
-        font-weight: normal;
-        line-height: 64px;
-        color: #fff;
+        z-index: 4;
+        width: 100%;
+        height: 100%;
+        min-height: 500px;
+        max-height: 900px;
+        content: "";
+        background: linear-gradient(
+          180deg,
+          #000 0%,
+          rgba(0, 0, 0, 0) 30.43%,
+          rgba(0, 0, 0, 0) 70.54%,
+          #000 100%
+        );
 
-        .title {
-          .line-two {
-            margin-left: 85px;
-          }
+        @media screen and (min-width: 769px) and (max-width: 1199px) {
+          top: 60px;
+          width: 100vw;
+          min-width: auto;
+          height: 56.25vw;
+          min-height: auto;
         }
 
-        .text {
-          width: 462px;
-          margin-top: 20px;
-          margin-left: 85px;
-          font-family: Inter;
-          font-size: 20px;
-          font-style: normal;
-          // font-weight: 900;
-          line-height: 36px;
-          color: #999;
-          letter-spacing: .01em;
-        }
-      }
-
-      .content-wrap {
-        // padding-right: 138px;
-        margin-top: 155px;
-
-        .content {
-          display: flex;
-          flex-wrap: wrap;
-          width: 1068px;
-
-          .card {
-            box-sizing: border-box;
-            display: flex;
-            width: 356px;
-            height: 130px;
-            margin-bottom: 60px;
-
-            .right {
-              padding-top: 10px;
-              margin-left: 12px;
-
-              .title {
-                display: flex;
-                align-items: center;
-                font-family: Inter;
-                font-size: 20px;
-                font-style: normal;
-                font-weight: 900;
-                line-height: 24px;
-                color: #fff;
-                text-transform: uppercase;
-              }
-
-              .count {
-                font-family: Cindie Mono;
-                font-size: 42px;
-                font-style: normal;
-                font-weight: normal;
-                line-height: 67px;
-                color: #fff;
-              }
-
-              .tips {
-                display: flex;
-                align-items: center;
-                font-family: Inter;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 600;
-                line-height: 17px;
-                color: #fff;
-                opacity: .56;
-              }
-            }
-          }
-
-          .card:nth-last-child(-n + 3) > .right > .tips {
-            color: rgba(255, 255, 255, .25);
-          }
+        @media screen and (max-width: 768px) {
+          top: 60px;
+          width: 140vw;
+          min-width: auto;
+          height: 78.75vw;
+          min-height: auto;
         }
       }
     }
-    // section-three
-    .section-three {
+
+    .container {
       position: relative;
       z-index: 5;
-      box-sizing: border-box;
-      display: flex;
-      justify-content: space-between;
-      padding-right: 138px;
-      padding-left: 120px;
-      margin-top: 125px;
+      width: 100%;
+      padding: 150px 100px 0;
 
-      .left {
-        align-self: end;
+      .text-content {
+        position: relative;
+        z-index: 10;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 60vh;
 
-        .title {
+        .circle-wrap {
+          position: absolute;
+          top: 480px;
+          left: 110px;
+          z-index: 0;
+
+          .circle1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 15vw;
+            height: 15vw;
+            border: 1px solid rgba($color: white, $alpha: 0.3);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+          }
+
+          .circle2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 25vw;
+            height: 25vw;
+            border: 1px solid rgba($color: white, $alpha: 0.25);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+          }
+
+          .circle3 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 35vw;
+            height: 35vw;
+            border: 1px solid rgba($color: white, $alpha: 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+          }
+
+          .circle4 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 45vw;
+            height: 45vw;
+            border: 1px solid rgba($color: white, $alpha: 0.15);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+          }
+
+          .circle5 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 55vw;
+            height: 55vw;
+            border: 1px solid rgba($color: white, $alpha: 0.1);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+
+        .title-wrap {
+          position: absolute;
+          top: 0;
+          left: 0;
           font-family: Cindie Mono;
           font-size: 40px;
           font-style: normal;
           font-weight: normal;
           line-height: 64px;
           color: #fff;
-        }
 
-        .content {
-          width: 448px;
-          margin-left: 85px;
+          .title {
+            .line-two {
+              margin-left: 85px;
+            }
+          }
 
-          .tips-one,
-          .tips-two,
-          .tips-three {
+          .text {
+            width: 462px;
             margin-top: 20px;
+            margin-left: 85px;
             font-family: Inter;
             font-size: 20px;
             font-style: normal;
             // font-weight: 900;
             line-height: 36px;
             color: #999;
-            letter-spacing: .03em;
+            letter-spacing: 0.01em;
           }
+        }
 
-          .line-one {
-            width: 151px;
-            height: 1px;
-            margin: 20px 0;
-            background: #fff;
-            opacity: .35;
-          }
+        .content-wrap {
+          // padding-right: 138px;
+          margin-top: 155px;
 
-          .footer {
+          .content {
             display: flex;
-            align-items: center;
-            width: 100%;
-            margin-top: 64px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-end;
 
-            .footer-btn {
+            .card {
               box-sizing: border-box;
               display: flex;
-              align-items: center;
-              justify-content: space-between;
-              height: 70px;
-              padding: 0 30px;
-              cursor: pointer;
-              background: rgba(255, 255, 255, 0);
-              border: 1px solid #fff;
-              transition: .35s ease;
-
-              .text {
-                display: inline-block;
-                font-family: "Cindie Mono";
-                font-size: 20px;
-                font-style: normal;
-                font-weight: normal;
-                line-height: 70px;
-                color: rgba(255, 255, 255, 1);
-                transition: .35s ease;
-              }
-
-              .icon {
-                width: 32px;
-                height: 26px;
-                margin-left: 40px;
-              }
-
-              .archeArrow {
-                position: relative;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 50px;
-                height: 30px;
-
-                span:nth-child(1) {
-                  position: absolute;
-                  top: 5px;
-                  right: 2px;
-                  display: block;
-                  width: 12px;
-                  height: 6px;
-                  background: #00ff47;
-                  transition: all .25s cubic-bezier(.08, .82, .17, 1);
-                  transform: rotate(-120deg);
-                }
-
-                span:nth-child(2) {
-                  display: block;
-                  width: 20px;
-                  height: 6px;
-                  background: #00ff47;
-                  transition: all .25s cubic-bezier(.08, .82, .17, 1);
-                  transform: rotate(0deg);
-                }
-
-                span:nth-child(3) {
-                  position: absolute;
-                  right: 2px;
-                  bottom: 5px;
-                  display: block;
-                  width: 12px;
-                  height: 6px;
-                  background: #00ff47;
-                  transition: all .25s cubic-bezier(.08, .82, .17, 1);
-                  transform: rotate(-60deg);
-                }
-              }
-
-              &:hover {
-                background: rgba(255, 255, 255, 1);
-
-                .text {
-                  color: rgba(0, 0, 0, 1);
-                }
-
-                .archeArrow {
-                  span:nth-child(1) {
-                    transform: translate3d(9px, 1px, 0) rotate(-155deg);
-                  }
-
-                  span:nth-child(2) {
-                    transform: translate3d(12px, 0, 0) rotate(0deg);
-                  }
-
-                  span:nth-child(3) {
-                    transform: translate3d(9px, -1px, 0) rotate(-25deg);
-                  }
-                }
-              }
-
-              &.disable {
-                opacity: .3;
-              }
-
-              &.disable:hover {
-                cursor: no-drop;
-                background: rgba(255, 255, 255, 0);
-
-                .text {
-                  color: rgba(255, 255, 255, 1);
-                }
-              }
-            }
-
-            .footer-link {
-              margin: 0 40px;
-              font-size: 20px;
-              font-style: normal;
-              font-weight: 700;
-              line-height: 36px;
-              color: rgba(255, 255, 255, .3);
-              text-align: left;
-              text-decoration-line: underline;
-              text-transform: uppercase;
-              letter-spacing: 0;
-              cursor: pointer;
-              transition: all .25s cubic-bezier(.08, .82, .17, 1);
-
-              &:hover {
-                color: rgba(255, 255, 255, .8);
-                cursor: help;
-              }
-            }
-          }
-
-          .line-two {
-            height: 1px;
-            margin-top: 252px;
-            margin-bottom: 20px;
-            background: #fff;
-          }
-
-          .bottom {
-            display: flex;
-            align-items: flex-end;
-            justify-content: space-between;
-            margin-top: 70px;
-
-            .text {
-              display: flex;
-              align-items: center;
-              font-family: Inter;
-              font-size: 32px;
-              font-style: normal;
-              font-weight: 900;
-              line-height: 39px;
-              color: #fff;
-              text-transform: uppercase;
-            }
-          }
-        }
-      }
-
-      .right {
-        display: flex;
-        flex-wrap: wrap;
-        width: 837px;
-
-        .staffCard {
-          position: relative;
-          box-sizing: border-box;
-          width: 279px;
-          height: 362px;
-          overflow: hidden;
-          background: #010101;
-
-          &:nth-of-type(1) {
-            border: 1px solid #444;
-          }
-
-          &:nth-of-type(2) {
-            border: 1px solid #444;
-            border-left: none;
-          }
-
-          &:nth-of-type(4) {
-            border: 1px solid #444;
-            border-top: none;
-          }
-
-          &:nth-of-type(5) {
-            border: 1px solid #444;
-            border-top: none;
-            border-left: none;
-          }
-
-          &:nth-of-type(6) {
-            border: 1px solid #444;
-            border-left: none;
-          }
-
-          &:nth-of-type(7) {
-            border: 1px solid #444;
-            border-top: none;
-          }
-
-          &:nth-of-type(8) {
-            border: 1px solid #444;
-            border-top: none;
-            border-left: none;
-          }
-
-          &:nth-of-type(9) {
-            border: 1px solid #444;
-            border-top: none;
-            border-left: none;
-          }
-          // ordinary
-          .ordinary {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            .img {
-              position: relative;
-              margin-top: 67px;
-
-              img {
-                width: 153px;
-                border-radius: 50%;
-              }
-
-              .badge {
-                position: absolute;
-                top: 0;
-                right: 0;
-                box-sizing: border-box;
-                width: 25px;
-                height: 25px;
-                border: 2px solid #fff;
-                border-radius: 50%;
-                transform: translateX(-50%);
-              }
-            }
-
-            .name {
-              margin-top: 36px;
-              font-family: Cindie Mono;
-              font-size: 18px;
-              font-style: normal;
-              font-weight: normal;
-              line-height: 29px;
-              color: #fff;
-
-              /* identical to box height */
-
-              text-align: center;
-            }
-
-            .position {
-              margin-top: 10px;
-              font-family: Inter;
-              font-size: 18px;
-              font-style: normal;
-              font-weight: normal;
-              line-height: 36px;
-              color: #fff;
-
-              /* or 200% */
-
-              text-align: center;
-              text-transform: uppercase;
-              opacity: .6;
-            }
-          }
-          // hover
-          .hover {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            height: 100%;
-            padding: 30px 30px 30px 42px;
-            background-color: #1a1a1a;
-
-            .title {
-              font-family: Cindie Mono;
-              font-size: 12px;
-              font-style: normal;
-              font-weight: normal;
-              line-height: 19px;
-              color: #fff;
-              opacity: .3;
-            }
-
-            .info {
-              display: flex;
-              align-items: center;
-              margin-top: 24px;
-
-              .img {
-                position: relative;
-
-                img {
-                  width: 46px;
-                  border-radius: 50%;
-                }
-
-                .badge {
-                  position: absolute;
-                  top: 0;
-                  right: 0;
-                  box-sizing: border-box;
-                  width: 8px;
-                  height: 8px;
-                  border: 1px solid #fff;
-                  border-radius: 50%;
-                  transform: translateX(-50%);
-                }
-              }
+              width: 22vw;
+              height: 130px;
+              margin-bottom: 80px;
 
               .right {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                margin-left: 13px;
+                padding-top: 10px;
+                margin-left: 12px;
 
-                .name {
+                .title {
+                  display: flex;
+                  align-items: center;
+                  font-family: Inter;
+                  font-size: 20px;
+                  font-style: normal;
+                  font-weight: 900;
+                  line-height: 24px;
+                  color: #fff;
+                  text-transform: uppercase;
+                }
+
+                .count {
                   font-family: Cindie Mono;
-                  font-size: 12px;
+                  font-size: 42px;
                   font-style: normal;
                   font-weight: normal;
+                  line-height: 67px;
                   color: #fff;
                 }
 
-                .position {
-                  margin-top: 12px;
-                  font-family: Inter;
-                  font-size: 12px;
-                  font-style: normal;
-                  font-weight: normal;
-                  color: #fff;
-
-                  /* identical to box height, or 225% */
-
-                  text-transform: uppercase;
-                  opacity: .6;
-                }
-              }
-            }
-
-            .introduction {
-              margin-top: 12px;
-              font-family: Inter;
-              font-size: 14px;
-              font-style: normal;
-              font-weight: normal;
-              line-height: 22px;
-              color: #fff;
-              opacity: .6;
-            }
-
-            .twitter {
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              margin-top: 55px;
-              cursor: pointer;
-
-              &:hover {
-                .right .archeArrow {
-                  span:nth-child(1) {
-                    transform: translate3d(4px, 1px, 0) rotate(-155deg);
-                  }
-
-                  span:nth-child(2) {
-                    transform: translate3d(6px, 0, 0) rotate(0deg);
-                  }
-
-                  span:nth-child(3) {
-                    transform: translate3d(4px, -1px, 0) rotate(-25deg);
-                  }
-                }
-              }
-
-              .left {
-                display: flex;
-
-                .img {
+                .tips {
                   display: flex;
                   align-items: center;
-                }
-
-                .text {
-                  margin-left: 9.32px;
                   font-family: Inter;
-                  font-size: 12px;
+                  font-size: 14px;
                   font-style: normal;
-                  font-weight: bold;
-                  line-height: 36px;
+                  font-weight: 600;
+                  line-height: 17px;
                   color: #fff;
-                  text-decoration-line: underline;
-                  text-transform: uppercase;
-                }
-              }
-
-              .right {
-                display: flex;
-                justify-content: flex-end;
-                width: 34px;
-                height: 24px;
-
-                .archeArrow {
-                  position: relative;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  width: 34px;
-                  height: 24px;
-
-                  span:nth-child(1) {
-                    position: absolute;
-                    top: 5px;
-                    right: 2px;
-                    display: block;
-                    width: 8.44px;
-                    height: 3.95px;
-                    background: #00ff47;
-                    transition: all .25s cubic-bezier(.08, .82, .17, 1);
-                    transform: rotate(-120deg);
-                  }
-
-                  span:nth-child(2) {
-                    display: block;
-                    width: 12.63px;
-                    height: 3.95px;
-                    background: #00ff47;
-                    transition: all .25s cubic-bezier(.08, .82, .17, 1);
-                    transform: rotate(0deg);
-                  }
-
-                  span:nth-child(3) {
-                    position: absolute;
-                    right: 2px;
-                    bottom: 5px;
-                    display: block;
-                    width: 8.44px;
-                    height: 3.95px;
-                    background: #00ff47;
-                    transition: all .25s cubic-bezier(.08, .82, .17, 1);
-                    transform: rotate(-60deg);
-                  }
+                  opacity: 0.56;
                 }
               }
             }
@@ -939,96 +392,43 @@ const close = (index) => {
         }
       }
     }
-  }
 
-  .circle-wrap {
-    position: absolute;
-    top: 1453.995px;
-    left: 280px;
-    z-index: 0;
-
-    .circle1 {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 353.45px;
-      height: 353.45px;
-      border: 1px solid rgba($color: white, $alpha: .3);
-      border-radius: 50%;
-      transform: translate(-50%, -50%);
+    .bold {
+      font-weight: 900;
+      color: white;
+      text-transform: uppercase;
     }
 
-    .circle2 {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 589.09px;
-      height: 589.09px;
-      border: 1px solid rgba($color: white, $alpha: .3);
-      border-radius: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    .circle3 {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 823.55px;
-      height: 823.55px;
-      border: 1px solid rgba($color: white, $alpha: .2);
-      border-radius: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    .circle4 {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 1060.36px;
-      height: 1060.36px;
-      border: 1px solid rgba($color: white, $alpha: .15);
-      border-radius: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    .circle5 {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 1296px;
-      height: 1296px;
-      border: 1px solid rgba($color: white, $alpha: .1);
-      border-radius: 50%;
-      transform: translate(-50%, -50%);
+    .underline {
+      text-decoration: underline;
     }
   }
-}
 
-.transition {
-  animation: open .7s;
-}
-
-@keyframes open {
-  from {
-    height: 0;
-    opacity: 0;
+  .transition {
+    animation: open 0.7s;
   }
 
-  to {
-    height: 100%;
-    opacity: 1;
-  }
-}
+  @keyframes open {
+    from {
+      height: 0;
+      opacity: 0;
+    }
 
-@keyframes close {
-  from {
-    height: 100%;
-    opacity: 1;
+    to {
+      height: 100%;
+      opacity: 1;
+    }
   }
 
-  to {
-    height: 0;
-    opacity: 0;
+  @keyframes close {
+    from {
+      height: 100%;
+      opacity: 1;
+    }
+
+    to {
+      height: 0;
+      opacity: 0;
+    }
   }
-}
 </style>

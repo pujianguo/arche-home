@@ -10,7 +10,7 @@
   "editor.detectIndentation": true,
   "editor.insertSpaces": true,
   "editor.renderWhitespace": "none",
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
   "editor.formatOnPaste": false,
   "editor.quickSuggestions": {
     "other": true,

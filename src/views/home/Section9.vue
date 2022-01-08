@@ -39,7 +39,7 @@
                 <img :src="item.imgSrc" :alt="item.title">
                 <div class="popup" v-if="item.title === 'TELEGRAM'">
                   <a class="popup-item" v-for="telegram in telegramList" :key="telegram.id" :href="telegram.link" target="_blank">
-                    <a-sve class="icon" :name="telegram.icon"></a-sve>
+                    <a-svg class="icon" :name="telegram.icon"></a-svg>
                     <span>{{telegram.label}}</span>
                   </a>
                 </div>
@@ -193,9 +193,9 @@ const telegramList = [
 
           .investor-item {
             cursor: pointer;
-            opacity: .5;
-            transition: all .35s;
-            transform: scale(.9);
+            opacity: 0.5;
+            transition: all 0.35s;
+            transform: scale(0.9);
 
             .img {
               width: 100%;
@@ -272,7 +272,7 @@ const telegramList = [
               font-style: normal;
               font-weight: 400;
               line-height: 36px;
-              color: rgba(255, 255, 255, .7);
+              color: rgba(255, 255, 255, 0.7);
               text-align: left;
               letter-spacing: 0;
             }
@@ -358,7 +358,7 @@ const telegramList = [
                 img {
                   width: 60px;
                   // margin-right: 30px;
-                  transition: all .3s;
+                  transition: all 0.3s;
                 }
 
                 .popup {
@@ -372,7 +372,7 @@ const telegramList = [
                   pointer-events: none;
                   background: #fff;
                   opacity: 0;
-                  transition: all .5s;
+                  transition: all 0.5s;
 
                   &::after {
                     position: absolute;
@@ -380,7 +380,7 @@ const telegramList = [
                     bottom: -30px;
                     left: 0;
                     height: 30px;
-                    content: '';
+                    content: "";
                     background: transparent;
                   }
 
@@ -391,7 +391,7 @@ const telegramList = [
                     bottom: -9px;
                     left: 50%;
                     margin-left: -10px;
-                    content: '';
+                    content: "";
                     border-color: #fff transparent transparent transparent;
                     border-style: solid;
                     border-width: $w $w 0 $w;
@@ -481,25 +481,22 @@ const telegramList = [
     }
 
     input::-webkit-input-placeholder {
-      color: rgba(255, 255, 255, .3);
+      color: rgba(255, 255, 255, 0.3);
     }
 
     input::-moz-placeholder {
-
       /* Mozilla Firefox 19+ */
-      color: rgba(255, 255, 255, .3);
+      color: rgba(255, 255, 255, 0.3);
     }
 
     input:-moz-placeholder {
-
       /* Mozilla Firefox 4 to 18 */
-      color: rgba(255, 255, 255, .3);
+      color: rgba(255, 255, 255, 0.3);
     }
 
     input:-ms-input-placeholder {
-
       /* Internet Explorer 10-11 */
-      color: rgba(255, 255, 255, .3);
+      color: rgba(255, 255, 255, 0.3);
     }
   }
 
@@ -676,9 +673,9 @@ const telegramList = [
 
             .investor-item {
               cursor: pointer;
-              opacity: .5;
-              transition: all .35s;
-              transform: scale(.9);
+              opacity: 0.5;
+              transition: all 0.35s;
+              transform: scale(0.9);
 
               .img {
                 width: 100%;
@@ -758,7 +755,7 @@ const telegramList = [
                 font-style: normal;
                 font-weight: 400;
                 line-height: 2;
-                color: rgba(255, 255, 255, .7);
+                color: rgba(255, 255, 255, 0.7);
                 text-align: center;
                 letter-spacing: 0;
               }
@@ -844,7 +841,7 @@ const telegramList = [
                   img {
                     width: 54px;
                     margin: 0 4px;
-                    transition: all .3s;
+                    transition: all 0.3s;
                   }
 
                   &:hover {
@@ -896,25 +893,22 @@ const telegramList = [
       }
 
       input::-webkit-input-placeholder {
-        color: rgba(255, 255, 255, .3);
+        color: rgba(255, 255, 255, 0.3);
       }
 
       input::-moz-placeholder {
-
         /* Mozilla Firefox 19+ */
-        color: rgba(255, 255, 255, .3);
+        color: rgba(255, 255, 255, 0.3);
       }
 
       input:-moz-placeholder {
-
         /* Mozilla Firefox 4 to 18 */
-        color: rgba(255, 255, 255, .3);
+        color: rgba(255, 255, 255, 0.3);
       }
 
       input:-ms-input-placeholder {
-
         /* Internet Explorer 10-11 */
-        color: rgba(255, 255, 255, .3);
+        color: rgba(255, 255, 255, 0.3);
       }
     }
   }
