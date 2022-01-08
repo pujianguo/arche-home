@@ -11,6 +11,7 @@
       </div>
       <!-- video -->
       <div class="section-one">
+        <div class="video-cover"></div>
         <video muted autoplay="autoplay" class="video" loop>
           <source src="https://media.arche.network/arche2.0/video/ARCHE-About.mp4" type="video/mp4">
         </video>
@@ -69,14 +70,14 @@
                 leadership <br>
                 team
               </div>
-              <div class="img">
+              <!-- <div class="img">
                 <svg width="182" height="101" viewBox="0 0 182 101" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="66.0469" y="30.8882" width="62.1789" height="22.4068" transform="rotate(150 66.0469 30.8882)" fill="#0038FF" />
                   <rect width="62.1789" height="22.4068" transform="matrix(-0.866025 -0.5 -0.5 0.866025 182 42.5728)" fill="#00FFFF" />
                   <rect x="128.148" y="100.551" width="73.3823" height="89.0671" transform="rotate(-180 128.148 100.551)" fill="#FA00FF" />
                   <rect x="111.066" y="11.4834" width="39.2119" height="11.4835" transform="rotate(-180 111.066 11.4834)" fill="#00FF47" />
                 </svg>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -91,7 +92,7 @@
               <div class="name">{{item.name}}</div>
               <div class="position">{{item.position}}</div>
             </div>
-            <!-- hover -->
+            <!-- hover
             <div class="hover" :class="{ transition: item.showDetail, }" v-if="item.showDetail" @mouseleave="close(index)">
               <div class="title">Introduction</div>
               <div class="info">
@@ -123,6 +124,7 @@
                 </div>
               </div>
             </div>
+            -->
           </div>
         </div>
       </div>
@@ -145,8 +147,8 @@ const cardList = ref([
           </svg>`,
     title: 'founded',
     count: '2021',
-    tips: 'Founded BY',
-    underline: 'AnchorDAO',
+    tips: '',
+    underline: '',
   },
   {
     img: `
@@ -158,7 +160,7 @@ const cardList = ref([
           </svg>
           `,
     title: 'games',
-    count: '124',
+    count: '5',
     tips: 'Game in ARCHE',
     underline: '',
   },
@@ -189,78 +191,79 @@ const cardList = ref([
     </svg>
     `,
     title: 'guilds',
-    count: '96',
+    count: '7',
     tips: 'Guilds Joined in',
     underline: 'AGA',
   },
   {
     img: `
-        <svg width="41" height="44" viewBox="0 0 41 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect y="0.000488281" width="15.3438" height="9.58986" fill="#00FFFF"/>
-        <rect x="24.9336" width="15.3438" height="9.58986" fill="#FA00FF"/>
-        <rect x="24.9727" y="9.54321" width="15.3438" height="9.58986" transform="rotate(90 24.9727 9.54321)" fill="#00FF47"/>
-        <rect x="35.5234" y="44" width="30.6876" height="9.58986" transform="rotate(-180 35.5234 44)" fill="#0038FF"/>
-        </svg>
-        `,
-    title: 'online players',
-    count: '2456',
-    tips: 'ALL PLAYERS 10,657,624+',
-    underline: '',
-  },
-  {
-    img: `
-          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="17.3535" y="39.333" width="39.3331" height="9.25485" transform="rotate(-90 17.3535 39.333)" fill="#0038FF"/>
-          <rect x="44" y="30.8103" width="14.7677" height="9.22984" transform="rotate(120 44 30.8103)" fill="#00FFFF"/>
-          <rect x="7.38477" y="43.2566" width="14.7677" height="9.22984" transform="rotate(-120 7.38477 43.2566)" fill="#FA00FF"/>
-          <rect x="17.3535" y="14.8079" width="14.8078" height="9.25485" transform="rotate(-90 17.3535 14.8079)" fill="#00FF47"/>
-          </svg>
-          `,
-    title: 'value',
-    count: '$154M',
-    tips: 'Game in ARCHE',
-    underline: '',
-  },
-  {
-    img: `
-        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="43.8359" y="30.2446" width="19.0657" height="11.916" transform="rotate(135 43.8359 30.2446)" fill="#00FFFF"/>
         <rect x="8.42578" y="21.8508" width="19.0657" height="11.916" transform="rotate(45 8.42578 21.8508)" fill="#0038FF"/>
         <rect x="35.5742" y="21.9075" width="19.0657" height="11.916" transform="rotate(-135 35.5742 21.9075)" fill="#00FF47"/>
         <rect x="22.0938" y="8.47925" width="19.0661" height="11.9913" transform="rotate(135 22.0938 8.47925)" fill="#FA00FF"/>
         </svg>
+
         `,
     title: 'trades',
-    count: '3469',
-    tips: 'Guilds Joined in',
-    underline: 'AGA',
-  },
-  {
-    img: `
-        <svg width="44" height="36" viewBox="0 0 44 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="18.9766" y="35.7585" width="12.0017" height="7.50105" transform="rotate(-150 18.9766 35.7585)" fill="#00FFFF"/>
-        <rect x="8.85938" y="6.00073" width="12.0017" height="7.50105" transform="rotate(-30 8.85938 6.00073)" fill="#FA00FF"/>
-        <rect y="14.1025" width="12.0342" height="7.52137" fill="#00FF47"/>
-        <rect x="12.0352" y="14.1025" width="31.9658" height="7.52137" fill="#0038FF"/>
-        </svg>
-        `,
-    title: 'archers',
-    count: '16584',
-    tips: 'ALL PLAYERS 10,657,624+',
+    count: '2789',
+    tips: 'Platform trading number',
     underline: '',
   },
+  // {
+  //   img: `
+  //         <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+  //         <rect x="17.3535" y="39.333" width="39.3331" height="9.25485" transform="rotate(-90 17.3535 39.333)" fill="#0038FF"/>
+  //         <rect x="44" y="30.8103" width="14.7677" height="9.22984" transform="rotate(120 44 30.8103)" fill="#00FFFF"/>
+  //         <rect x="7.38477" y="43.2566" width="14.7677" height="9.22984" transform="rotate(-120 7.38477 43.2566)" fill="#FA00FF"/>
+  //         <rect x="17.3535" y="14.8079" width="14.8078" height="9.25485" transform="rotate(-90 17.3535 14.8079)" fill="#00FF47"/>
+  //         </svg>
+  //         `,
+  //   title: 'value',
+  //   count: '$154M',
+  //   tips: 'Game in ARCHE',
+  //   underline: '',
+  // },
+  // {
+  //   img: `
+  //       <svg width="41" height="44" viewBox="0 0 41 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+  //       <rect y="0.000488281" width="15.3438" height="9.58986" fill="#00FFFF"/>
+  //       <rect x="24.9336" width="15.3438" height="9.58986" fill="#FA00FF"/>
+  //       <rect x="24.9727" y="9.54321" width="15.3438" height="9.58986" transform="rotate(90 24.9727 9.54321)" fill="#00FF47"/>
+  //       <rect x="35.5234" y="44" width="30.6876" height="9.58986" transform="rotate(-180 35.5234 44)" fill="#0038FF"/>
+  //       </svg>
+  //       `,
+  //   title: 'player',
+  //   count: '3469',
+  //   tips: 'Guilds Joined in',
+  //   underline: 'AGA',
+  // },
+  // {
+  //   img: `
+  //       <svg width="44" height="36" viewBox="0 0 44 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+  //       <rect x="18.9766" y="35.7585" width="12.0017" height="7.50105" transform="rotate(-150 18.9766 35.7585)" fill="#00FFFF"/>
+  //       <rect x="8.85938" y="6.00073" width="12.0017" height="7.50105" transform="rotate(-30 8.85938 6.00073)" fill="#FA00FF"/>
+  //       <rect y="14.1025" width="12.0342" height="7.52137" fill="#00FF47"/>
+  //       <rect x="12.0352" y="14.1025" width="31.9658" height="7.52137" fill="#0038FF"/>
+  //       </svg>
+  //       `,
+  //   title: 'archers',
+  //   count: '16584',
+  //   tips: 'ALL PLAYERS 10,657,624+',
+  //   underline: '',
+  // },
 ])
 const staffCard = ref([
   // badge值为类名 不同颜色 可自行添加相应类名
-  { src: '/images/avatar.png', badge: 'badge-blue', name: 'Eliora', position: 'Co-founder&COO', introduction: '8 years of experience in the Internet, big data and finance. Worked as a regional management leader in a well-known Internet company.', twitter: 'https://www.twitter.com', showDetail: false },
-  { src: '/images/avatar.png', badge: 'badge-blue', name: 'Eliora', position: 'Co-founder&COO', introduction: '8 years of experience in the Internet, big data and finance. Worked as a regional management leader in a well-known Internet company.', twitter: 'https://www.twitter.com', showDetail: false },
+  { src: '/images/about-avatar-1.png', badge: 'badge-blue', name: 'Shifu', position: 'Co-Founder & CEO', introduction: '8 years of experience in the Internet, big data and finance. Worked as a regional management leader in a well-known Internet company.', twitter: 'https://www.twitter.com', showDetail: false },
+  { src: '/images/about-avatar-2.png', badge: 'badge-blue', name: 'Jeremy', position: 'Co-Founder', introduction: '8 years of experience in the Internet, big data and finance. Worked as a regional management leader in a well-known Internet company.', twitter: 'https://www.twitter.com', showDetail: false },
   { src: '', badge: '', name: '', position: '', introduction: '', twitter: '' },
-  { src: '/images/avatar.png', badge: 'badge-blue', name: 'Eliora', position: 'Co-founder&COO', introduction: '8 years of experience in the Internet, big data and finance. Worked as a regional management leader in a well-known Internet company.', twitter: 'https://www.twitter.com', showDetail: false },
-  { src: '/images/avatar.png', badge: 'badge-blue', name: 'Eliora', position: 'Co-founder&COO', introduction: '8 years of experience in the Internet, big data and finance. Worked as a regional management leader in a well-known Internet company.', twitter: 'https://www.twitter.com', showDetail: false },
-  { src: '/images/avatar.png', badge: 'badge-blue', name: 'Eliora', position: 'Co-founder&COO', introduction: '8 years of experience in the Internet, big data and finance. Worked as a regional management leader in a well-known Internet company.', twitter: 'https://www.twitter.com', showDetail: false },
-  { src: '/images/avatar.png', badge: 'badge-blue', name: 'Eliora', position: 'Co-founder&COO', introduction: '8 years of experience in the Internet, big data and finance. Worked as a regional management leader in a well-known Internet company.', twitter: 'https://www.twitter.com', showDetail: false },
-  { src: '/images/avatar.png', badge: 'badge-blue', name: 'Eliora', position: 'Co-founder&COO', introduction: '8 years of experience in the Internet, big data and finance. Worked as a regional management leader in a well-known Internet company.', twitter: 'https://www.twitter.com', showDetail: false },
-  { src: '/images/avatar.png', badge: 'badge-blue', name: 'Eliora', position: 'Co-founder&COO', introduction: '8 years of experience in the Internet, big data and finance. Worked as a regional management leader in a well-known Internet company.', twitter: 'https://www.twitter.com', showDetail: false },
+  { src: '/images/about-avatar-3.png', badge: 'badge-blue', name: 'Eliora', position: 'Co-founder & COO', introduction: '8 years of experience in the Internet, big data and finance. Worked as a regional management leader in a well-known Internet company.', twitter: 'https://www.twitter.com', showDetail: false },
+  { src: '/images/about-avatar-4.png', badge: 'badge-blue', name: 'Elainna', position: 'CMO', introduction: '8 years of experience in the Internet, big data and finance. Worked as a regional management leader in a well-known Internet company.', twitter: 'https://www.twitter.com', showDetail: false },
+  { src: '/images/about-avatar-5.png', badge: 'badge-blue', name: 'Pierre', position: 'CTO', introduction: '8 years of experience in the Internet, big data and finance. Worked as a regional management leader in a well-known Internet company.', twitter: 'https://www.twitter.com', showDetail: false },
+  { src: '/images/about-avatar-6.png', badge: 'badge-blue', name: 'KEY', position: 'CPO', introduction: '8 years of experience in the Internet, big data and finance. Worked as a regional management leader in a well-known Internet company.', twitter: 'https://www.twitter.com', showDetail: false },
+  { src: '/images/about-avatar-7.png', badge: 'badge-blue', name: 'CHAO', position: 'Director of design', introduction: '8 years of experience in the Internet, big data and finance. Worked as a regional management leader in a well-known Internet company.', twitter: 'https://www.twitter.com', showDetail: false },
+  { src: '/images/about-avatar-8.png', badge: 'badge-blue', name: 'Jerry', position: 'Head of marketing', introduction: '8 years of experience in the Internet, big data and finance. Worked as a regional management leader in a well-known Internet company.', twitter: 'https://www.twitter.com', showDetail: false },
 ])
 const jump = (url) => {
   window.open(url, '_blank')
@@ -288,7 +291,7 @@ const close = (index) => {
 .developer-section-1 {
   position: relative;
   box-sizing: border-box;
-  width: 1680px;
+  // width: 1680px;
   // min-height: 100vh;
   margin: 0 auto;
   // overflow: hidden;
@@ -308,10 +311,20 @@ const close = (index) => {
     z-index: 3;
     // section-one
     .section-one {
+      .video-cover {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 800px;
+        background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 30.43%, rgba(0, 0, 0, 0) 70.54%, #000 100%), url(2.render-0004.png), url(2.png);
+      }
+
       .video {
         position: relative;
         z-index: -1;
-        width: 1680px;
+        width: 100%;
+        height: 800px;
+        // width: 1680px;
       }
     }
     // section-two
@@ -323,6 +336,7 @@ const close = (index) => {
       display: flex;
       justify-content: flex-end;
       padding: 0 138px 0 120px;
+      margin: 0 120px;
 
       .title-wrap {
         position: absolute;

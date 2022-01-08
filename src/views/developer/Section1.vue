@@ -25,9 +25,10 @@
         </a>
       </div>
     </div>
+    <div class="video-cover"></div>
     <video muted autoplay="autoplay" class="video" loop>
-        <source src="https://media.arche.network/arche2.0/video/ARCHE-Fordeveloper-Slide1.mp4" type="video/mp4">
-      </video>
+      <source src="https://media.arche.network/arche2.0/video/ARCHE-Fordeveloper-Slide1.mp4" type="video/mp4">
+    </video>
   </section>
 </template>
 
@@ -221,12 +222,21 @@ import { ref } from 'vue'
     }
   }
 
+  .video-cover {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 1000px;
+    background: linear-gradient(90deg, #000 0%, #000 17.42%, rgba(0, 0, 0, 0) 50%), linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 30.43%, rgba(0, 0, 0, 0) 70.54%, #000 100%);
+  }
+
   .video {
     position: absolute;
-    top: 120px;
+    top: 0;
     right: 0;
     z-index: 0;
-    width: 1680px;
+    width: 100%;
+    height: 1000px;
     // width: 100%;
     // height: 100%;
   }
