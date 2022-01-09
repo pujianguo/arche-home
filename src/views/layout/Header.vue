@@ -40,7 +40,7 @@
   </div>
   <div class="home-header-nav" :class="{active: openMenu}">
     <ul class="">
-      <li :class="['menu-item', {active: item.routeName === routeName}]" v-for="item in menuList" :key="item.id">{{item.title}}</li>
+      <li :class="['menu-item', {active: item.routeName === routeName}]" v-for="item in menuList" :key="item.id" @click="jump(item,index)">{{item.title}}</li>
     </ul>
   </div>
 </template>
@@ -69,7 +69,7 @@ const menuList = [
   { id: 2, title: 'TOKENOMICS', routeName: 'Tokenomics', href: '' },
   { id: 3, title: 'AGA', routeName: '', href: '' },
   { id: 4, title: 'DEVELOPER', routeName: 'Developer', href: '' },
-  { id: 5, title: 'COMMUNITY', routeName: '', href: '' },
+  { id: 5, title: 'COMMUNITY', routeName: 'Community', href: '' },
   { id: 6, title: 'ABOUT', routeName: 'About', href: '' },
 ]
 

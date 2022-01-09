@@ -11,7 +11,7 @@
         {{item.title}}
       </li>
     </ul>
-    <div class="right">
+    <div class=" right">
       <a class="getapp" href="https://app.arche.network" target="_blank">
         <div class="text">Explore</div>
         <div class="archeArrow">
@@ -40,14 +40,14 @@
   </div>
   <div class="home-header-nav" :class="{active: openMenu}">
     <ul class="">
-      <li :class="['menu-item', {active: item.routeName === routeName}]" v-for="item in menuList" :key="item.id">{{item.title}}</li>
+      <li @click="jump(item,index)" :class="['menu-item', {active: item.routeName === routeName}]" v-for="item in menuList" :key="item.id">{{item.title}}</li>
     </ul>
   </div>
 </template>
 
 <script setup>
 import { computed, onMounted, ref } from 'vue'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import useInitGsap from '@/hooks/useInitGsap'
 
 const initGsap = (gsap, ScrollTrigger) => {
@@ -66,17 +66,25 @@ useInitGsap(initGsap)
 
 const menuList = [
   { id: 1, title: 'HOME', routeName: 'Home', href: '' },
-  { id: 2, title: 'TOKENOMICS', routeName: '', href: '' },
+  { id: 2, title: 'TOKENOMICS', routeName: 'Tokenomics', href: '' },
   { id: 3, title: 'AGA', routeName: '', href: '' },
-  { id: 4, title: 'DEVELOPER', routeName: '', href: '' },
-  { id: 5, title: 'COMMUNITY', routeName: '', href: '' },
-  { id: 6, title: 'ABOUT', routeName: '', href: '' },
+  { id: 4, title: 'DEVELOPER', routeName: 'Developer', href: '' },
+  { id: 5, title: 'COMMUNITY', routeName: 'Community', href: '' },
+  { id: 6, title: 'ABOUT', routeName: 'About', href: '' },
 ]
 
 const route = useRoute()
 const routeName = computed(() => {
   return route.name
 })
+const router = useRouter()
+const jump = (item, index) => {
+  if (!item.routeName) {
+    return
+  }
+  currentItem.value = index
+  router.push({ name: item.routeName })
+}
 
 const currentItem = ref(0)
 const ulRef = ref(null)

@@ -25,6 +25,11 @@ const router = createRouter({
           component: () => import('@/views/tokenomics/index.vue'),
         },
         {
+          path: '/community',
+          name: 'Community',
+          component: () => import('@/views/community/index.vue'),
+        },
+        {
           path: '/about',
           name: 'About',
           component: () => import('@/views/about/index.vue'),

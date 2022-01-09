@@ -35,12 +35,12 @@
           <div class="box box-4">
             <h1>Join Community</h1>
             <div class="social">
-              <a class="social-item" v-for="item in socialList" :key="item.id" target="_blank" :href="item.href">
+              <a class="social-item" v-for="item in socialList" :key="item.index" target="_blank" :href="item.href">
                 <img :src="item.imgSrc" :alt="item.title">
                 <div class="popup" v-if="item.title === 'TELEGRAM'">
-                  <a class="popup-item" v-for="telegram in telegramList" :key="telegram.id" :href="telegram.link" target="_blank">
-                    <a-svg class="icon" :name="telegram.icon"></a-svg>
-                    <span>{{telegram.label}}</span>
+                  <a class="popup-item" v-for="telegram in telegramList" :key="telegram.index" :href="telegram.link" target="_blank">
+                    <img :src="telegram.img" alt="">
+                    <span>{{telegram.title}}</span>
                   </a>
                 </div>
               </a>
@@ -128,15 +128,52 @@ const socialList = [
   },
 ]
 const telegramList = [
-  { id: 1, label: 'English', link: 'https://t.me/ArcheNetwork', icon: '' },
-  { id: 2, label: 'Russian', link: 'https://t.me/archerussian', icon: '' },
-  { id: 3, label: 'Vietnamese', link: 'https://t.me/Arche_Network_VNGroup', icon: '' },
-  { id: 4, label: 'Indonesian', link: 'https://t.me/Archeindonesia', icon: '' },
-  { id: 5, label: 'Spanish', link: 'https://t.me/archespanish ', icon: '' },
-  { id: 6, label: 'Indian', link: 'https://t.me/archeindian', icon: '' },
-  { id: 7, label: 'Japan', link: 'https://t.me/archejapan', icon: '' },
-  { id: 8, label: 'Persian', link: 'https://t.me/archearchpersian', icon: '' },
-  { id: 9, label: 'Chinese', link: 'https://t.me/archechinese', icon: '' },
+  {
+    title: 'English',
+    img: 'https://media.arche.network/arche2.0/images/flag/flag-eng.png',
+    link: 'https://t.me/ArcheNetwork',
+  },
+  {
+    title: 'Russian',
+    img: 'https://media.arche.network/arche2.0/images/flag/flag-rus.png',
+    link: 'https://t.me/archerussian',
+  },
+  {
+    title: 'Vietnamese',
+    img: 'https://media.arche.network/arche2.0/images/flag/flag-vie.png',
+    link: 'https://t.me/Arche_Network_VNGroup',
+  },
+  {
+    title: 'Indonesian',
+    img: 'https://media.arche.network/arche2.0/images/flag/flag-idn.png',
+    link: 'https://t.me/Archeindonesia',
+  },
+  {
+    title: 'Spanish',
+    img: 'https://media.arche.network/arche2.0/images/flag/flag-esp.png',
+    link: 'https://t.me/archespanish',
+  },
+  {
+    title: 'Indian',
+    img: 'https://media.arche.network/arche2.0/images/flag/flag-ind.png',
+    link: 'https://t.me/archeindian',
+  },
+  {
+    title: 'Japan',
+    img: 'https://media.arche.network/arche2.0/images/flag/flag-jpn.png',
+    link: 'https://t.me/archejapan',
+  },
+  {
+    title: 'Persian',
+    img: 'https://media.arche.network/arche2.0/images/flag/flag-iri.png',
+    link: 'https://t.me/archearchpersian',
+  },
+  {
+    title: 'Chinese',
+    img: 'https://media.arche.network/arche2.0/images/flag/flag-chn.png',
+    link: 'https://t.me/archechinese',
+  },
+
 ]
 
 </script>
@@ -377,10 +414,11 @@ const telegramList = [
                   position: absolute;
                   bottom: 60px;
                   left: -60px;
+                  z-index: 99;
                   box-sizing: border-box;
                   width: 180px;
-                  height: 300px;
-                  padding: 15px 0;
+                  height: 380px;
+                  padding: 10px 0;
                   pointer-events: none;
                   background: #fff;
                   opacity: 0;
@@ -414,16 +452,18 @@ const telegramList = [
                     display: flex;
                     align-items: center;
                     width: 100%;
-                    height: 30px;
+                    height: 40px;
                     padding: 0 20px;
                     cursor: pointer;
 
-                    .icon {
-                      width: 40px;
-                      height: 25px;
+                    img {
+                      width: 20px;
+                      margin-right: 12px;
+                      filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
                     }
 
                     span {
+                      font-size: 16px;
                       font-weight: 700;
                       color: #000;
                       text-align: left;
