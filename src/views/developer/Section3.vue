@@ -1,391 +1,273 @@
 <template>
   <section class="developer-section-3">
-    <div class="bg"></div>
-    <div class="section-wrap">
-      <div class="section-top">
-        <div class="top-left">
-          <div class="left-tips">
-            <div>TO BUILD</div>
-            <div class="line"></div>
-            <div>IN ARCHE NETWORK</div>
-          </div>
-          <div class="left-title">STEPS</div>
+    <div class="container">
+      <div class="circle-wrap">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+        <div class="circle4"></div>
+        <div class="circle5"></div>
+      </div>
+      <div class="section-next">
+        <div class="next-tips">
+          for developers
         </div>
-        <div class="top-right">
-          <div class="footer">
-            <a class="footer-btn" href="https://app.arche.network" target="_blank">
-              <span class="text">start apply</span>
-              <div class="archeArrow">
-                <span></span>
-                <span></span>
-                <span></span>
+        <div class="next-title">Key Features</div>
+        <div class="next-content">
+          <div class="next-item-left">
+            <div class="item" v-for="(item,index) in itemLeftList" :key="index">
+              <div class="item-img" :class="[0,2].includes(index)?'big':''" v-html="item.img">
               </div>
-            </a>
+              <div class="item-title">{{item.title}}</div>
+              <div class="item-tips">{{item.tips}}</div>
+            </div>
+          </div>
+          <div class="next-item-right">
+            <div class="item" v-for="(item,index) in itemRightList" :key="index">
+              <div class="item-img" :class="[1].includes(index)?'big':''" v-html="item.img">
+              </div>
+              <div class="item-title">{{item.title}}</div>
+              <div class="item-tips">{{item.tips}}</div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="section-bottom" @mousedown="mousedown()" @mouseup="mouseup()">
-        <div class="bottom-card-wrap">
-          <div class="bottom-card" v-for="(item,index) in cardList" :key="index">
-            <div class="card-count">{{index<9?('0'+(index+1)):index+1}}</div>
-            <div class="card-title">{{item.title}}</div>
-          </div>
-        </div>
-      </div>
-      <div class="bottom-line">
-        <div class="line-actived"></div>
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
-import { ref, reactive } from 'vue'
-const cardList = ref([
-  { title: 'Project Application ', actived: true, left: '0' },
-  { title: 'Project Assessment ', actived: false, left: '620px' },
-  { title: 'Meeting with Team Arche ', actived: false, left: '1240px' },
-  { title: 'Meeting with Team Arche ', actived: false, left: '1860px' },
-  { title: 'Meeting with Team Arche ', actived: false, left: '2480px' },
-  { title: 'Meeting with Team Arche ', actived: false, left: '3100px' },
-],
-)
-const startX = ref(0)
-const startY = ref(0)
-const mousedown = () => {
-  event.preventDefault()
-  startX.value = event.screenX
-  startY.value = event.screenY
-}
-const mouseup = () => {
-  event.preventDefault()
-  const moveEndX = event.screenX
-  const moveEndY = event.screenY
-  const X = moveEndX - startX.value
-  const Y = moveEndY - startY.value
-  if (Math.abs(X) > Math.abs(Y) && X > 0) {
-    changeImg('left')
-  }
-  if (Math.abs(X) > Math.abs(Y) && X < 0) {
-    changeImg('right')
-  }
-}
-const index = ref(0)
-
-const changeImg = (flag) => {
-  if (flag === 'left') {
-    if (index.value <= 0) {
-      return
-    }
-    index.value = cardList.value.findIndex((item) => {
-      return item.actived
-    })
-    cardList.value[index.value].actived = false
-    index.value--
-    cardList.value[index.value].actived = true
-    const bottomCardWrap = document.querySelector('.bottom-card-wrap')
-    console.log(index.value)
-    bottomCardWrap.style.left = `${-index.value * 620}px`
-    const bottomLine = document.querySelector('.bottom-line')
-    bottomLine.style.width = `${(cardList.value.length - index.value) * 590 + (index.value < 2 ? 0 : 30)}px`
-  }
-  if (flag === 'right') {
-    if (index.value >= 5) {
-      return
-    }
-    index.value = cardList.value.findIndex((item) => {
-      return item.actived
-    })
-    cardList.value[index.value].actived = false
-    index.value++
-    cardList.value[index.value].actived = true
-    const bottomCardWrap = document.querySelector('.bottom-card-wrap')
-    bottomCardWrap.style.left = `${-index.value * 620}px`
-    const bottomLine = document.querySelector('.bottom-line')
-    if (index.value > 3) {
-      bottomLine.style.width = `${(cardList.value.length - index.value) * 590 + (index.value > 4 ? 0 : 30)}px`
-    }
-  }
-}
-
+import { ref } from 'vue'
+const itemLeftList = ref([
+  {
+    img: `<svg viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M36.666 201.665V18.332H142.083L183.333 66.457V201.665H36.666Z" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M96.25 128.333H68.75V160.416H96.25V128.333Z" fill="#0038FF" />
+            <path d="M123.75 105.416H96.25V160.416H123.75V105.416Z" fill="#FA00FF" />
+            <path d="M151.25 82.499H123.75V160.416H151.25V82.499Z" fill="#00FFFF" />
+          </svg>`,
+    title: 'Web3.0 Game Profile',
+    tips: 'Aggregate all your digital activities, including customised homepage, verifiable on-chain NFT collection, IGO launchpad, GAO, events, etc all in your own profile.',
+  },
+  {
+    img: `
+        <svg  viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="5" y="30" width="189" height="12" fill="white"/>
+          <rect x="5" y="97" width="189" height="12" fill="white"/>
+          <rect x="5" y="164" width="189" height="12" fill="white"/>
+          <rect x="39" y="12" width="63" height="47" fill="#0038FF"/>
+          <rect x="98" y="79" width="63" height="47" fill="#FA00FF"/>
+          <rect x="39" y="147" width="63" height="47" fill="#00FFFF"/>
+        </svg>
+        `,
+    title: 'Arche Bot to Connect Web 3.0 to Web 2.0',
+    tips: 'All transaction information of the developer can be subscribed, and the transaction status of the assets inside can be notified from web3.0 to web2.0. Just with a click, they can start their digital asset management journey.',
+  },
+  {
+    img: `
+          <svg viewBox="0 0 220 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="6" width="188" height="188" stroke="white" stroke-width="12"/>
+            <rect x="12" y="71" width="208" height="53" fill="#0038FF"/>
+            <rect x="151" y="93" width="69" height="10" fill="#00FFFF"/>
+          </svg>
+          `,
+    title: 'Payment Tools in One Place',
+    tips: 'Aggregated and customised Swapping/ Lending/ Farming/ Staking Defi protocols are given in the Arche, in order to link asset usage scenarios with a smoother user experience.',
+  },
+])
+const itemRightList = ref([
+  {
+    img: `<svg  viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="39" y="23" width="122" height="154" stroke="white" stroke-width="12"/>
+            <path d="M92 62H17V138H92V62Z" fill="#1447FD"/>
+            <path d="M41.666 87.5L66.666 112.5" stroke="white" stroke-width="4" stroke-linecap="square" stroke-linejoin="round"/>
+            <path d="M66.666 87.5L41.666 112.5" stroke="white" stroke-width="4" stroke-linecap="square" stroke-linejoin="round"/>
+            <rect x="116" y="62" width="28" height="8" fill="#00FF47"/>
+            <rect x="112" y="96" width="32" height="8" fill="#00FFFF"/>
+            <rect x="103" y="130" width="41" height="8" fill="#FA00FF"/>
+          </svg>
+          `,
+    title: 'Full Fairness From the Decentralised Network',
+    tips: 'Arche Network uses the Chainlink VRF (Verifiable random function) to ensure that users can fairly obtain, draw and launch assets in the mystery box of the gamefi launchpad to ensure that no one exploits the system.',
+  },
+  {
+    img: `<svg  viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="94" height="54" stroke="white" stroke-width="4"/>
+            <rect y="64" width="98" height="58" fill="#FA00FF"/>
+            <rect x="111" width="89" height="122" fill="#00FF47"/>
+            <rect y="128" width="200" height="72" fill="#0038FF"/>
+          </svg>`,
+    title: 'NFT Marketplace with Social Tools',
+    tips: 'First and Secondary buy and sell NFTs activities are directly on exclusive Arche social networks, empowered by BBS (Bulletin Board System).',
+  },
+  {
+    img: `<svg viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M36.666 201.665V18.332H142.083L183.333 66.457V201.665H36.666Z" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M96.25 128.333H68.75V160.416H96.25V128.333Z" fill="#0038FF" />
+                <path d="M123.75 105.416H96.25V160.416H123.75V105.416Z" fill="#FA00FF" />
+                <path d="M151.25 82.499H123.75V160.416H151.25V82.499Z" fill="#00FFFF" />
+              </svg>`,
+    title: 'Stronger Sales Exposure',
+    tips: 'Arche Network brings traffic and exposure to the project with Archer system and Arche Guild Alliance support. Arche Network is here to bridge and serve stakeholders, such as guilds/ developers/ players.',
+  },
+])
 </script>
 
-<style lang="scss"  scoped>
-.developer-section-3 {
-  position: relative;
-  box-sizing: border-box;
-  max-width: 1680px;
-  height: 856px;
-  min-height: unset !important;
-  padding: 0 120px;
-  margin: 0 auto;
-  overflow: hidden;
-  background-color: #0038ff;
-
-  .bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    width: 100%;
-    height: 856px;
-    background: url("/images/shading.png") no-repeat;
-    background-size: cover;
-  }
-
-  .section-wrap {
+<style lang="scss" scoped>
+  .developer-section-3 {
     position: relative;
+    z-index: 3;
     box-sizing: border-box;
-    height: 100%;
-    padding-top: 138px;
-    overflow: hidden;
+    margin: 0 auto;
+    perspective: 500px;
 
-    .section-top {
+    .green {
+      color: #00ff47;
+    }
+
+    .container {
+      position: relative;
+      z-index: 5;
+      width: 100%;
+      padding: 150px 100px 100px;
+    }
+
+    .circle-wrap {
+      position: absolute;
+      top: 14vw;
+      left: 10vw;
+      z-index: 0;
+
+      .circle1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 15vw;
+        height: 15vw;
+        border: 1px solid rgba($color: white, $alpha: 0.3);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .circle2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 25vw;
+        height: 25vw;
+        border: 1px solid rgba($color: white, $alpha: 0.25);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .circle3 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 35vw;
+        height: 35vw;
+        border: 1px solid rgba($color: white, $alpha: 0.2);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .circle4 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 45vw;
+        height: 45vw;
+        border: 1px solid rgba($color: white, $alpha: 0.15);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .circle5 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 55vw;
+        height: 55vw;
+        border: 1px solid rgba($color: white, $alpha: 0.1);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .next-tips {
+      font-family: Cindie Mono;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: normal;
+      line-height: 16px;
+      color: #fff;
+      text-transform: uppercase;
+    }
+
+    .next-title {
+      font-family: Cindie Mono;
+      font-size: 60px;
+      font-style: normal;
+      font-weight: normal;
+      line-height: 96px;
+      color: #00ff47;
+    }
+
+    .next-content {
       display: flex;
-      align-items: center;
+      column-gap: 40px;
       justify-content: space-between;
+      padding-left: 16vw;
+      margin-top: 100px;
 
-      .top-left {
+      .next-item-left,
+      .next-item-right {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
 
-        .left-tips {
-          display: flex;
-          flex-wrap: nowrap;
-          align-items: center;
-          height: 32px;
-          font-family: Cindie Mono;
-          font-size: 16px;
-          font-style: normal;
-          font-weight: normal;
-          line-height: 32px;
-          color: #fff;
-          text-transform: uppercase;
-
-          .line {
-            width: 72px;
-            height: 1px;
-            margin: 5px 12px 0 12px;
-            background-color: #fff;
-          }
+        .item {
+          margin-bottom: 60px;
         }
 
-        .left-title {
-          font-family: Cindie Mono;
-          font-size: 60px;
-          font-style: normal;
-          font-weight: normal;
-          line-height: 96px;
-          color: #0ff;
-        }
-      }
-
-      .top-right {
-        display: flex;
-        align-items: center;
-
-        .footer {
-          display: flex;
-          align-items: center;
-          width: 100%;
-          margin-top: 20px;
-
-          .footer-btn {
-            box-sizing: border-box;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 70px;
-            padding: 0 30px;
-            cursor: pointer;
-            background: rgba(255, 255, 255, 0);
-            border: 1px solid #fff;
-            transition: .35s ease;
-
-            .text {
-              display: inline-block;
-              font-family: "Cindie Mono";
-              font-size: 20px;
-              font-style: normal;
-              font-weight: normal;
-              line-height: 70px;
-              color: rgba(255, 255, 255, 1);
-              transition: .35s ease;
-            }
-
-            .icon {
-              width: 32px;
-              height: 26px;
-              margin-left: 40px;
-            }
-
-            .archeArrow {
-              position: relative;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              width: 50px;
-              height: 30px;
-
-              span:nth-child(1) {
-                position: absolute;
-                top: 5px;
-                right: 2px;
-                display: block;
-                width: 12px;
-                height: 6px;
-                background: #00ff47;
-                transition: all .25s cubic-bezier(.08, .82, .17, 1);
-                transform: rotate(-120deg);
-              }
-
-              span:nth-child(2) {
-                display: block;
-                width: 20px;
-                height: 6px;
-                background: #00ff47;
-                transition: all .25s cubic-bezier(.08, .82, .17, 1);
-                transform: rotate(0deg);
-              }
-
-              span:nth-child(3) {
-                position: absolute;
-                right: 2px;
-                bottom: 5px;
-                display: block;
-                width: 12px;
-                height: 6px;
-                background: #00ff47;
-                transition: all .25s cubic-bezier(.08, .82, .17, 1);
-                transform: rotate(-60deg);
-              }
-            }
-
-            &:hover {
-              background: rgba(255, 255, 255, 1);
-
-              .text {
-                color: rgba(0, 0, 0, 1);
-              }
-
-              .archeArrow {
-                span:nth-child(1) {
-                  transform: translate3d(9px, 1px, 0) rotate(-155deg);
-                }
-
-                span:nth-child(2) {
-                  transform: translate3d(12px, 0, 0) rotate(0deg);
-                }
-
-                span:nth-child(3) {
-                  transform: translate3d(9px, -1px, 0) rotate(-25deg);
-                }
-              }
-            }
-
-            &.disable {
-              opacity: .3;
-            }
-
-            &.disable:hover {
-              cursor: no-drop;
-              background: rgba(255, 255, 255, 0);
-
-              .text {
-                color: rgba(255, 255, 255, 1);
-              }
-            }
-          }
-
-          .footer-link {
-            margin: 0 40px;
-            font-size: 20px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 36px;
-            color: rgba(255, 255, 255, .3);
-            text-align: left;
-            text-decoration-line: underline;
-            text-transform: uppercase;
-            letter-spacing: 0;
-            cursor: pointer;
-            transition: all .25s cubic-bezier(.08, .82, .17, 1);
-
-            &:hover {
-              color: rgba(255, 255, 255, .8);
-              cursor: help;
-            }
-          }
-        }
-      }
-    }
-
-    .section-bottom {
-      position: relative;
-      margin-top: 70px;
-
-      .bottom-card-wrap {
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: flex;
-        align-items: center;
-        transition: left .3s;
-
-        .bottom-card {
+        .item-img {
           box-sizing: border-box;
-          width: 590px;
-          height: 320px;
-          padding: 40px 30px;
-          border: 1px solid #fff;
-
-          .card-count {
-            font-family: Cindie Mono;
-            font-size: 40px;
-            font-style: normal;
-            font-weight: normal;
-            line-height: 64px;
-            color: #fff;
-          }
-
-          .card-title {
-            margin-top: 60px;
-            font-family: Cindie Mono;
-            font-size: 24px;
-            font-style: normal;
-            font-weight: normal;
-            line-height: 39px;
-            color: #fff;
-            text-transform: uppercase;
-          }
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 22vw;
+          min-height: 300px;
+          padding: 0 35%;
+          background: rgba(255, 255, 255, 0.1);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          backdrop-filter: blur(14px);
         }
 
-        .bottom-card + .bottom-card {
-          margin-left: 30px;
+        .big {
+          height: 33vw;
+          min-height: 500px;
         }
-      }
-    }
 
-    .bottom-line {
-      position: absolute;
-      top: 730px;
-      left: 0;
-      width: 3960px;
-      height: 3px;
-      background: rgba(255, 255, 255, .3);
-      transition: width .3s;
+        .item-title {
+          margin-top: 20px;
+          font-family: Cindie Mono;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: normal;
+          line-height: 39px;
+          color: #fff;
+        }
 
-      .line-actived {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 3;
-        width: 590px;
-        height: 3px;
-        background-color: #fff;
+        .item-tips {
+          margin-top: 20px;
+          font-family: Inter;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: normal;
+          line-height: 36px;
+          color: rgba($color: white, $alpha: 0.6);
+        }
       }
     }
   }
-}
 </style>

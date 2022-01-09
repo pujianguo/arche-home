@@ -5,6 +5,7 @@
     <Section3></Section3>
     <Section4></Section4>
     <Section5></Section5>
+    <div class="bg"></div>
   </div>
 </template>
 
@@ -18,7 +19,22 @@ import Section5 from './Section5.vue'
 
 </script>
 <style lang="scss" scoped>
-.developer {
-  // overflow: hidden;
-}
+  .developer {
+    position: relative;
+    padding-bottom: 328px;
+    margin: 0 auto;
+    margin-bottom: -44px;
+    overflow: hidden;
+
+    .bg {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 100%;
+      max-width: 1920px;
+      height: 667px;
+      background: linear-gradient(180deg, #00145a 0%, rgba(0, 20, 90, 0) 62.97%);
+      transform: translateX(-50%) matrix(1, 0, 0, -1, 0, 0);
+    }
+  }
 </style>

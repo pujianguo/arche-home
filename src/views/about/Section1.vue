@@ -3,7 +3,7 @@
     <div class="container">
       <div class="text-content">
         <!-- circle -->
-        <div class="circle-wrap">
+        <div class="circle-wrap">+
           <div class="circle1"></div>
           <div class="circle2"></div>
           <div class="circle3"></div>
