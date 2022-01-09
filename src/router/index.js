@@ -20,9 +20,9 @@ const router = createRouter({
           component: () => import('@/views/developer/index.vue'),
         },
         {
-          path: '/staking',
-          name: 'Staking',
-          component: () => import('@/views/staking/index.vue'),
+          path: '/tokenomics',
+          name: 'Tokenomics',
+          component: () => import('@/views/tokenomics/index.vue'),
         },
         {
           path: '/about',
