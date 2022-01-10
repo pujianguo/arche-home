@@ -180,4 +180,87 @@ import { ref, reactive } from 'vue'
       }
     }
   }
+
+  @media screen and (min-width: 1100px) and (max-width: 1400px) {
+  }
+
+  @media screen and (min-width: 900px) and (max-width: 1099px) {
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 899px) {
+  }
+
+  @media screen and (max-width: 768px) {
+    .community-section-3 {
+      .container {
+        padding: 6vw;
+
+        .section-top {
+          margin-top: 60px;
+          margin-right: 22px;
+          margin-left: 22px;
+
+          .title {
+            font-size: 24px;
+            line-height: 1.8;
+          }
+
+          .subscribe {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            min-width: auto;
+            height: 110px;
+            margin: 30px auto 180px;
+            background: none;
+
+            input {
+              box-sizing: border-box;
+              width: 100%;
+              height: 50px;
+              padding-left: 15px;
+              margin-bottom: 10px;
+              font-size: 16px;
+              line-height: 1.6;
+              text-align: center;
+              border-radius: 0;
+            }
+
+            button {
+              width: 100%;
+              height: 44px;
+              font-size: 16px;
+              color: #fff;
+              background: #0038ff;
+            }
+          }
+        }
+      }
+
+      .background-wrap {
+        video {
+          @media screen and (max-width: 768px) {
+            top: 0;
+            width: 250%;
+            min-width: auto;
+            height: 100%;
+            min-height: auto;
+            transform: translateX(-50%) translateY(0%);
+          }
+        }
+
+        &::after {
+          @media screen and (max-width: 768px) {
+            top: 0;
+            width: 100%;
+            min-width: auto;
+            height: 85%;
+            min-height: auto;
+          }
+        }
+      }
+    }
+  }
 </style>

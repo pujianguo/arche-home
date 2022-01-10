@@ -229,4 +229,59 @@ const close = (index) => {
       opacity: 0;
     }
   }
+
+  @media screen and (min-width: 1100px) and (max-width: 1400px) {
+  }
+
+  @media screen and (min-width: 900px) and (max-width: 1099px) {
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 899px) {
+  }
+
+  @media screen and (max-width: 768px) {
+    .community-section-2 {
+      .container {
+        padding: 6vw;
+
+        .title {
+          margin-top: 60px;
+          font-size: 22px;
+          line-height: 1.8;
+        }
+
+        .content {
+          gap: 20px;
+          justify-content: center;
+          margin-top: 40px;
+          margin-right: 22px;
+          margin-left: 22px;
+
+          .tcard {
+            width: 100%;
+            height: 14vw;
+
+            .img {
+              width: 24px;
+              border-radius: 2px;
+
+              img {
+                width: 100%;
+              }
+            }
+
+            .title {
+              margin-top: 0;
+              font-size: 16px;
+              line-height: 1.6;
+            }
+
+            .arrow {
+              height: 14vw;
+            }
+          }
+        }
+      }
+    }
+  }
 </style>
