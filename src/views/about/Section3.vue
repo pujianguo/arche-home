@@ -356,4 +356,129 @@ const changeBottomImg = (key, flag) => {
       }
     }
   }
+
+  @media screen and (min-width: 1100px) and (max-width: 1400px) {
+  }
+
+  @media screen and (min-width: 900px) and (max-width: 1099px) {
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 899px) {
+  }
+
+  @media screen and (max-width: 768px) {
+    .about-section-3 {
+      .container {
+        padding: 6vw;
+
+        .section-top {
+          position: relative;
+
+          .title {
+            font-size: 24px;
+            line-height: 1.8;
+
+            .title-bottom {
+              margin-left: 22px;
+            }
+          }
+
+          .content {
+            margin-top: 30px;
+            margin-right: 22px;
+            margin-left: 22px;
+
+            .top-card-wrap {
+              flex-direction: column;
+              gap: 30px;
+
+              .card {
+                width: auto;
+
+                .img {
+                  img {
+                    width: 100%;
+                  }
+                }
+
+                .title {
+                  margin-top: 10px;
+                  font-size: 12px;
+                  line-height: 1.6;
+                }
+
+                .time {
+                  margin-top: 6px;
+                  font-size: 10px;
+                  line-height: 1.6;
+                }
+              }
+
+              .card + .card {
+                margin-left: 0;
+              }
+            }
+          }
+
+          .top-line {
+            display: none;
+          }
+        }
+
+        .section-bottom {
+          margin-top: 60px;
+          margin-right: 22px;
+          margin-left: 22px;
+
+          .bottom-title {
+            margin-bottom: 40px;
+            margin-left: -22px;
+            font-size: 24px;
+            line-height: 1.8;
+          }
+
+          .section {
+            .title {
+              font-size: 16px;
+              line-height: 1.8;
+            }
+
+            .content {
+              display: flex;
+              margin-top: 10px;
+
+              .bottom-card-wrap {
+                flex-wrap: wrap;
+                gap: 6%;
+
+                .card {
+                  justify-content: flex-start;
+                  width: 47%;
+
+                  img {
+                    width: 100%;
+                    margin-bottom: 3px;
+                  }
+
+                  .title {
+                    margin-bottom: 12px;
+                    font-size: 12px;
+                    line-height: 1.8;
+                  }
+                }
+
+                .card + .card {
+                  margin-left: 0;
+                }
+              }
+            }
+          }
+
+          .section + .section {
+            margin-top: 40px;
+          }
+        }
+      }
+    }
+  }
 </style>

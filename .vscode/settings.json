@@ -22,12 +22,7 @@
     "source.fixAll.stylelint": true
   },
   "auto-close-tag.enableAutoCloseTag": true,
-  "stylelint.validate": [
-    "css",
-    "less",
-    "scss",
-    "vue"
-  ],
+  "stylelint.validate": ["css", "less", "scss", "vue"],
   "vetur.format.defaultFormatter.js": "none",
   "vetur.format.defaultFormatter.html": "js-beautify-html",
   "vetur.format.defaultFormatterOptions": {
@@ -49,7 +44,6 @@
   "[vue]": {
     "editor.defaultFormatter": "octref.vetur"
   },
-  "cSpell.words": [
-    "heco"
-  ]
+  "cSpell.words": ["heco"],
+  "editor.codeLens": false
 }

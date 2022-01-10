@@ -32,4 +32,24 @@ import Section3 from './Section3.vue'
       transform: translateX(-50%) matrix(1, 0, 0, -1, 0, 0);
     }
   }
+
+  @media screen and (min-width: 1100px) and (max-width: 1400px) {
+  }
+
+  @media screen and (min-width: 900px) and (max-width: 1099px) {
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 899px) {
+  }
+
+  @media screen and (max-width: 768px) {
+    .about {
+      padding-bottom: 120px;
+      margin-bottom: -44px;
+
+      .bg {
+        height: 300px;
+      }
+    }
+  }
 </style>

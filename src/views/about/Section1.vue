@@ -3,7 +3,7 @@
     <div class="container">
       <div class="text-content">
         <!-- circle -->
-        <div class="circle-wrap">+
+        <div class="circle-wrap">
           <div class="circle1"></div>
           <div class="circle2"></div>
           <div class="circle3"></div>
@@ -47,7 +47,7 @@ const cardList = ref([
   { img: '', title: '', count: '', tips: '' },
   { img: '', title: '', count: '', tips: '' },
   {
-    img: `<svg width="44" height="45" viewBox="0 0 44 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+    img: `<svg class="icon" width="44" height="45" viewBox="0 0 44 45" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect y="16.762" width="16.7618" height="10.4761" fill="#00FFFF"/>
           <rect x="27.2383" y="16.7615" width="16.7618" height="10.4761" fill="#FA00FF"/>
           <rect x="27.2383" width="16.7618" height="10.4761" transform="rotate(90 27.2383 0)" fill="#00FF47"/>
@@ -60,7 +60,7 @@ const cardList = ref([
   },
   {
     img: `
-          <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="icon" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="27.1777" y="43.9995" width="14.6412" height="9.15072" transform="rotate(-135 27.1777 43.9995)" fill="#00FFFF"/>
           <rect x="10.3535" y="27.1763" width="14.6412" height="9.15072" transform="rotate(-135 10.3535 27.1763)" fill="#FA00FF"/>
           <rect y="37.5293" width="14.6412" height="9.15073" transform="rotate(-45 0 37.5293)" fill="#00FF47"/>
@@ -74,7 +74,7 @@ const cardList = ref([
   },
   {
     img: `
-    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="icon" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M4.88822 29.3207H9.77645C12.465 29.3207 14.6647 27.121 14.6647 24.4325V19.5442C14.6647 16.8557 12.465 14.656 9.77645 14.656H4.88822C2.1997 14.656 0 16.8557 0 19.5442V24.4325C0 27.121 2.1997 29.3207 4.88822 29.3207Z" fill="#00FFFF"/>
     <path d="M19.5679 14.6647H24.4561C27.1447 14.6647 29.3444 12.465 29.3444 9.77645V4.88822C29.3444 2.1997 27.1447 0 24.4561 0H19.5679C16.8794 0 14.6797 2.1997 14.6797 4.88822V9.77645C14.6797 12.465 16.8794 14.6647 19.5679 14.6647Z" fill="#00FF47"/>
     <path d="M39.1124 29.3263H34.2242C31.5356 29.3263 29.3359 27.1266 29.3359 24.4381V19.5498C29.3359 16.8613 31.5356 14.6616 34.2242 14.6616H39.1124C41.8009 14.6616 44.0006 16.8613 44.0006 19.5498V24.4381C44.0006 27.1266 41.8009 29.3263 39.1124 29.3263Z" fill="#FA00FF"/>
@@ -105,7 +105,7 @@ const cardList = ref([
   },
   {
     img: `
-    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="icon" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="43.8359" y="30.2446" width="19.0657" height="11.916" transform="rotate(135 43.8359 30.2446)" fill="#00FFFF"/>
         <rect x="8.42578" y="21.8508" width="19.0657" height="11.916" transform="rotate(45 8.42578 21.8508)" fill="#0038FF"/>
         <rect x="35.5742" y="21.9075" width="19.0657" height="11.916" transform="rotate(-135 35.5742 21.9075)" fill="#00FF47"/>
@@ -144,87 +144,6 @@ const close = (index) => {
     box-sizing: border-box;
     margin: 0 auto;
     perspective: 500px;
-
-    .background-wrap {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 3;
-      width: 100%;
-      height: 100%;
-      min-height: 500px;
-      max-height: 900px;
-      overflow: hidden;
-      background-position: center;
-      background-size: cover;
-      backface-visibility: hidden;
-
-      video {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        z-index: -100;
-        width: auto;
-        min-width: 100%;
-        height: auto;
-        min-height: 100%;
-        background-size: cover;
-        transform: translateX(-50%) translateY(-50%);
-
-        @media screen and (min-width: 769px) and (max-width: 1199px) {
-          top: 60px;
-          width: 100vw;
-          min-width: auto;
-          height: 56.25vw;
-          min-height: auto;
-          transform: translateX(-50%) translateY(0%);
-        }
-
-        @media screen and (max-width: 768px) {
-          top: 60px;
-          width: 140vw;
-          min-width: auto;
-          height: 78.75vw;
-          min-height: auto;
-          transform: translateX(-50%) translateY(0%);
-        }
-      }
-
-      &::after {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 4;
-        width: 100%;
-        height: 100%;
-        min-height: 500px;
-        max-height: 900px;
-        content: "";
-        background: linear-gradient(
-          180deg,
-          #000 0%,
-          rgba(0, 0, 0, 0) 30.43%,
-          rgba(0, 0, 0, 0) 70.54%,
-          #000 100%
-        );
-
-        @media screen and (min-width: 769px) and (max-width: 1199px) {
-          top: 60px;
-          width: 100vw;
-          min-width: auto;
-          height: 56.25vw;
-          min-height: auto;
-        }
-
-        @media screen and (max-width: 768px) {
-          top: 60px;
-          width: 140vw;
-          min-width: auto;
-          height: 78.75vw;
-          min-height: auto;
-        }
-      }
-    }
 
     .container {
       position: relative;
@@ -393,6 +312,87 @@ const close = (index) => {
       }
     }
 
+    .background-wrap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 3;
+      width: 100%;
+      height: 100%;
+      min-height: 500px;
+      max-height: 900px;
+      overflow: hidden;
+      background-position: center;
+      background-size: cover;
+      backface-visibility: hidden;
+
+      video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: -100;
+        width: auto;
+        min-width: 100%;
+        height: auto;
+        min-height: 100%;
+        background-size: cover;
+        transform: translateX(-50%) translateY(-50%);
+
+        @media screen and (min-width: 769px) and (max-width: 1199px) {
+          top: 60px;
+          width: 100vw;
+          min-width: auto;
+          height: 56.25vw;
+          min-height: auto;
+          transform: translateX(-50%) translateY(0%);
+        }
+
+        @media screen and (max-width: 768px) {
+          top: 60px;
+          width: 140vw;
+          min-width: auto;
+          height: 78.75vw;
+          min-height: auto;
+          transform: translateX(-50%) translateY(0%);
+        }
+      }
+
+      &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 4;
+        width: 100%;
+        height: 100%;
+        min-height: 500px;
+        max-height: 900px;
+        content: "";
+        background: linear-gradient(
+          180deg,
+          #000 0%,
+          rgba(0, 0, 0, 0) 30.43%,
+          rgba(0, 0, 0, 0) 70.54%,
+          #000 100%
+        );
+
+        @media screen and (min-width: 769px) and (max-width: 1199px) {
+          top: 60px;
+          width: 100vw;
+          min-width: auto;
+          height: 56.25vw;
+          min-height: auto;
+        }
+
+        @media screen and (max-width: 768px) {
+          top: 60px;
+          width: 140vw;
+          min-width: auto;
+          height: 78.75vw;
+          min-height: auto;
+        }
+      }
+    }
+
     .bold {
       font-weight: 900;
       color: white;
@@ -429,6 +429,116 @@ const close = (index) => {
     to {
       height: 0;
       opacity: 0;
+    }
+  }
+
+  @media screen and (min-width: 1100px) and (max-width: 1400px) {
+  }
+
+  @media screen and (min-width: 900px) and (max-width: 1099px) {
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 899px) {
+  }
+
+  @media screen and (max-width: 768px) {
+    .about-section-1 {
+      .container {
+        padding: 6vw;
+
+        .text-content {
+          margin-top: 90vw;
+
+          .circle-wrap {
+            position: absolute;
+            top: 65vw;
+            left: 80vw;
+            z-index: 0;
+            opacity: 0.5;
+            transform: scale(2);
+          }
+
+          .title-wrap {
+            font-size: 24px;
+            line-height: 1.8;
+
+            .title {
+              .line-two {
+                margin-left: 22px;
+              }
+            }
+
+            .text {
+              width: 88%;
+              margin-top: 20px;
+              margin-left: 22px;
+              font-size: 14px;
+              line-height: 1.8;
+            }
+          }
+
+          .content-wrap {
+            margin-top: 240px;
+
+            .content {
+              justify-content: flex-start;
+              padding-left: 22px;
+
+              .card {
+                width: 50%;
+                height: 90px;
+                margin-bottom: 10px;
+
+                &:first-child,
+                &:nth-child(2) {
+                  display: none;
+                }
+
+                .left {
+                  display: none;
+                }
+
+                .right {
+                  padding-top: 0;
+                  margin-left: 0;
+
+                  .title {
+                    font-size: 14px;
+                  }
+
+                  .count {
+                    font-size: 24px;
+                    line-height: 2;
+                  }
+
+                  .tips {
+                    display: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .background-wrap {
+        video {
+          top: 60px;
+          width: 140vw;
+          min-width: auto;
+          height: 78.75vw;
+          min-height: auto;
+          transform: translateX(-50%) translateY(0%);
+        }
+
+        &::after {
+          top: 60px;
+          width: 140vw;
+          min-width: auto;
+          height: 78.75vw;
+          min-height: auto;
+        }
+      }
     }
   }
 </style>

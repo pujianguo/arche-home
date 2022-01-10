@@ -718,4 +718,203 @@ const close = (index) => {
       opacity: 0;
     }
   }
+
+  @media screen and (min-width: 1100px) and (max-width: 1400px) {
+  }
+
+  @media screen and (min-width: 900px) and (max-width: 1099px) {
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 899px) {
+  }
+
+  @media screen and (max-width: 768px) {
+    .about-section-2 {
+      .container {
+        flex-direction: column;
+        padding: 6vw;
+
+        .text-content {
+          width: 100%;
+
+          .title {
+            font-size: 24px;
+            line-height: 1.8;
+          }
+
+          .content {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+
+            .wrap {
+              padding-right: 22px;
+              padding-left: 22px;
+            }
+
+            .tips-one,
+            .tips-two,
+            .tips-three {
+              font-size: 14px;
+              line-height: 1.8;
+            }
+
+            .line-one {
+              width: 40vw;
+            }
+
+            .footer {
+              margin-top: 20px;
+
+              .footer-btn {
+                height: 44px;
+                padding: 0 15px;
+
+                .text {
+                  margin-right: 20px;
+                  font-size: 12px;
+                  line-height: 44px;
+                }
+
+                .archeArrow {
+                  transform: scale(0.7);
+
+                  span:nth-child(1) {
+                    transform: translate3d(9px, 1px, 0) rotate(-155deg);
+                  }
+
+                  span:nth-child(2) {
+                    transform: translate3d(12px, 0, 0) rotate(0deg);
+                  }
+
+                  span:nth-child(3) {
+                    transform: translate3d(9px, -1px, 0) rotate(-25deg);
+                  }
+                }
+              }
+
+              .footer-link {
+                margin: 0 40px;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 36px;
+                color: rgba(255, 255, 255, 0.3);
+                text-align: left;
+                text-decoration-line: underline;
+                text-transform: uppercase;
+                letter-spacing: 0;
+                cursor: pointer;
+                transition: all 0.25s cubic-bezier(0.08, 0.82, 0.17, 1);
+
+                &:hover {
+                  color: rgba(255, 255, 255, 0.8);
+                  cursor: help;
+                }
+              }
+            }
+
+            .bottom {
+              margin-top: 20px;
+              margin-bottom: 20px;
+
+              .text {
+                font-size: 18px;
+                line-height: 1.4;
+              }
+
+              .img {
+                transform: scale(0.66);
+                transform-origin: center right;
+              }
+            }
+          }
+        }
+
+        .team-content {
+          width: 88%;
+          padding-right: 22px;
+          padding-left: 22px;
+
+          .content {
+            .staffCard {
+              width: 50%;
+              height: 50vw;
+
+              &:nth-of-type(1) {
+                border: 1px solid #444;
+              }
+
+              &:nth-of-type(2) {
+                border: 1px solid #444;
+                border-left: none;
+              }
+
+              &:nth-of-type(3) {
+                display: none;
+              }
+
+              &:nth-of-type(4) {
+                border: 1px solid #444;
+                border-top: none;
+              }
+
+              &:nth-of-type(5) {
+                border: 1px solid #444;
+                border-top: none;
+                border-left: none;
+              }
+
+              &:nth-of-type(6) {
+                border: 1px solid #444;
+                border-top: none;
+              }
+
+              &:nth-of-type(7) {
+                border: 1px solid #444;
+                border-top: none;
+                border-left: none;
+              }
+
+              &:nth-of-type(8) {
+                border: 1px solid #444;
+                border-top: none;
+              }
+
+              &:nth-of-type(9) {
+                border: 1px solid #444;
+                border-top: none;
+                border-left: none;
+              }
+              // ordinary
+              .ordinary {
+                .img {
+                  .badge {
+                    width: 14px;
+                    height: 14px;
+                    border-radius: 50%;
+                    transform: translate(-25%, 25%);
+                  }
+                }
+
+                .name {
+                  margin-top: 10%;
+                  font-size: 12px;
+                  line-height: 1.2;
+                }
+
+                .position {
+                  margin-top: 5%;
+                  font-size: 10px;
+                  line-height: 2;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 </style>
