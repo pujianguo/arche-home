@@ -25,7 +25,7 @@
         D-commerce on web3.0
       </div>
       <div class="footer">
-        <a class="footer-btn" href="https://app.arche.network" target="_blank">
+        <a class="footer-btn" href="https://archenetwork.typeform.com/application" target="_blank">
           <span class="text">start apply</span>
           <div class="archeArrow">
             <span></span>
