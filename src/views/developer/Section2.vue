@@ -131,4 +131,46 @@ import { ref } from 'vue'
       margin-top: 65px;
     }
   }
+
+  @media screen and (min-width: 1100px) and (max-width: 1400px) {
+  }
+
+  @media screen and (min-width: 900px) and (max-width: 1099px) {
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 899px) {
+  }
+
+  @media screen and (max-width: 768px) {
+    .developer-section-2 {
+      min-height: auto;
+
+      .container {
+        padding: 6vw;
+      }
+
+      .section-title {
+        margin-top: 60px;
+        font-size: 20px;
+        line-height: 1.6;
+        text-align: left;
+      }
+
+      .section-tips {
+        width: auto;
+        margin: 20px auto;
+        font-size: 14px;
+        line-height: 1.6;
+        text-align: left;
+      }
+
+      .section-img {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 80vw;
+        margin-top: 0;
+      }
+    }
+  }
 </style>

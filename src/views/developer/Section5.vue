@@ -371,4 +371,145 @@ const communityList = ref([
       }
     }
   }
+
+  @media screen and (min-width: 1100px) and (max-width: 1400px) {
+  }
+
+  @media screen and (min-width: 900px) and (max-width: 1099px) {
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 899px) {
+  }
+
+  @media screen and (max-width: 768px) {
+    .developer-section-5 {
+      .mt200 {
+        margin-top: 60px !important;
+      }
+
+      .container {
+        padding: 6vw;
+        margin-top: 40px;
+
+        .section-title {
+          font-size: 24px;
+          line-height: 1.6;
+          text-align: left;
+        }
+
+        .section-cardWrap {
+          flex-direction: column;
+          margin-top: 40px;
+
+          .section-card {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 30px 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+
+            .card-text {
+              height: auto;
+              font-size: 14px;
+              line-height: 1.8;
+            }
+          }
+        }
+
+        .communityCardWrap {
+          flex-direction: column;
+          gap: 20px;
+          margin-top: 40px;
+
+          .communityCard {
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+            padding: 20px 20px;
+
+            .img {
+              width: 60px;
+              height: 60px;
+              margin-right: 20px;
+
+              img {
+                width: 100%;
+              }
+            }
+
+            .count {
+              margin-top: 0;
+              font-size: 22px;
+              line-height: 1.6;
+              text-align: left;
+            }
+
+            .unit {
+              margin-top: 0;
+              font-size: 12px;
+              line-height: 1.6;
+              text-align: left;
+            }
+          }
+        }
+
+        .section-title-color {
+          width: 100%;
+          padding-top: 60px;
+          font-size: 24px;
+          line-height: 1.6;
+        }
+
+        .footer {
+          margin-top: 20px;
+
+          .footer-btn {
+            height: 44px;
+            padding: 0 15px;
+
+            .text {
+              margin-right: 20px;
+              font-size: 12px;
+              line-height: 44px;
+            }
+
+            .archeArrow {
+              transform: scale(0.7);
+
+              span:nth-child(1) {
+                transform: translate3d(9px, 1px, 0) rotate(-155deg);
+              }
+
+              span:nth-child(2) {
+                transform: translate3d(12px, 0, 0) rotate(0deg);
+              }
+
+              span:nth-child(3) {
+                transform: translate3d(9px, -1px, 0) rotate(-25deg);
+              }
+            }
+          }
+
+          .footer-link {
+            margin: 0 40px;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 36px;
+            color: rgba(255, 255, 255, 0.3);
+            text-align: left;
+            text-decoration-line: underline;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            cursor: pointer;
+            transition: all 0.25s cubic-bezier(0.08, 0.82, 0.17, 1);
+
+            &:hover {
+              color: rgba(255, 255, 255, 0.8);
+              cursor: help;
+            }
+          }
+        }
+      }
+    }
+  }
 </style>

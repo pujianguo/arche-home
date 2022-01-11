@@ -270,4 +270,81 @@ const itemRightList = ref([
       }
     }
   }
+
+  @media screen and (min-width: 1100px) and (max-width: 1400px) {
+  }
+
+  @media screen and (min-width: 900px) and (max-width: 1099px) {
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 899px) {
+  }
+
+  @media screen and (max-width: 768px) {
+    .developer-section-3 {
+      .container {
+        padding: 6vw;
+      }
+
+      .circle-wrap {
+        position: absolute;
+        top: 24vw;
+        left: 90vw;
+        z-index: 0;
+      }
+
+      .next-tips {
+        margin-top: 60px;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .next-title {
+        font-size: 24px;
+        line-height: 1.8;
+      }
+
+      .next-content {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding-left: 0;
+        margin-top: 40px;
+        margin-bottom: 60px;
+
+        .next-item-left,
+        .next-item-right {
+          display: flex;
+          flex-direction: column;
+          gap: 40px;
+
+          .item {
+            margin-bottom: 0;
+          }
+
+          .item-img {
+            height: 12vw;
+            min-height: 160px;
+          }
+
+          .big {
+            height: 12vw;
+            min-height: 160px;
+          }
+
+          .item-title {
+            margin-top: 16px;
+            font-size: 14px;
+            line-height: 1.6;
+          }
+
+          .item-tips {
+            margin-top: 10px;
+            font-size: 12px;
+            line-height: 1.6;
+          }
+        }
+      }
+    }
+  }
 </style>

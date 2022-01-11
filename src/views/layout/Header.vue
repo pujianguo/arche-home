@@ -66,10 +66,10 @@ useInitGsap(initGsap)
 
 const menuList = [
   { id: 1, title: 'HOME', routeName: 'Home', href: '' },
-  { id: 2, title: 'TOKENOMICS', routeName: 'Tokenomics', href: '' },
-  { id: 3, title: 'AGA', routeName: '', href: '' },
-  { id: 4, title: 'DEVELOPER', routeName: 'Developer', href: '' },
-  { id: 5, title: 'COMMUNITY', routeName: 'Community', href: '' },
+  { id: 2, title: 'AGA', routeName: '', href: 'https://aga.arche.network' },
+  { id: 3, title: 'DEVELOPER', routeName: 'Developer', href: '' },
+  { id: 4, title: 'COMMUNITY', routeName: 'Community', href: '' },
+  { id: 5, title: 'TOKENOMICS', routeName: 'Tokenomics', href: '' },
   { id: 6, title: 'ABOUT', routeName: 'About', href: '' },
 ]
 
