@@ -12,7 +12,7 @@
           <div class="box1dot"></div>
         </div>
         <div class="section-right">
-          <div class="footer">
+          <!-- <div class="footer">
             <a class="footer-btn" href="https://app.arche.network" target="_blank">
               <span class="text">Explore</span>
               <div class="archeArrow">
@@ -21,6 +21,11 @@
                 <span></span>
               </div>
             </a>
+          </div> -->
+          <div class="footer">
+            <div class="footer-btn disable">
+              <span class="text">coming soon</span>
+            </div>
           </div>
         </div>
       </div>

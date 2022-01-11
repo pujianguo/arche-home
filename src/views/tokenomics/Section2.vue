@@ -205,7 +205,7 @@ import { ref } from 'vue'
 
           .key-data {
             padding: 30px 0 0 30px;
-            margin-bottom: 100px;
+            margin-bottom: 40px;
 
             .title {
               font-size: 24px;
