@@ -217,4 +217,152 @@
       }
     }
   }
+
+  @media screen and (min-width: 1100px) and (max-width: 1400px) {
+  }
+
+  @media screen and (min-width: 900px) and (max-width: 1099px) {
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 899px) {
+  }
+
+  @media screen and (max-width: 768px) {
+    .token-section-1 {
+      .container {
+        padding: 6vw;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+
+        .content-box1 {
+          flex-direction: column;
+          width: 100%;
+
+          .box1 {
+            position: relative;
+            box-sizing: border-box;
+            width: 100%;
+            padding: 4vw 6vw 16vw 6vw;
+            margin-top: 36vw;
+
+            .box1text1,
+            .box1text2 {
+              font-size: 34px;
+              line-height: 1.4;
+            }
+
+            .box1text2 {
+              text-indent: 2em;
+            }
+
+            .button {
+              width: auto;
+              height: auto;
+              padding: 10px 30px;
+              font-size: 12px;
+              line-height: 1.6;
+            }
+
+            .box1top {
+              position: absolute;
+              top: -80px;
+              left: 0;
+              width: 70%;
+              height: 80px;
+            }
+
+            .box1left {
+              position: absolute;
+              top: 0;
+              left: -10vw;
+              z-index: -1;
+              width: 35vw;
+              height: 80vw;
+
+              &::before {
+                display: none;
+              }
+
+              &::after {
+                display: none;
+              }
+            }
+
+            .box1bottom {
+              position: absolute;
+              bottom: -30vw;
+              left: 0;
+              z-index: -1;
+              width: 80%;
+              height: 30vw;
+              background: rgba(19, 82, 213, 0.2);
+            }
+
+            .box1dot {
+              position: absolute;
+              bottom: -50px;
+              left: 0;
+              width: 50px;
+              height: 100px;
+              background: url(https://media.arche.network/arche2.0/images/pattern-dot-bg.png);
+              background-size: 80%;
+              opacity: 0.3;
+            }
+          }
+
+          .box2 {
+            position: absolute;
+            top: 30vw;
+            right: 0;
+            z-index: 9;
+            width: 100%;
+            height: 55px;
+
+            .box2dot {
+              position: absolute;
+              top: 0;
+              right: 0;
+              width: 80px;
+              height: 55px;
+              background: url(https://media.arche.network/arche2.0/images/pattern-dot-bg.png);
+              background-size: 50%;
+              opacity: 0.3;
+            }
+          }
+
+          .dot {
+            width: 54px;
+            height: 54px;
+          }
+        }
+
+        .content-box2 {
+          position: relative;
+          z-index: 1;
+          display: flex;
+          width: 100%;
+
+          .box3 {
+            position: relative;
+            width: 20%;
+          }
+
+          .box4 {
+            position: relative;
+            width: 80%;
+
+            .box4text {
+              top: 0;
+              padding: 20px 24px;
+              font-size: 12px;
+              line-height: 1.6;
+            }
+          }
+        }
+      }
+    }
+  }
 </style>

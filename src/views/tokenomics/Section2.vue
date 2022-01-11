@@ -18,7 +18,7 @@
         </div>
         <div class="box3">
           <div class="title">20M</div>
-          <div class="tips">The total supply of ARCHE will be 100M tokens.</div>
+          <div class="tips">20M ARCHE tokens will be reward vARCHE token holder in four years.</div>
         </div>
         <div class="box4">
           <div class="title">35M</div>
@@ -180,6 +180,123 @@ import { ref } from 'vue'
 
         .grey {
           color: rgba($color: #fff, $alpha: 0.5) !important;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1100px) and (max-width: 1400px) {
+  }
+
+  @media screen and (min-width: 900px) and (max-width: 1099px) {
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 899px) {
+  }
+
+  @media screen and (max-width: 768px) {
+    .token-section-2 {
+      .container {
+        padding: 6vw;
+        margin-top: 60px;
+
+        .text-content {
+          position: relative;
+
+          .key-data {
+            padding: 30px 0 0 30px;
+            margin-bottom: 100px;
+
+            .title {
+              font-size: 24px;
+
+              span {
+                margin-left: 1em;
+              }
+            }
+
+            .arrow {
+              position: absolute;
+              top: 28px;
+              right: 10px;
+              width: 2px;
+              height: 26px;
+              background-color: #fff;
+
+              &::before,
+              &::after {
+                height: 2px;
+              }
+            }
+
+            &::before {
+              width: 30px;
+              height: 2px;
+            }
+
+            &::after {
+              width: 2px;
+              height: 30px;
+            }
+          }
+        }
+
+        .section-wrap {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          padding: 0;
+
+          .box1,
+          .box2,
+          .box3,
+          .box4 {
+            box-sizing: border-box;
+            width: 100%;
+            height: auto;
+            padding: 20px 20px 20px 20px;
+            border: 1px solid rgba($color: #fff, $alpha: 0.2);
+          }
+
+          .box1 {
+            width: 100%;
+            border-right: 1px solid rgba($color: #fff, $alpha: 0.2);
+            border-bottom: none;
+          }
+
+          .box2 {
+            flex: 1;
+            order: 1;
+            width: 100%;
+            padding: 20px 20px 20px 20px;
+          }
+
+          .box3 {
+            width: 100%;
+            height: auto;
+            padding: 20px 20px 20px 20px;
+            border-right: 1px solid rgba($color: #fff, $alpha: 0.2);
+          }
+
+          .box4 {
+            flex: 1;
+            width: 100%;
+            height: auto;
+            padding: 20px 20px 20px 20px;
+            border-top: none;
+            border-bottom: none;
+          }
+
+          .title {
+            font-size: 22px;
+            line-height: 1.6;
+          }
+
+          .tips {
+            margin-top: 5px;
+            font-size: 14px;
+            line-height: 1.6;
+          }
         }
       }
     }

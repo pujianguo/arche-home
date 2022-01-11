@@ -92,10 +92,14 @@ const cardList = ref([
   },
   {
     img: `<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 13L33 1V89.5L0 100V13Z" fill="#0038FF"/>
-        <path d="M66 13L99 1V89.5L66 100V13Z" fill="#00FF47"/>
-        <path d="M38 86.2906V8.33181L61 16.5266V93.2603L38 86.2906Z" stroke="white" stroke-width="10"/>
-        </svg>`,
+<rect x="45" width="55" height="12" fill="white"/>
+<rect x="45" y="29" width="55" height="12" fill="white"/>
+<rect x="45" y="58" width="55" height="12" fill="white"/>
+<rect x="45" y="87" width="55" height="12" fill="white"/>
+<rect y="58" width="73" height="41" fill="#0038FF"/>
+<rect x="45" y="41" width="28" height="17" fill="#00FF47"/>
+</svg>
+`,
     title: 'AGA Fund',
     text: 'Join the AGA(Arche Guilds Alliance)Games Fund to get the latest gaming strategies.',
   },
@@ -206,6 +210,103 @@ const cardList = ref([
             font-weight: normal;
             line-height: 36px;
             color: rgba($color: #fff, $alpha: 0.6);
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1100px) and (max-width: 1400px) {
+  }
+
+  @media screen and (min-width: 900px) and (max-width: 1099px) {
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 899px) {
+  }
+
+  @media screen and (max-width: 768px) {
+    .token-section-3 {
+      .container {
+        padding: 6vw;
+        margin-top: 80px;
+
+        .section-top {
+          margin-bottom: 80px;
+
+          .box1 {
+            position: absolute;
+            top: 0;
+            left: -4vw;
+            z-index: 5;
+            width: 10vw;
+            height: 6vw;
+            background: #e107fa;
+          }
+
+          .box2 {
+            position: absolute;
+            top: 6vw;
+            left: -3vw;
+            width: 41vw;
+            height: 20vw;
+            background: #0038ff;
+          }
+
+          .box3 {
+            position: absolute;
+            top: 21vw;
+            left: 14vw;
+            width: 15vw;
+            height: 48px;
+            background: url(https://media.arche.network/arche2.0/images/pattern-dot-bg.png);
+            background-size: 25%;
+            opacity: 0.3;
+          }
+
+          .title {
+            font-size: 24px;
+            line-height: 1.6;
+            color: #0ff;
+
+            .title-bottom {
+              color: #00ff47;
+              text-indent: 1em;
+            }
+          }
+        }
+
+        .section-bottom {
+          flex-direction: column;
+
+          .card {
+            width: 100%;
+
+            .img {
+              width: 50px;
+              height: 50px;
+            }
+
+            .line {
+              display: none;
+            }
+
+            .title {
+              margin-top: 20px;
+              font-family: Cindie Mono;
+              font-size: 18px;
+              font-style: normal;
+              font-weight: normal;
+              line-height: 1.6;
+              color: #fff;
+            }
+
+            .text {
+              margin-top: 10px;
+              margin-bottom: 0;
+              font-size: 14px;
+              line-height: 1.6;
+            }
           }
         }
       }

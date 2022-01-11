@@ -269,4 +269,140 @@ const cardList = ref([
       }
     }
   }
+
+  @media screen and (min-width: 1100px) and (max-width: 1400px) {
+  }
+
+  @media screen and (min-width: 900px) and (max-width: 1099px) {
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 899px) {
+  }
+
+  @media screen and (max-width: 768px) {
+    .token-section-5 {
+      .container {
+        padding: 6vw;
+
+        .top {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .section-left {
+            position: relative;
+
+            .title {
+              width: 100%;
+              margin-bottom: 60px;
+              font-size: 24px;
+              line-height: 1.6;
+              color: #00ff47;
+            }
+
+            .box1 {
+              position: absolute;
+              top: -3vw;
+              left: -9vw;
+              z-index: 2;
+              width: 65vw;
+              height: 36vw;
+              background: #0038ff;
+            }
+
+            .box2 {
+              position: absolute;
+              top: 33vw;
+              left: -10vw;
+              z-index: 3;
+              width: 48vw;
+              height: 8vw;
+              background: #e107fa;
+            }
+
+            .box1dot {
+              position: absolute;
+              top: -9vw;
+              left: -9vw;
+              z-index: 4;
+              width: 100px;
+              height: 160px;
+              background: url(https://media.arche.network/arche2.0/images/pattern-dot-bg.png);
+              background-size: 50%;
+              opacity: 0.3;
+            }
+          }
+
+          .section-right {
+            .footer {
+              margin-top: 20px;
+
+              .footer-btn {
+                height: 44px;
+                padding: 0 15px;
+
+                .text {
+                  margin-right: 20px;
+                  font-size: 12px;
+                  line-height: 44px;
+                }
+
+                .archeArrow {
+                  transform: scale(0.7);
+
+                  span:nth-child(1) {
+                    transform: translate3d(9px, 1px, 0) rotate(-155deg);
+                  }
+
+                  span:nth-child(2) {
+                    transform: translate3d(12px, 0, 0) rotate(0deg);
+                  }
+
+                  span:nth-child(3) {
+                    transform: translate3d(9px, -1px, 0) rotate(-25deg);
+                  }
+                }
+              }
+
+              .footer-link {
+                margin: 0 40px;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 36px;
+                color: rgba(255, 255, 255, 0.3);
+                text-align: left;
+                text-decoration-line: underline;
+                text-transform: uppercase;
+                letter-spacing: 0;
+                cursor: pointer;
+                transition: all 0.25s cubic-bezier(0.08, 0.82, 0.17, 1);
+
+                &:hover {
+                  color: rgba(255, 255, 255, 0.8);
+                  cursor: help;
+                }
+              }
+            }
+          }
+        }
+
+        .bottom {
+          display: flex;
+          flex-direction: column;
+          gap: 40px;
+          align-items: center;
+          justify-content: space-between;
+          margin-top: 60px;
+
+          .card {
+            min-height: auto;
+            padding: 4vw 8vw;
+            font-size: 14px;
+            line-height: 1.6;
+          }
+        }
+      }
+    }
+  }
 </style>

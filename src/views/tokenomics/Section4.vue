@@ -125,4 +125,77 @@ import { ref } from 'vue'
       }
     }
   }
+
+  @media screen and (min-width: 1100px) and (max-width: 1400px) {
+  }
+
+  @media screen and (min-width: 900px) and (max-width: 1099px) {
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 899px) {
+  }
+
+  @media screen and (max-width: 768px) {
+    .token-section-4 {
+      .container {
+        padding: 6vw;
+        margin-top: 100px;
+
+        .bg {
+          position: absolute;
+          top: -60px;
+          right: 0;
+          transform: scale(0.25);
+          transform-origin: top right;
+        }
+
+        .content {
+          margin-bottom: 70px;
+
+          .title-wrap {
+            .title-top {
+              font-size: 24px;
+              line-height: 1.6;
+            }
+
+            .title-bottom {
+              font-size: 24px;
+              line-height: 1.6;
+              text-indent: 1.4em;
+
+              span {
+                font-size: 18px;
+              }
+            }
+
+            .box1dot {
+              top: 4px;
+              left: 0;
+              width: 2.2em;
+              height: 5em;
+              background-size: 100%;
+              opacity: 0.3;
+            }
+          }
+        }
+
+        .text {
+          width: 100%;
+          margin-top: 20px;
+          margin-bottom: 30px;
+          font-size: 14px;
+          line-height: 1.6;
+        }
+
+        .tips {
+          margin-top: 0;
+          font-size: 14px;
+          line-height: 1.6;
+          color: #00ff47;
+          text-transform: uppercase;
+          border-bottom: 1px solid #00ff47;
+        }
+      }
+    }
+  }
 </style>
