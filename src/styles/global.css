@@ -5,21 +5,8 @@ body {
   padding: 0;
   margin: 0;
   overflow: auto;
-  font-family:
-    'Inter',
-    -apple-system,
-    BlinkMacSystemFont,
-    Helvetica,
-    Tahoma,
-    Arial,
-    'Hiragino Sans GB',
-    'Microsoft YaHei',
-    微软雅黑,
-    SimSun,
-    宋体,
-    Heiti,
-    黑体,
-    sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, Helvetica, Tahoma, Arial, "Hiragino Sans GB",
+    "Microsoft YaHei", 微软雅黑, SimSun, 宋体, Heiti, 黑体, sans-serif;
   font-size: 14px;
   font-weight: normal;
   letter-spacing: 0;
@@ -29,6 +16,8 @@ body {
   -khtml-user-select: none; /* 早期浏览器 */
   user-select: none;
   background: #000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
   @media screen and (min-width: 1200px) {
     min-width: 1200px;
@@ -61,7 +50,7 @@ a,
   cursor: pointer;
 
   &:hover {
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
 }
 
@@ -109,62 +98,56 @@ Cindie Mono font.
 ------------------------------------------------------- */
 
 @font-face {
-  font-family: 'Cindie Mono';
+  font-family: "Cindie Mono";
   font-style: normal;
   font-weight: 200;
-  src:
-    url('https://media.arche.network/arche2.0/fonts/CindieMono-A.woff2') format('woff2'),
-    url('https://media.arche.network/arche2.0/fonts/CindieMono-A.woff') format('woff');
+  src: url("https://media.arche.network/arche2.0/fonts/CindieMono-A.woff2") format("woff2"),
+    url("https://media.arche.network/arche2.0/fonts/CindieMono-A.woff") format("woff");
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Cindie Mono';
+  font-family: "Cindie Mono";
   font-style: normal;
   font-weight: 300;
-  src:
-    url('https://media.arche.network/arche2.0/fonts/CindieMono-B.woff2') format('woff2'),
-    url('https://media.arche.network/arche2.0/fonts/CindieMono-B.woff') format('woff');
+  src: url("https://media.arche.network/arche2.0/fonts/CindieMono-B.woff2") format("woff2"),
+    url("https://media.arche.network/arche2.0/fonts/CindieMono-B.woff") format("woff");
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Cindie Mono';
+  font-family: "Cindie Mono";
   font-style: normal;
   font-weight: 400;
-  src:
-    url('https://media.arche.network/arche2.0/fonts/CindieMono-C.woff2') format('woff2'),
-    url('https://media.arche.network/arche2.0/fonts/CindieMono-C.woff') format('woff');
+  src: url("https://media.arche.network/arche2.0/fonts/CindieMono-C.woff2") format("woff2"),
+    url("https://media.arche.network/arche2.0/fonts/CindieMono-C.woff") format("woff");
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Cindie Mono';
+  font-family: "Cindie Mono";
   font-style: normal;
   font-weight: 500;
-  src:
-    url('https://media.arche.network/arche2.0/fonts/CindieMono-D.woff2') format('woff2'),
-    url('https://media.arche.network/arche2.0/fonts/CindieMono-D.woff') format('woff');
+  src: url("https://media.arche.network/arche2.0/fonts/CindieMono-D.woff2") format("woff2"),
+    url("https://media.arche.network/arche2.0/fonts/CindieMono-D.woff") format("woff");
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Cindie Mono';
+  font-family: "Cindie Mono";
   font-style: normal;
   font-weight: 600;
-  src:
-    url('https://media.arche.network/arche2.0/fonts/CindieMono-E.woff2') format('woff2'),
-    url('https://media.arche.network/arche2.0/fonts/CindieMono-E.woff') format('woff');
+  src: url("https://media.arche.network/arche2.0/fonts/CindieMono-E.woff2") format("woff2"),
+    url("https://media.arche.network/arche2.0/fonts/CindieMono-E.woff") format("woff");
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Cindie Mono';
+  font-family: "Cindie Mono";
   font-style: normal;
   font-weight: 700;
-  src:
-    url('https://media.arche.network/arche2.0/fonts/CindieMono-F.woff2') format('woff2'),
-    url('https://media.arche.network/arche2.0/fonts/CindieMono-F.woff') format('woff');
+  src: url("https://media.arche.network/arche2.0/fonts/CindieMono-F.woff2") format("woff2"),
+    url("https://media.arche.network/arche2.0/fonts/CindieMono-F.woff") format("woff");
   font-display: swap;
 }
 
@@ -173,182 +156,164 @@ Inter Variable font.
 ------------------------------------------------------- */
 
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 100;
-  src:
-    url('https://media.arche.network/arche2.0/fonts/Inter-Thin.woff2?v=3.19') format('woff2'),
-    url('https://media.arche.network/arche2.0/fonts/Inter-Thin.woff?v=3.19') format('woff');
+  src: url("https://media.arche.network/arche2.0/fonts/Inter-Thin.woff2?v=3.19") format("woff2"),
+    url("https://media.arche.network/arche2.0/fonts/Inter-Thin.woff?v=3.19") format("woff");
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: italic;
   font-weight: 100;
-  src:
-    url('https://media.arche.network/arche2.0/fonts/Inter-ThinItalic.woff2?v=3.19') format('woff2'),
-    url('https://media.arche.network/arche2.0/fonts/Inter-ThinItalic.woff?v=3.19') format('woff');
+  src: url("https://media.arche.network/arche2.0/fonts/Inter-ThinItalic.woff2?v=3.19") format("woff2"),
+    url("https://media.arche.network/arche2.0/fonts/Inter-ThinItalic.woff?v=3.19") format("woff");
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 200;
-  src:
-    url('https://media.arche.network/arche2.0/fonts/Inter-ExtraLight.woff2?v=3.19') format('woff2'),
-    url('https://media.arche.network/arche2.0/fonts/Inter-ExtraLight.woff?v=3.19') format('woff');
+  src: url("https://media.arche.network/arche2.0/fonts/Inter-ExtraLight.woff2?v=3.19") format("woff2"),
+    url("https://media.arche.network/arche2.0/fonts/Inter-ExtraLight.woff?v=3.19") format("woff");
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: italic;
   font-weight: 200;
-  src:
-    url('https://media.arche.network/arche2.0/fonts/Inter-ExtraLightItalic.woff2?v=3.19') format('woff2'),
-    url('https://media.arche.network/arche2.0/fonts/Inter-ExtraLightItalic.woff?v=3.19') format('woff');
+  src: url("https://media.arche.network/arche2.0/fonts/Inter-ExtraLightItalic.woff2?v=3.19") format("woff2"),
+    url("https://media.arche.network/arche2.0/fonts/Inter-ExtraLightItalic.woff?v=3.19") format("woff");
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 300;
-  src:
-    url('https://media.arche.network/arche2.0/fonts/Inter-Light.woff2?v=3.19') format('woff2'),
-    url('https://media.arche.network/arche2.0/fonts/Inter-Light.woff?v=3.19') format('woff');
+  src: url("https://media.arche.network/arche2.0/fonts/Inter-Light.woff2?v=3.19") format("woff2"),
+    url("https://media.arche.network/arche2.0/fonts/Inter-Light.woff?v=3.19") format("woff");
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: italic;
   font-weight: 300;
-  src:
-    url('https://media.arche.network/arche2.0/fonts/Inter-LightItalic.woff2?v=3.19') format('woff2'),
-    url('https://media.arche.network/arche2.0/fonts/Inter-LightItalic.woff?v=3.19') format('woff');
+  src: url("https://media.arche.network/arche2.0/fonts/Inter-LightItalic.woff2?v=3.19") format("woff2"),
+    url("https://media.arche.network/arche2.0/fonts/Inter-LightItalic.woff?v=3.19") format("woff");
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  src:
-    url('https://media.arche.network/arche2.0/fonts/Inter-Regular.woff2?v=3.19') format('woff2'),
-    url('https://media.arche.network/arche2.0/fonts/Inter-Regular.woff?v=3.19') format('woff');
+  src: url("https://media.arche.network/arche2.0/fonts/Inter-Regular.woff2?v=3.19") format("woff2"),
+    url("https://media.arche.network/arche2.0/fonts/Inter-Regular.woff?v=3.19") format("woff");
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: italic;
   font-weight: 400;
-  src:
-    url('https://media.arche.network/arche2.0/fonts/Inter-Italic.woff2?v=3.19') format('woff2'),
-    url('https://media.arche.network/arche2.0/fonts/Inter-Italic.woff?v=3.19') format('woff');
+  src: url("https://media.arche.network/arche2.0/fonts/Inter-Italic.woff2?v=3.19") format("woff2"),
+    url("https://media.arche.network/arche2.0/fonts/Inter-Italic.woff?v=3.19") format("woff");
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 500;
-  src:
-    url('https://media.arche.network/arche2.0/fonts/Inter-Medium.woff2?v=3.19') format('woff2'),
-    url('https://media.arche.network/arche2.0/fonts/Inter-Medium.woff?v=3.19') format('woff');
+  src: url("https://media.arche.network/arche2.0/fonts/Inter-Medium.woff2?v=3.19") format("woff2"),
+    url("https://media.arche.network/arche2.0/fonts/Inter-Medium.woff?v=3.19") format("woff");
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: italic;
   font-weight: 500;
-  src:
-    url('https://media.arche.network/arche2.0/fonts/Inter-MediumItalic.woff2?v=3.19') format('woff2'),
-    url('https://media.arche.network/arche2.0/fonts/Inter-MediumItalic.woff?v=3.19') format('woff');
+  src: url("https://media.arche.network/arche2.0/fonts/Inter-MediumItalic.woff2?v=3.19") format("woff2"),
+    url("https://media.arche.network/arche2.0/fonts/Inter-MediumItalic.woff?v=3.19") format("woff");
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 600;
-  src:
-    url('https://media.arche.network/arche2.0/fonts/Inter-SemiBold.woff2?v=3.19') format('woff2'),
-    url('https://media.arche.network/arche2.0/fonts/Inter-SemiBold.woff?v=3.19') format('woff');
+  src: url("https://media.arche.network/arche2.0/fonts/Inter-SemiBold.woff2?v=3.19") format("woff2"),
+    url("https://media.arche.network/arche2.0/fonts/Inter-SemiBold.woff?v=3.19") format("woff");
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: italic;
   font-weight: 600;
-  src:
-    url('https://media.arche.network/arche2.0/fonts/Inter-SemiBoldItalic.woff2?v=3.19') format('woff2'),
-    url('https://media.arche.network/arche2.0/fonts/Inter-SemiBoldItalic.woff?v=3.19') format('woff');
+  src: url("https://media.arche.network/arche2.0/fonts/Inter-SemiBoldItalic.woff2?v=3.19") format("woff2"),
+    url("https://media.arche.network/arche2.0/fonts/Inter-SemiBoldItalic.woff?v=3.19") format("woff");
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  src:
-    url('https://media.arche.network/arche2.0/fonts/Inter-Bold.woff2?v=3.19') format('woff2'),
-    url('https://media.arche.network/arche2.0/fonts/Inter-Bold.woff?v=3.19') format('woff');
+  src: url("https://media.arche.network/arche2.0/fonts/Inter-Bold.woff2?v=3.19") format("woff2"),
+    url("https://media.arche.network/arche2.0/fonts/Inter-Bold.woff?v=3.19") format("woff");
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: italic;
   font-weight: 700;
-  src:
-    url('https://media.arche.network/arche2.0/fonts/Inter-BoldItalic.woff2?v=3.19') format('woff2'),
-    url('https://media.arche.network/arche2.0/fonts/Inter-BoldItalic.woff?v=3.19') format('woff');
+  src: url("https://media.arche.network/arche2.0/fonts/Inter-BoldItalic.woff2?v=3.19") format("woff2"),
+    url("https://media.arche.network/arche2.0/fonts/Inter-BoldItalic.woff?v=3.19") format("woff");
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 800;
-  src:
-    url('https://media.arche.network/arche2.0/fonts/Inter-ExtraBold.woff2?v=3.19') format('woff2'),
-    url('https://media.arche.network/arche2.0/fonts/Inter-ExtraBold.woff?v=3.19') format('woff');
+  src: url("https://media.arche.network/arche2.0/fonts/Inter-ExtraBold.woff2?v=3.19") format("woff2"),
+    url("https://media.arche.network/arche2.0/fonts/Inter-ExtraBold.woff?v=3.19") format("woff");
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: italic;
   font-weight: 800;
-  src:
-    url('https://media.arche.network/arche2.0/fonts/Inter-ExtraBoldItalic.woff2?v=3.19') format('woff2'),
-    url('https://media.arche.network/arche2.0/fonts/Inter-ExtraBoldItalic.woff?v=3.19') format('woff');
+  src: url("https://media.arche.network/arche2.0/fonts/Inter-ExtraBoldItalic.woff2?v=3.19") format("woff2"),
+    url("https://media.arche.network/arche2.0/fonts/Inter-ExtraBoldItalic.woff?v=3.19") format("woff");
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: normal;
   font-weight: 900;
-  src:
-    url('https://media.arche.network/arche2.0/fonts/Inter-Black.woff2?v=3.19') format('woff2'),
-    url('https://media.arche.network/arche2.0/fonts/Inter-Black.woff?v=3.19') format('woff');
+  src: url("https://media.arche.network/arche2.0/fonts/Inter-Black.woff2?v=3.19") format("woff2"),
+    url("https://media.arche.network/arche2.0/fonts/Inter-Black.woff?v=3.19") format("woff");
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Inter';
+  font-family: "Inter";
   font-style: italic;
   font-weight: 900;
-  src:
-    url('https://media.arche.network/arche2.0/fonts/Inter-BlackItalic.woff2?v=3.19') format('woff2'),
-    url('https://media.arche.network/arche2.0/fonts/Inter-BlackItalic.woff?v=3.19') format('woff');
+  src: url("https://media.arche.network/arche2.0/fonts/Inter-BlackItalic.woff2?v=3.19") format("woff2"),
+    url("https://media.arche.network/arche2.0/fonts/Inter-BlackItalic.woff?v=3.19") format("woff");
   font-display: swap;
 }
 
@@ -362,21 +327,21 @@ html { font-family: 'Inter', sans-serif; }
 }
 */
 @font-face {
-  font-family: 'Inter var';
+  font-family: "Inter var";
   font-style: normal;
   font-weight: 100 900;
-  src: url('https://media.arche.network/arche2.0/fonts/Inter-roman.var.woff2?v=3.19') format('woff2');
+  src: url("https://media.arche.network/arche2.0/fonts/Inter-roman.var.woff2?v=3.19") format("woff2");
   font-display: swap;
-  font-named-instance: 'Regular';
+  font-named-instance: "Regular";
 }
 
 @font-face {
-  font-family: 'Inter var';
+  font-family: "Inter var";
   font-style: italic;
   font-weight: 100 900;
-  src: url('https://media.arche.network/arche2.0/fonts/Inter-italic.var.woff2?v=3.19') format('woff2');
+  src: url("https://media.arche.network/arche2.0/fonts/Inter-italic.var.woff2?v=3.19") format("woff2");
   font-display: swap;
-  font-named-instance: 'Italic';
+  font-named-instance: "Italic";
 }
 
 /* --------------------------------------------------------------------------
@@ -393,10 +358,10 @@ explicitly, e.g.
 
 */
 @font-face {
-  font-family: 'Inter var experimental';
+  font-family: "Inter var experimental";
   font-style: oblique 0deg 10deg;
   font-weight: 100 900;
-  src: url('https://media.arche.network/arche2.0/fonts/Inter.var.woff2?v=3.19') format('woff2');
+  src: url("https://media.arche.network/arche2.0/fonts/Inter.var.woff2?v=3.19") format("woff2");
   font-display: swap;
 }
 
@@ -480,7 +445,7 @@ p {
 }
 
 .c-white-t-7 {
-  color: rgba(255, 255, 255, .7);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .c-block {
@@ -488,11 +453,11 @@ p {
 }
 
 .c-block-t-5 {
-  color: rgba(0, 0, 0, .5);
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .c-block-t-05 {
-  color: rgba(0, 0, 0, .05);
+  color: rgba(0, 0, 0, 0.05);
 }
 
 .c-green {
@@ -508,7 +473,7 @@ p {
 }
 
 .c-blue-t6 {
-  color: rgba(0, 31, 255, .6);
+  color: rgba(0, 31, 255, 0.6);
 }
 
 /**************** LAYOUT ***************/
