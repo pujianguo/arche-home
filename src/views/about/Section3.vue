@@ -125,12 +125,13 @@ const sectionList = reactive({
     { title: 'bigtime', src: 'https://media.arche.network/arche2.0/images/about/about-games-1.png' },
   ],
   guilds: [
-    { title: 'yield guild', src: 'https://media.arche.network/arche2.0/images/about/about-guilds-6.png' },
-    { title: 'merit circle', src: 'https://media.arche.network/arche2.0/images/about/about-guilds-5.png' },
-    { title: 'avocado guild', src: 'https://media.arche.network/arche2.0/images/about/about-guilds-4.png' },
-    { title: 'good games guild', src: 'https://media.arche.network/arche2.0/images/about/about-guilds-3.png' },
-    { title: 'polemos', src: 'https://media.arche.network/arche2.0/images/about/about-guilds-2.png' },
-    { title: 'ASTRA guild ventures', src: 'https://media.arche.network/arche2.0/images/about/about-guilds-1.png' },
+    { title: 'YGG SEA', src: 'https://media.arche.network/arche2.0/images/about/about-guilds-07.png' },
+    { title: 'Yield Guild', src: 'https://media.arche.network/arche2.0/images/about/about-guilds-06.png' },
+    { title: 'Merit Circle', src: 'https://media.arche.network/arche2.0/images/about/about-guilds-05.png' },
+    { title: 'Avocado Guild', src: 'https://media.arche.network/arche2.0/images/about/about-guilds-04.png' },
+    { title: 'Good Games Guild', src: 'https://media.arche.network/arche2.0/images/about/about-guilds-03.png' },
+    { title: 'Earn Guild', src: 'https://media.arche.network/arche2.0/images/about/about-guilds-02.png' },
+    { title: 'Infinity Force', src: 'https://media.arche.network/arche2.0/images/about/about-guilds-01.png' },
   ],
 })
 const indexList = reactive({
