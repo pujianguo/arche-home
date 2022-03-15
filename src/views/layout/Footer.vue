@@ -50,7 +50,7 @@
       </div>
       <div class="content-footer">
         <div class="box-item">
-          © 2021 Arche Group. All rights reserved.
+          © {{years}} Arche Group. All rights reserved.
         </div>
         <div class="box-item">
           Reach Out Us -- support@arche.network
@@ -66,6 +66,7 @@ import { ref, watch, onMounted } from 'vue'
 import config from '@/config'
 import { useRoute } from 'vue-router'
 const isHome = ref(true)
+const years = ref(typeof new Date().getFullYear() === 'number' ? new Date().getFullYear() : '')
 const route = useRoute()
 watch(() => route.name, () => {
   isHome.value = route.name === 'Home'
