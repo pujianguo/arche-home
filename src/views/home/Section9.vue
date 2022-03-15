@@ -83,7 +83,7 @@ const investorList = [
   { id: 15, imgSrc: config.imgUrl + 'backedby/inverstor-logo-15.png', class: 'ae-5' },
   { id: 16, imgSrc: config.imgUrl + 'backedby/inverstor-logo-16.png', class: 'ae-5' },
   { id: 17, imgSrc: config.imgUrl + 'backedby/inverstor-logo-17.png', class: 'ae-5' },
-  { id: 18, imgSrc: config.imgUrl + 'backedby/inverstor-logo-18.png', class: 'ae-5' },
+  { id: 18, imgSrc: config.imgUrl + 'backedby/inverstor-logo-19.png', class: 'ae-5' },
 ]
 const inputValue = ref('')
 const socialList = [
